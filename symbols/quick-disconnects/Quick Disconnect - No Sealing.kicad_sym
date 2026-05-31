@@ -114,7 +114,31 @@
           (width 0.1000)
           (type dot))
         (fill
-          (type none)))
+          (type none)))      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+
       (pin passive line
         (at -8 0 0)
         (length 3)
