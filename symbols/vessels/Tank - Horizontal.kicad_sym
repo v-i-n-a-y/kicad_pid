@@ -1,0 +1,102 @@
+
+(kicad_symbol_lib
+  (version 20231120)
+  (generator kicad_symbol_editor)
+  (generator_version "8.0")
+  (symbol "Tank - Horizontal"
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property Reference Tank_H
+      (at 0 -7 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Tank - Horizontal_1_1"
+      (rectangle private
+        (start -12 8)
+        (end 12 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -9 5)
+        (end 9 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -6 4)
+        (end 6 -4)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -6 -4)
+        (mid -8 0)
+        (end -6 4)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 6 4)
+        (mid 8 0)
+        (end 6 -4)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name ""
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number ""
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name ""
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number ""
+          (effects
+            (font
+              (size 1.2700 1.2700))))))))
