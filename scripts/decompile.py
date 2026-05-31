@@ -82,7 +82,6 @@ def usage():
 
 
 if __name__ == "__main__":
-
     print("Rocketry P&ID KiCAD - Decompile Monolith\n")
 
     if len(sys.argv) != 3:

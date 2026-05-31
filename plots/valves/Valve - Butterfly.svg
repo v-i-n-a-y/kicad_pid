@@ -1,6 +1,8 @@
+<!-- Copyright 2026 Kingston University Rocket Engineering -->
+
 <?xml version="1.0" standalone="no"?>
- <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+ <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg
   xmlns:svg="http://www.w3.org/2000/svg"
   xmlns="http://www.w3.org/2000/svg"
@@ -13,38 +15,38 @@
 <g style="fill:#000000; fill-opacity:1.0000;stroke:#000000; stroke-opacity:1.0000;
 stroke-linecap:round; stroke-linejoin:round;"
  transform="translate(0 0) scale(1 1)">
-<path style="fill:none; 
-stroke:#840000; stroke-width:0.1000; stroke-opacity:1; 
+<path style="fill:none;
+stroke:#840000; stroke-width:0.1000; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;fill:none"
 d="M 5.0584,7.9569
 5.0584,11.9569
-" /> 
-<path style="fill:none; 
-stroke:#840000; stroke-width:0.1000; stroke-opacity:1; 
+" />
+<path style="fill:none;
+stroke:#840000; stroke-width:0.1000; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;fill:none"
 d="M 5.5584,11.7069
 10.0584,9.9569
-" /> 
-<path style="fill:none; 
-stroke:#840000; stroke-width:0.1000; stroke-opacity:1; 
+" />
+<path style="fill:none;
+stroke:#840000; stroke-width:0.1000; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;fill:none"
 d="M 10.0584,9.9569
 14.5584,8.2069
-" /> 
+" />
 </g>
-<g style="fill:#840000; fill-opacity:1.0000; 
-stroke:#840000; stroke-width:0.1524; stroke-opacity:1; 
+<g style="fill:#840000; fill-opacity:1.0000;
+stroke:#840000; stroke-width:0.1524; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;">
-<circle cx="10.0584" cy="9.9569" r="0.5000" /> 
-<path style="fill:none; 
-stroke:#840000; stroke-width:0.1000; stroke-opacity:1; 
+<circle cx="10.0584" cy="9.9569" r="0.5000" />
+<path style="fill:none;
+stroke:#840000; stroke-width:0.1000; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;fill:none"
 d="M 15.0584,7.9569
 15.0584,11.9569
-" /> 
+" />
 </g>
-<g style="fill:none; 
-stroke:#840000; stroke-width:0.1524; stroke-opacity:1; 
+<g style="fill:none;
+stroke:#840000; stroke-width:0.1524; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;">
 <path d="M5.0584 9.9569
 L2.0584 9.9569
@@ -53,8 +55,8 @@ L2.0584 9.9569
 L18.0584 9.9569
 " />
 </g>
-<g style="fill:none; 
-stroke:#006464; stroke-width:0.1524; stroke-opacity:1; 
+<g style="fill:none;
+stroke:#006464; stroke-width:0.1524; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;">
 <text x="10.0584" y="20.5919"
 textLength="15.3221" font-size="1.6933" lengthAdjust="spacingAndGlyphs"
@@ -405,5 +407,5 @@ L17.0131 19.9921
 <path d="M17.0131 19.9921
 L17.0131 20.0526
 " />
-</g></g> 
+</g></g>
 </svg>

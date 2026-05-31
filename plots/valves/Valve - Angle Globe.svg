@@ -1,6 +1,8 @@
+<!-- Copyright 2026 Kingston University Rocket Engineering -->
+
 <?xml version="1.0" standalone="no"?>
- <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+ <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg
   xmlns:svg="http://www.w3.org/2000/svg"
   xmlns="http://www.w3.org/2000/svg"
@@ -13,28 +15,28 @@
 <g style="fill:#000000; fill-opacity:1.0000;stroke:#000000; stroke-opacity:1.0000;
 stroke-linecap:round; stroke-linejoin:round;"
  transform="translate(0 0) scale(1 1)">
-<path style="fill:none; 
-stroke:#840000; stroke-width:0.1000; stroke-opacity:1; 
+<path style="fill:none;
+stroke:#840000; stroke-width:0.1000; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;fill:none"
 d="M 10.5410,10.3256
 5.5410,8.3256
 5.5410,12.3256
-Z" /> 
-<path style="fill:none; 
-stroke:#840000; stroke-width:0.1000; stroke-opacity:1; 
+Z" />
+<path style="fill:none;
+stroke:#840000; stroke-width:0.1000; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;fill:none"
 d="M 10.5410,10.3256
 8.5410,5.3256
 12.5410,5.3256
-Z" /> 
+Z" />
 </g>
-<g style="fill:#840000; fill-opacity:1.0000; 
-stroke:#840000; stroke-width:0.1524; stroke-opacity:1; 
+<g style="fill:#840000; fill-opacity:1.0000;
+stroke:#840000; stroke-width:0.1524; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;">
-<circle cx="10.5410" cy="10.3256" r="0.5000" /> 
+<circle cx="10.5410" cy="10.3256" r="0.5000" />
 </g>
-<g style="fill:none; 
-stroke:#840000; stroke-width:0.1524; stroke-opacity:1; 
+<g style="fill:none;
+stroke:#840000; stroke-width:0.1524; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;">
 <path d="M5.5410 10.3256
 L2.5410 10.3256
@@ -43,8 +45,8 @@ L2.5410 10.3256
 L10.5410 2.3256
 " />
 </g>
-<g style="fill:none; 
-stroke:#006464; stroke-width:0.1524; stroke-opacity:1; 
+<g style="fill:none;
+stroke:#006464; stroke-width:0.1524; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;">
 <text x="10.5410" y="20.9606"
 textLength="18.6482" font-size="1.6933" lengthAdjust="spacingAndGlyphs"
@@ -506,5 +508,5 @@ L19.1587 20.3608
 <path d="M19.1587 20.3608
 L19.1587 20.4213
 " />
-</g></g> 
+</g></g>
 </svg>

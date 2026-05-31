@@ -31,8 +31,7 @@ def _strip_unit_suffix(symbol_path, outdir):
     base = os.path.splitext(os.path.basename(symbol_path))[0]
     prefix = f"{base}_unit"
     units = sorted(
-        f for f in os.listdir(outdir)
-        if f.startswith(prefix) and f.endswith(".svg")
+        f for f in os.listdir(outdir) if f.startswith(prefix) and f.endswith(".svg")
     )
     if len(units) == 1 and units[0] == f"{base}_unit1.svg":
         src = os.path.join(outdir, units[0])
@@ -114,7 +113,6 @@ def usage():
 
 
 if __name__ == "__main__":
-
     print("Rocketry P&ID KiCAD - Plotting\n")
 
     if len(sys.argv) != 3:
