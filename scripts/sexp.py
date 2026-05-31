@@ -1,3 +1,5 @@
+# Copyright 2026 Kingston University Rocket Engineering
+
 """
 Copyright 2015, 2016 Adam Greig
 
@@ -76,7 +78,7 @@ def generate(sexp, depth=0):
             node = generate(node, depth + 1)
         parts.append(node)
     out = "\n{}({})".format(" " * depth * 2, " ".join(parts)).splitlines()
-    return "\n".join(l.rstrip() for l in out)
+    return "\n".join(line.rstrip() for line in out)
 
 
 def find(sexp, *names):

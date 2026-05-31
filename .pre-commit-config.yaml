@@ -1,0 +1,29 @@
+# Copyright 2026 Kingston University Rocket Engineering
+
+repos:
+  - repo: https://github.com/v-i-n-a-y/pre-commits
+    rev: v0.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: mixed-line-endings
+      - id: copyright-check
+        args: [--holder, "Kingston University Rocket Engineering"]
+      - id: ruff-check
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: conventional-commit
+        name: conventional-commit
+        language: system
+        entry: python3 scripts/conventional_commit.py
+        stages: [commit-msg]
+        pass_filenames: true
+
+      - id: kicad-pid-precommit
+        name: KiCAD P&ID precommit
+        entry: python3 scripts/precommit.py pid_kicad.kicad_sym symbols/
+        language: system
+        pass_filenames: false
+        always_run: true

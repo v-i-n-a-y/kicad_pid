@@ -1,3 +1,5 @@
+# Copyright 2026 Kingston University Rocket Engineering
+
 import os
 import sys
 from utils import file_changed
@@ -30,7 +32,6 @@ def main(libpath, symbolsdir):
 
 
 if __name__ == "__main__":
-
     if len(sys.argv) != 3:
         print(
             f"Usage: {sys.argv[0]} <monolith lib path> <symbols directory>",

@@ -6,7 +6,7 @@ This repository contains a set of P&ID symbols as KiCAD symbols. The symbol set 
 - Sheffield University (Sunride)
 - Glasgow University (GU Rocketry)
 
-We put together this symbol set to standardise our P&ID diagrams for easier collaborations and coherence. 
+We put together this symbol set to standardise our P&ID diagrams for easier collaborations and coherence.
 
 ## Symbols
 

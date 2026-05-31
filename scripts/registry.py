@@ -18,7 +18,13 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import mm
 from reportlab.lib import colors
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle, PageBreak,
+    SimpleDocTemplate,
+    Paragraph,
+    Spacer,
+    Image,
+    Table,
+    TableStyle,
+    PageBreak,
 )
 from reportlab.lib.enums import TA_CENTER
 
@@ -26,15 +32,20 @@ from reportlab.lib.enums import TA_CENTER
 PAGE_W, PAGE_H = A4
 MARGIN = 18 * mm
 COLS = 3
-SYM_PX = 240       # rsvg-convert raster size (px)
-SYM_PT = 52 * mm   # display size in PDF
+SYM_PX = 240  # rsvg-convert raster size (px)
+SYM_PT = 52 * mm  # display size in PDF
 
 
 def svg_to_png_bytes(svg_path: str) -> Optional[bytes]:
     result = subprocess.run(
         [
-            "rsvg-convert", "-f", "png",
-            "-w", str(SYM_PX), "-h", str(SYM_PX),
+            "rsvg-convert",
+            "-f",
+            "png",
+            "-w",
+            str(SYM_PX),
+            "-h",
+            str(SYM_PX),
             "--keep-aspect-ratio",
             svg_path,
         ],
@@ -128,7 +139,11 @@ def build_registry(plots_dir: str, output_path: str) -> None:
     # Title page
     story.append(Spacer(1, 50 * mm))
     story.append(Paragraph("P&amp;ID KiCAD Symbol Registry", title_style))
-    story.append(Paragraph("Aerospace Piping &amp; Instrumentation Diagram Symbols", subtitle_style))
+    story.append(
+        Paragraph(
+            "Aerospace Piping &amp; Instrumentation Diagram Symbols", subtitle_style
+        )
+    )
     story.append(PageBreak())
 
     symbols = collect_symbols(plots_dir)
@@ -158,10 +173,12 @@ def build_registry(plots_dir: str, output_path: str) -> None:
                 rowHeights=[SYM_PT + 10 * mm],
             )
             t.setStyle(
-                TableStyle([
-                    ("ALIGN",  (0, 0), (-1, -1), "CENTER"),
-                    ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-                ])
+                TableStyle(
+                    [
+                        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+                        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                    ]
+                )
             )
             story.append(t)
             story.append(Spacer(1, 3 * mm))
