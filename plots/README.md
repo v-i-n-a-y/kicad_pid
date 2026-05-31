@@ -212,6 +212,10 @@
 <img src='vessels/Bottle - Small.svg' width='500' height='500'>
 ### Bottle.svg
 <img src='vessels/Bottle.svg' width='500' height='500'>
+### Sample Cylinder - Large.svg
+<img src='vessels/Sample Cylinder - Large.svg' width='500' height='500'>
+### Sample Cylinder - Small.svg
+<img src='vessels/Sample Cylinder - Small.svg' width='500' height='500'>
 ### Sample Cylinder.svg
 <img src='vessels/Sample Cylinder.svg' width='500' height='500'>
 ### Tank - Horizontal.svg
