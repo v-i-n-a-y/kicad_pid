@@ -1,10 +1,4 @@
-"""
-Copyright 2024 Kingston University Rocket Engineering
-
-MIT License - See license file
-
-Generates a PDF registry of all P&ID symbols from SVGs in plots/.
-"""
+# Copyright 2024 Kingston University Rocket Engineering
 
 import os
 import sys

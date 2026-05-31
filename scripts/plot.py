@@ -1,10 +1,4 @@
-"""
-Copyright 2024 Kingston University Rocket Engineering
-
-MIT License - See license file
-
-Generates library from symbols
-"""
+# Copyright 2024 Kingston University Rocket Engineering
 
 import os
 import sys
