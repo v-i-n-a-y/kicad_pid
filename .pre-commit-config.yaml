@@ -9,7 +9,7 @@ repos:
       - id: mixed-line-endings
       - id: copyright-check
         args: [--holder, "Kingston University Rocket Engineering"]
-        exclude: scripts/sexp\.py
+        exclude: (scripts/sexp\.py|\.svg$)
       - id: ruff-check
       - id: ruff-format
 
