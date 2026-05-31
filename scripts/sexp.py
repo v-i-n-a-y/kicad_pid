@@ -1,5 +1,3 @@
-# Copyright 2026 Kingston University Rocket Engineering
-
 """
 Copyright 2015, 2016 Adam Greig
 
