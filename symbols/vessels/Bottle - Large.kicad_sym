@@ -8,7 +8,7 @@
     (in_bom yes)
     (on_board yes)
     (property Reference Bottle_L
-      (at 0 -15 0)
+      (at 0 -12 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -38,8 +38,8 @@
     (symbol "Bottle - Large_0_1"
       (polyline
         (pts
-          (xy -6 44)
-          (xy -6 -8))
+          (xy -5 42)
+          (xy -5 -8))
         (stroke
           (width 0)
           (type default))
@@ -47,27 +47,18 @@
           (type none)))
       (polyline
         (pts
-          (xy -6 -8)
+          (xy -5 -8)
           (xy 5 -8)
-          (xy 5 45))
+          (xy 5 42))
         (stroke
           (width 0)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 0 50)
-        (mid -4.2426 48.2426)
-        (end -5.9997 43.9997)
-        (stroke
-          (width 0)
-          (type default))
-        (fill
-          (type none)))
-      (arc
-        (start 5 45)
-        (mid 3.5355 48.5355)
-        (end -0.0003 50.0003)
+        (start 5 42)
+        (mid 0 47)
+        (end -5 42)
         (stroke
           (width 0)
           (type default))
@@ -108,17 +99,17 @@
           (type none)))
       (polyline
         (pts
-          (xy 1.2 50)
-          (xy 1.2 54)
-          (xy -1.2 54)
-          (xy -1.2 50))
+          (xy 1.2 47)
+          (xy 1.2 51)
+          (xy -1.2 51)
+          (xy -1.2 47))
         (stroke
           (width 0)
           (type default))
         (fill
           (type none)))
       (pin passive line
-        (at 0 57 270)
+        (at 0 54 270)
         (length 3)
         (name ""
           (effects

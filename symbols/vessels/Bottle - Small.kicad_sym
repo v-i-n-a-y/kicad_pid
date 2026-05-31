@@ -38,8 +38,8 @@
     (symbol "Bottle - Small_0_1"
       (polyline
         (pts
-          (xy -4 19)
-          (xy -4 -5))
+          (xy -3 20)
+          (xy -3 -5))
         (stroke
           (width 0)
           (type default))
@@ -47,7 +47,7 @@
           (type none)))
       (polyline
         (pts
-          (xy -4 -5)
+          (xy -3 -5)
           (xy 3 -5)
           (xy 3 20))
         (stroke
@@ -56,18 +56,9 @@
         (fill
           (type none)))
       (arc
-        (start 0 23)
-        (mid -2.8284 21.8284)
-        (end -4 19)
-        (stroke
-          (width 0)
-          (type default))
-        (fill
-          (type none)))
-      (arc
         (start 3 20)
-        (mid 2.1213 22.1213)
-        (end 0 23)
+        (mid 0 23)
+        (end -3 20)
         (stroke
           (width 0)
           (type default))
