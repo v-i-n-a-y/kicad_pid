@@ -1,84 +1,198 @@
 # PI&D KiCAD Symbols
 
-## flexible hose.svg
-<img src = 'flexible hose.svg' width = '500' height = '500'>
-## valve - general.svg
-<img src = 'valve - general.svg' width = '500' height = '500'>
-## filter - conical.svg
-<img src = 'filter - conical.svg' width = '500' height = '500'>
-## pump.svg
-<img src = 'pump.svg' width = '500' height = '500'>
-## pressure indicator.svg
-<img src = 'pressure indicator.svg' width = '500' height = '500'>
-## engine - bipropellant.svg
-<img src = 'engine - bipropellant.svg' width = '500' height = '500'>
-## back pressure regulator.svg
-<img src = 'back pressure regulator.svg' width = '500' height = '500'>
-## burst disk - vacuum.svg
-<img src = 'burst disk - vacuum.svg' width = '500' height = '500'>
-## valve - 3 way globe.svg
-<img src = 'valve - 3 way globe.svg' width = '500' height = '500'>
-## quick disconnect - destination sealed.svg
-<img src = 'quick disconnect - destination sealed.svg' width = '500' height = '500'>
-## quick disconnect - source sealed.svg
-<img src = 'quick disconnect - source sealed.svg' width = '500' height = '500'>
-## valve - needle.svg
-<img src = 'valve - needle.svg' width = '500' height = '500'>
-## valve - angle ball.svg
-<img src = 'valve - angle ball.svg' width = '500' height = '500'>
-## valve - 3 way.svg
-<img src = 'valve - 3 way.svg' width = '500' height = '500'>
-## valve - manual.svg
-<img src = 'valve - manual.svg' width = '500' height = '500'>
-## valve - 4 way.svg
-<img src = 'valve - 4 way.svg' width = '500' height = '500'>
-## valve - pressure relief.svg
-<img src = 'valve - pressure relief.svg' width = '500' height = '500'>
-## cap.svg
-<img src = 'cap.svg' width = '500' height = '500'>
-## engine - hybrid.svg
-<img src = 'engine - hybrid.svg' width = '500' height = '500'>
-## pressure gauge.svg
-<img src = 'pressure gauge.svg' width = '500' height = '500'>
-## valve - pneumatic.svg
-<img src = 'valve - pneumatic.svg' width = '500' height = '500'>
-## pressure regulator.svg
-<img src = 'pressure regulator.svg' width = '500' height = '500'>
-## valve - pressure and vacuum relief.svg
-<img src = 'valve - pressure and vacuum relief.svg' width = '500' height = '500'>
-## bottle - dip tube.svg
-<img src = 'bottle - dip tube.svg' width = '500' height = '500'>
-## valve - check.svg
-<img src = 'valve - check.svg' width = '500' height = '500'>
-## valve - butterfly.svg
-<img src = 'valve - butterfly.svg' width = '500' height = '500'>
-## burst disk - pressure.svg
-<img src = 'burst disk - pressure.svg' width = '500' height = '500'>
-## vent - covered.svg
-<img src = 'vent - covered.svg' width = '500' height = '500'>
-## thermocouple.svg
-<img src = 'thermocouple.svg' width = '500' height = '500'>
-## quick disconnect - no sealing.svg
-<img src = 'quick disconnect - no sealing.svg' width = '500' height = '500'>
-## bottle.svg
-<img src = 'bottle.svg' width = '500' height = '500'>
-## valve - non return.svg
-<img src = 'valve - non return.svg' width = '500' height = '500'>
-## valve - servo.svg
-<img src = 'valve - servo.svg' width = '500' height = '500'>
-## engine - solid.svg
-<img src = 'engine - solid.svg' width = '500' height = '500'>
-## filter.svg
-<img src = 'filter.svg' width = '500' height = '500'>
-## vent - uncovered.svg
-<img src = 'vent - uncovered.svg' width = '500' height = '500'>
-## quick disconnect - both sealed.svg
-<img src = 'quick disconnect - both sealed.svg' width = '500' height = '500'>
-## valve - 3 way ball.svg
-<img src = 'valve - 3 way ball.svg' width = '500' height = '500'>
-## valve - hydraulic.svg
-<img src = 'valve - hydraulic.svg' width = '500' height = '500'>
-## valve - angle globe.svg
-<img src = 'valve - angle globe.svg' width = '500' height = '500'>
-## pressure transducer.svg
-<img src = 'pressure transducer.svg' width = '500' height = '500'>
+## burst-disks
+
+### Burst Disk - Pressure.svg
+<img src='burst-disks/Burst Disk - Pressure.svg' width='500' height='500'>
+### Burst Disk - Vacuum.svg
+<img src='burst-disks/Burst Disk - Vacuum.svg' width='500' height='500'>
+
+## engines
+
+### Engine - Bipropellant.svg
+<img src='engines/Engine - Bipropellant.svg' width='500' height='500'>
+### Engine - Hybrid.svg
+<img src='engines/Engine - Hybrid.svg' width='500' height='500'>
+### Engine - Solid.svg
+<img src='engines/Engine - Solid.svg' width='500' height='500'>
+
+## filters
+
+### Filter - Conical.svg
+<img src='filters/Filter - Conical.svg' width='500' height='500'>
+### Filter.svg
+<img src='filters/Filter.svg' width='500' height='500'>
+
+## fittings
+
+### Cap.svg
+<img src='fittings/Cap.svg' width='500' height='500'>
+### Cross.svg
+<img src='fittings/Cross.svg' width='500' height='500'>
+### Elbow.svg
+<img src='fittings/Elbow.svg' width='500' height='500'>
+### Flexible Hose.svg
+<img src='fittings/Flexible Hose.svg' width='500' height='500'>
+### Reducer.svg
+<img src='fittings/Reducer.svg' width='500' height='500'>
+### Tee.svg
+<img src='fittings/Tee.svg' width='500' height='500'>
+
+## instruments
+
+### Flow Indicator.svg
+<img src='instruments/Flow Indicator.svg' width='500' height='500'>
+### Flow Transmitter.svg
+<img src='instruments/Flow Transmitter.svg' width='500' height='500'>
+### Level Indicator.svg
+<img src='instruments/Level Indicator.svg' width='500' height='500'>
+### Level Transmitter.svg
+<img src='instruments/Level Transmitter.svg' width='500' height='500'>
+### Pressure Gauge.svg
+<img src='instruments/Pressure Gauge.svg' width='500' height='500'>
+### Pressure Indicator.svg
+<img src='instruments/Pressure Indicator.svg' width='500' height='500'>
+### Pressure Switch.svg
+<img src='instruments/Pressure Switch.svg' width='500' height='500'>
+### Pressure Transducer.svg
+<img src='instruments/Pressure Transducer.svg' width='500' height='500'>
+### RTD.svg
+<img src='instruments/RTD.svg' width='500' height='500'>
+### Thermocouple.svg
+<img src='instruments/Thermocouple.svg' width='500' height='500'>
+
+## pumps
+
+### Pump.svg
+<img src='pumps/Pump.svg' width='500' height='500'>
+
+## pyrotechnics
+
+### Pyro Valve NC.svg
+<img src='pyrotechnics/Pyro Valve NC.svg' width='500' height='500'>
+### Pyro Valve NO.svg
+<img src='pyrotechnics/Pyro Valve NO.svg' width='500' height='500'>
+### Squib.svg
+<img src='pyrotechnics/Squib.svg' width='500' height='500'>
+
+## quick-disconnects
+
+### Quick Disconnect - Both Sealed.svg
+<img src='quick-disconnects/Quick Disconnect - Both Sealed.svg' width='500' height='500'>
+### Quick Disconnect - Destination Sealed.svg
+<img src='quick-disconnects/Quick Disconnect - Destination Sealed.svg' width='500' height='500'>
+### Quick Disconnect - No Sealing.svg
+<img src='quick-disconnects/Quick Disconnect - No Sealing.svg' width='500' height='500'>
+### Quick Disconnect - Source Sealed.svg
+<img src='quick-disconnects/Quick Disconnect - Source Sealed.svg' width='500' height='500'>
+
+## regulators
+
+### Back Pressure Regulator.svg
+<img src='regulators/Back Pressure Regulator.svg' width='500' height='500'>
+### Pressure Regulator.svg
+<img src='regulators/Pressure Regulator.svg' width='500' height='500'>
+
+## restrictions
+
+### Cavitating Venturi.svg
+<img src='restrictions/Cavitating Venturi.svg' width='500' height='500'>
+### Restriction Orifice.svg
+<img src='restrictions/Restriction Orifice.svg' width='500' height='500'>
+
+## valves
+
+### Valve - 3 Way Ball.svg
+<img src='valves/Valve - 3 Way Ball.svg' width='500' height='500'>
+### Valve - 3 Way Globe.svg
+<img src='valves/Valve - 3 Way Globe.svg' width='500' height='500'>
+### Valve - 3 Way.svg
+<img src='valves/Valve - 3 Way.svg' width='500' height='500'>
+### Valve - 4 Way.svg
+<img src='valves/Valve - 4 Way.svg' width='500' height='500'>
+### Valve - Angle Ball.svg
+<img src='valves/Valve - Angle Ball.svg' width='500' height='500'>
+### Valve - Angle Globe.svg
+<img src='valves/Valve - Angle Globe.svg' width='500' height='500'>
+### Valve - Ball Hydraulic.svg
+<img src='valves/Valve - Ball Hydraulic.svg' width='500' height='500'>
+### Valve - Ball Manual.svg
+<img src='valves/Valve - Ball Manual.svg' width='500' height='500'>
+### Valve - Ball Pneumatic.svg
+<img src='valves/Valve - Ball Pneumatic.svg' width='500' height='500'>
+### Valve - Ball Servo.svg
+<img src='valves/Valve - Ball Servo.svg' width='500' height='500'>
+### Valve - Ball.svg
+<img src='valves/Valve - Ball.svg' width='500' height='500'>
+### Valve - Butterfly Hydraulic.svg
+<img src='valves/Valve - Butterfly Hydraulic.svg' width='500' height='500'>
+### Valve - Butterfly Manual.svg
+<img src='valves/Valve - Butterfly Manual.svg' width='500' height='500'>
+### Valve - Butterfly Pneumatic.svg
+<img src='valves/Valve - Butterfly Pneumatic.svg' width='500' height='500'>
+### Valve - Butterfly Servo.svg
+<img src='valves/Valve - Butterfly Servo.svg' width='500' height='500'>
+### Valve - Butterfly.svg
+<img src='valves/Valve - Butterfly.svg' width='500' height='500'>
+### Valve - Check.svg
+<img src='valves/Valve - Check.svg' width='500' height='500'>
+### Valve - Diaphragm Hydraulic.svg
+<img src='valves/Valve - Diaphragm Hydraulic.svg' width='500' height='500'>
+### Valve - Diaphragm Manual.svg
+<img src='valves/Valve - Diaphragm Manual.svg' width='500' height='500'>
+### Valve - Diaphragm Pneumatic.svg
+<img src='valves/Valve - Diaphragm Pneumatic.svg' width='500' height='500'>
+### Valve - Diaphragm Servo.svg
+<img src='valves/Valve - Diaphragm Servo.svg' width='500' height='500'>
+### Valve - Diaphragm.svg
+<img src='valves/Valve - Diaphragm.svg' width='500' height='500'>
+### Valve - Gate Hydraulic.svg
+<img src='valves/Valve - Gate Hydraulic.svg' width='500' height='500'>
+### Valve - Gate Manual.svg
+<img src='valves/Valve - Gate Manual.svg' width='500' height='500'>
+### Valve - Gate Pneumatic.svg
+<img src='valves/Valve - Gate Pneumatic.svg' width='500' height='500'>
+### Valve - Gate Servo.svg
+<img src='valves/Valve - Gate Servo.svg' width='500' height='500'>
+### Valve - Gate.svg
+<img src='valves/Valve - Gate.svg' width='500' height='500'>
+### Valve - Globe Hydraulic.svg
+<img src='valves/Valve - Globe Hydraulic.svg' width='500' height='500'>
+### Valve - Globe Manual.svg
+<img src='valves/Valve - Globe Manual.svg' width='500' height='500'>
+### Valve - Globe Pneumatic.svg
+<img src='valves/Valve - Globe Pneumatic.svg' width='500' height='500'>
+### Valve - Globe Servo.svg
+<img src='valves/Valve - Globe Servo.svg' width='500' height='500'>
+### Valve - Globe.svg
+<img src='valves/Valve - Globe.svg' width='500' height='500'>
+### Valve - Needle Hydraulic.svg
+<img src='valves/Valve - Needle Hydraulic.svg' width='500' height='500'>
+### Valve - Needle Manual.svg
+<img src='valves/Valve - Needle Manual.svg' width='500' height='500'>
+### Valve - Needle Pneumatic.svg
+<img src='valves/Valve - Needle Pneumatic.svg' width='500' height='500'>
+### Valve - Needle Servo.svg
+<img src='valves/Valve - Needle Servo.svg' width='500' height='500'>
+### Valve - Needle.svg
+<img src='valves/Valve - Needle.svg' width='500' height='500'>
+### Valve - Pressure Relief.svg
+<img src='valves/Valve - Pressure Relief.svg' width='500' height='500'>
+### Valve - Pressure and Vacuum Relief.svg
+<img src='valves/Valve - Pressure and Vacuum Relief.svg' width='500' height='500'>
+
+## vents
+
+### Vent - Covered.svg
+<img src='vents/Vent - Covered.svg' width='500' height='500'>
+### Vent - Uncovered.svg
+<img src='vents/Vent - Uncovered.svg' width='500' height='500'>
+
+## vessels
+
+### Bottle - Dip Tube.svg
+<img src='vessels/Bottle - Dip Tube.svg' width='500' height='500'>
+### Bottle.svg
+<img src='vessels/Bottle.svg' width='500' height='500'>
+### Tank.svg
+<img src='vessels/Tank.svg' width='500' height='500'>

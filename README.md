@@ -12,7 +12,7 @@ We put together this symbol set to standardise our P&ID diagrams for easier coll
 
 There is one .kicad_sym file per symbol which is contained in the symbols folder. To use, add the relevant .kicad_sym files to your project library.
 
-Alternatively you can download the rocketry_pid.kicad_sym file which includes all symbols (automatically keep up-to-date)
+Alternatively you can download the pid_kicad.kicad_sym file which includes all symbols (automatically keep up-to-date)
 
 
 ## Collaborations

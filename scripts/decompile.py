@@ -11,6 +11,16 @@ import os
 import sexp
 
 
+def find_existing_paths(outdir):
+    """Map symbol-name -> existing .kicad_sym path under outdir (recursive)."""
+    paths = {}
+    for root, _, files in os.walk(outdir):
+        for f in files:
+            if f.endswith(".kicad_sym"):
+                paths[f[: -len(".kicad_sym")]] = os.path.join(root, f)
+    return paths
+
+
 def split_lib(libpath, outdir):
     """
     Split Monolith Library
@@ -27,6 +37,7 @@ def split_lib(libpath, outdir):
         lib_data = sexp.parse(f.read(), parse_nums=True)
 
     header = lib_data[:4]
+    existing = find_existing_paths(outdir)
 
     components = []
     current_lib = None
@@ -35,7 +46,7 @@ def split_lib(libpath, outdir):
         if isinstance(entry, list) and entry[0] == "symbol":
             symbol = entry[1]
             if current_lib and current_lib != symbol:
-                save_lib(header, current_lib, components, outdir)
+                save_lib(header, current_lib, components, outdir, existing)
                 components.clear()
             current_lib = symbol
             components.append(entry)
@@ -43,23 +54,15 @@ def split_lib(libpath, outdir):
             components.append(entry)
 
     if components:
-        save_lib(header, current_lib, components, outdir)
+        save_lib(header, current_lib, components, outdir, existing)
 
 
-def save_lib(header, lib_name, components, outdir):
+def save_lib(header, lib_name, components, outdir, existing):
     """
-    Saves library
-
-    header - list
-        Header information for file
-    lib_name - name
-        Name to export library to
-    components - list
-        Components to put into the library
-    outdir - str
-        Output directory
+    Save a single symbol back to its existing location if known,
+    else into outdir's root.
     """
-    lib_file = os.path.join(outdir, f"{lib_name}.kicad_sym")
+    lib_file = existing.get(lib_name, os.path.join(outdir, f"{lib_name}.kicad_sym"))
     os.makedirs(os.path.dirname(lib_file), exist_ok=True)
 
     print("Writing: " + lib_file)
