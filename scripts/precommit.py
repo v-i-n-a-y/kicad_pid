@@ -6,9 +6,12 @@ from utils import file_changed
 def main(libpath, symbolsdir):
 
     symbol_changes = False
-    for f in os.listdir(symbolsdir):
-        if f.endswith(".kicad_sym") and file_changed(os.path.join(symbolsdir, f)):
-            symbol_changes = True
+    for root, _, files in os.walk(symbolsdir):
+        for f in files:
+            if f.endswith(".kicad_sym") and file_changed(os.path.join(root, f)):
+                symbol_changes = True
+                break
+        if symbol_changes:
             break
 
     monolith_changes = file_changed(libpath)
@@ -29,9 +32,13 @@ def main(libpath, symbolsdir):
 if __name__ == "__main__":
 
     if len(sys.argv) != 3:
-        print("Error")
-    else:
-        libpath = sys.argv[1]
-        symbolsdir = sys.argv[2]
+        print(
+            f"Usage: {sys.argv[0]} <monolith lib path> <symbols directory>",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    libpath = sys.argv[1]
+    symbolsdir = sys.argv[2]
 
     main(libpath, symbolsdir)

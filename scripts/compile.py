@@ -30,15 +30,22 @@ def combine_libs(libdir, outlib):
         ['generator_version "8.0"'],
     ]
 
-    for lib_file in os.listdir(libdir):
-        if lib_file.endswith(".kicad_sym"):
-            lib_path = os.path.join(libdir, lib_file)
-            print("Reading: " + lib_path)
+    lib_paths = []
+    for root, _, files in os.walk(libdir):
+        for f in files:
+            if f.endswith(".kicad_sym"):
+                lib_paths.append(os.path.join(root, f))
+    lib_paths.sort()
 
-            with open(lib_path, "r") as f:
-                lib_data = sexp.parse(f.read(), parse_nums=True)
+    for lib_path in lib_paths:
+        print("Reading: " + lib_path)
 
-            combined_data += lib_data[4:][0]
+        with open(lib_path, "r") as f:
+            lib_data = sexp.parse(f.read(), parse_nums=True)
+
+        for entry in lib_data[4:]:
+            if isinstance(entry, list) and entry and entry[0] == "symbol":
+                combined_data.append(entry)
 
     with open(outlib, "w") as f:
         f.write(sexp.generate(combined_data))
@@ -71,9 +78,10 @@ if __name__ == "__main__":
             )
             sys.exit(1)
 
-        if not os.path.isdir(outlib):
+        outlib_dir = os.path.dirname(outlib) or "."
+        if not os.path.isdir(outlib_dir):
             print(
-                f"Warning: The intended output directory '{outlib}' does not exist.",
+                f"Error: The intended output directory '{outlib_dir}' does not exist.",
                 file=sys.stderr,
             )
             sys.exit(1)
