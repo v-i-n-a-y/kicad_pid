@@ -1,5 +1,3 @@
-# Copyright 2026 Vinay Williams
-
 """
 Copyright 2015, 2016 Adam Greig
 
