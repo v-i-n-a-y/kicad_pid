@@ -1,6 +1,7 @@
 # Copyright 2024 Kingston University Rocket Engineering
 
 import os
+import struct
 import sys
 import subprocess
 import tempfile
@@ -32,20 +33,15 @@ SYM_PT = 52 * mm  # display size in PDF
 
 def svg_to_png_bytes(svg_path: str) -> Optional[bytes]:
     result = subprocess.run(
-        [
-            "rsvg-convert",
-            "-f",
-            "png",
-            "-w",
-            str(SYM_PX),
-            "-h",
-            str(SYM_PX),
-            "--keep-aspect-ratio",
-            svg_path,
-        ],
+        ["rsvg-convert", "-f", "png", "-w", str(SYM_PX), svg_path],
         capture_output=True,
     )
     return result.stdout if result.returncode == 0 else None
+
+
+def png_dims(data: bytes) -> tuple:
+    """Read width, height from PNG IHDR chunk."""
+    return struct.unpack(">II", data[16:24])
 
 
 def collect_symbols(plots_dir: str) -> "list[tuple[str, str, str]]":
@@ -122,8 +118,16 @@ def build_registry(plots_dir: str, output_path: str) -> None:
         os.close(fd)
         Path(tmp).write_bytes(png)
         tmp_files.append(tmp)
+        pw, ph = png_dims(png)
+        aspect = pw / ph
+        max_w = col_w - 4 * mm
+        max_h = SYM_PT
+        if aspect >= max_w / max_h:
+            dw, dh = max_w, max_w / aspect
+        else:
+            dw, dh = max_h * aspect, max_h
         return [
-            Image(tmp, width=SYM_PT, height=SYM_PT),
+            Image(tmp, width=dw, height=dh),
             Spacer(1, 1 * mm),
             Paragraph(name, name_style),
         ]
