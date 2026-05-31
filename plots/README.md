@@ -200,14 +200,20 @@
 
 ## vessels
 
+### Bottle - Dip Tube 2.svg
+<img src='vessels/Bottle - Dip Tube 2.svg' width='500' height='500'>
 ### Bottle - Dip Tube.svg
 <img src='vessels/Bottle - Dip Tube.svg' width='500' height='500'>
 ### Bottle - Large.svg
 <img src='vessels/Bottle - Large.svg' width='500' height='500'>
+### Bottle - Small 2.svg
+<img src='vessels/Bottle - Small 2.svg' width='500' height='500'>
 ### Bottle - Small.svg
 <img src='vessels/Bottle - Small.svg' width='500' height='500'>
 ### Bottle.svg
 <img src='vessels/Bottle.svg' width='500' height='500'>
+### Sample Cylinder.svg
+<img src='vessels/Sample Cylinder.svg' width='500' height='500'>
 ### Tank - Horizontal.svg
 <img src='vessels/Tank - Horizontal.svg' width='500' height='500'>
 ### Tank - Large.svg
