@@ -40,6 +40,8 @@
 
 ## instruments
 
+### Coriolis Flow Meter.svg
+<img src='instruments/Coriolis Flow Meter.svg' width='500' height='500'>
 ### Flow Indicator.svg
 <img src='instruments/Flow Indicator.svg' width='500' height='500'>
 ### Flow Transmitter.svg
