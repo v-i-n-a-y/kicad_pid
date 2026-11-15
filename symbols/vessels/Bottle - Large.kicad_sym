@@ -4,32 +4,43 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol "Bottle - Large"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Bottle_L
+    (on_board no)
+    (property "Reference" "CYL"
       (at 0 -12 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Large gas bottle"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "bottle cylinder large gas cyl"
       (at 0 0 0)
       (effects
         (font
@@ -41,7 +52,7 @@
           (xy -5 42)
           (xy -5 -8))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -51,7 +62,7 @@
           (xy 5 -8)
           (xy 5 42))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -60,7 +71,7 @@
         (mid 0 47)
         (end -5 42)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -104,18 +115,18 @@
           (xy -1.2 51)
           (xy -1.2 47))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
       (pin passive line
         (at 0 54 270)
         (length 3)
-        (name ""
+        (name "PORT"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700))))))))

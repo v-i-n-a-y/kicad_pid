@@ -4,43 +4,59 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol Thermocouple
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Thermocouple
+    (on_board no)
+    (property "Reference" "TE"
       (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Thermocouple, temperature sensor"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "ki_keywords" "instrument temperature thermocouple sensor te"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "TE"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
     (symbol "Thermocouple_0_1"
       (circle
         (center 0 0)
         (radius 2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -61,19 +77,14 @@
           (type dot))
         (fill
           (type none)))
-      (text TC
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.2700 1.2700))))
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name "PROCESS"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700))))))))

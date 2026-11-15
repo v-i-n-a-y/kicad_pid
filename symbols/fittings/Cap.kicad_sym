@@ -4,32 +4,43 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol Cap
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Cap
+    (on_board no)
+    (property "Reference" "FIT"
       (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Pipe cap, closes the end of a line"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "fitting cap end plug fit"
       (at 0 0 0)
       (effects
         (font
@@ -80,13 +91,13 @@
         (fill
           (type none)))
       (pin passive line
-        (at -3 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 8)
+        (name "PORT"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700))))))))

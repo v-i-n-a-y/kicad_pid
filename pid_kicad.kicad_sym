@@ -4,10 +4,15 @@
   (generator "kicad_symbol_editor")
   (generator_version "8.0")
   (symbol "Burst Disk - Pressure"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_Burst_Disk
+    (on_board no)
+    (property Reference BD
       (at 0 -10 0)
       (effects
         (font
@@ -29,7 +34,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Burst disk, ruptures above a set pressure"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "burst disk rupture bursting pressure bd"
       (at 0 0 0)
       (effects
         (font
@@ -100,32 +111,37 @@
         (fill
           (type outline)))
       (pin passive line
-        (at -3 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 8)
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 6 0 180)
-        (length 3)
-        (name ""
+        (at 8 0 180)
+        (length 5)
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Burst Disk - Vacuum"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Vacuum_Burst_Disk
+    (on_board no)
+    (property Reference BD
       (at 0 -10 0)
       (effects
         (font
@@ -147,7 +163,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Burst disk, ruptures under a set vacuum"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "burst disk rupture bursting vacuum bd"
       (at 0 0 0)
       (effects
         (font
@@ -227,21 +249,26 @@
         (fill
           (type outline)))
       (pin passive line
-        (at -5 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 6)
+        (name PORT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Engine - Bipropellant"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Engine_Bipropellant
+    (on_board no)
+    (property Reference ENG
       (at 0 -10 0)
       (effects
         (font
@@ -263,7 +290,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Bipropellant rocket engine"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "engine rocket bipropellant thruster eng"
       (at 0 0 0)
       (effects
         (font
@@ -318,7 +351,7 @@
           (xy -2.2500 13)
           (xy -2 12))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -340,7 +373,7 @@
           (xy 1.7500 13)
           (xy 2 12))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -359,30 +392,35 @@
       (pin passive line
         (at -2 15 270)
         (length 3)
-        (name ""
+        (name "IN1"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 2 15 270)
         (length 3)
-        (name ""
+        (name "IN2"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Engine - Hybrid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Engine_Hybrid
+    (on_board no)
+    (property Reference ENG
       (at 0 -10 0)
       (effects
         (font
@@ -404,7 +442,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Hybrid rocket engine"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "engine rocket hybrid thruster eng"
       (at 0 0 0)
       (effects
         (font
@@ -478,7 +522,7 @@
           (xy -0.2500 13.2500)
           (xy 0 12.2500))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -505,19 +549,24 @@
       (pin passive line
         (at 0 15 270)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Engine - Solid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Engine_Solid
+    (on_board no)
+    (property Reference ENG
       (at 0 -10 0)
       (effects
         (font
@@ -539,7 +588,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Solid rocket motor"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "engine rocket solid motor eng"
       (at 0 0 0)
       (effects
         (font
@@ -627,10 +682,15 @@
         (fill
           (type outline)))))
   (symbol "Filter - Conical"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Conical_Filter
+    (on_board no)
+    (property Reference FLT
       (at 0 -10 0)
       (effects
         (font
@@ -652,7 +712,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Conical inline filter"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "filter strainer conical flt"
       (at 0 0 0)
       (effects
         (font
@@ -726,32 +792,37 @@
         (fill
           (type none)))
       (pin passive line
-        (at -5 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 6)
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 5 0 180)
-        (length 3)
-        (name ""
+        (at 8 0 180)
+        (length 6)
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Filter
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Filter
+    (on_board no)
+    (property Reference FLT
       (at 0 -10 0)
       (effects
         (font
@@ -773,7 +844,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Inline filter"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "filter strainer inline flt"
       (at 0 0 0)
       (effects
         (font
@@ -866,32 +943,37 @@
         (fill
           (type outline)))
       (pin passive line
-        (at -5 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 6)
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 5 0 180)
-        (length 3)
-        (name ""
+        (at 8 0 180)
+        (length 6)
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Cap
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Cap
+    (on_board no)
+    (property Reference FIT
       (at 0 -10 0)
       (effects
         (font
@@ -913,7 +995,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pipe cap, closes the end of a line"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "fitting cap end plug fit"
       (at 0 0 0)
       (effects
         (font
@@ -964,21 +1052,26 @@
         (fill
           (type none)))
       (pin passive line
-        (at -3 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 8)
+        (name PORT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Cross
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Cross
+    (on_board no)
+    (property Reference FIT
       (at 0 -10 0)
       (effects
         (font
@@ -1000,7 +1093,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Four-way cross fitting"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "fitting cross four way fit"
       (at 0 0 0)
       (effects
         (font
@@ -1028,7 +1127,7 @@
           (xy -5 0)
           (xy 5 0))
         (stroke
-          (width 0.2000)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1037,7 +1136,7 @@
           (xy 0 5)
           (xy 0 -5))
         (stroke
-          (width 0.2000)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1045,7 +1144,7 @@
         (center 0 0)
         (radius 0.4000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -1076,52 +1175,57 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -8 90)
         (length 3)
-        (name ""
+        (name "BRANCH2"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "4"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name BRANCH
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "3"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Elbow
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Elbow
+    (on_board no)
+    (property Reference FIT
       (at 0 -10 0)
       (effects
         (font
@@ -1143,7 +1247,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Right-angle elbow fitting"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "fitting elbow bend fit"
       (at 0 0 0)
       (effects
         (font
@@ -1172,7 +1282,7 @@
           (xy 0 0)
           (xy 0 -5))
         (stroke
-          (width 0.2000)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1199,11 +1309,11 @@
           (type outline)))
       (polyline
         (pts
-          (xy 6 0)
-          (xy 6 0.2500)
-          (xy 7 0)
-          (xy 6 -0.2500)
-          (xy 6 0))
+          (xy 0 -6)
+          (xy 0.2500 -6)
+          (xy 0 -7)
+          (xy -0.2500 -6)
+          (xy 0 -6))
         (stroke
           (width 0.1000)
           (type default))
@@ -1212,30 +1322,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -8 90)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Flexible Hose"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Flexible_Hose
+    (on_board no)
+    (property Reference FIT
       (at 0 -10 0)
       (effects
         (font
@@ -1257,7 +1372,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Flexible hose"
+      (at 0.5000 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "fitting hose flexible fit"
       (at 0.5000 0 0)
       (effects
         (font
@@ -1269,7 +1390,7 @@
         (mid -4.7071 -0.7071)
         (end -4 -1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1277,7 +1398,7 @@
         (start -5 2)
         (end 5 -2.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1286,7 +1407,7 @@
         (mid -3.2929 -0.7071)
         (end -3 0)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1295,7 +1416,7 @@
         (mid -2.7071 0.7071)
         (end -3 0)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1304,7 +1425,7 @@
         (mid -1.2929 0.7071)
         (end -2 1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1313,7 +1434,7 @@
         (mid -0.7071 -0.7071)
         (end 0 -1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1322,7 +1443,7 @@
         (mid 0.7071 -0.7071)
         (end 1 0)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1331,7 +1452,7 @@
           (xy -1.2500 -10)
           (xy -1.2500 -10))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1340,7 +1461,7 @@
         (mid 1.2929 0.7071)
         (end 1 0)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1349,7 +1470,7 @@
         (mid 2.7071 0.7071)
         (end 2 1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1358,7 +1479,7 @@
         (mid 3.2929 -0.7071)
         (end 4 -1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1367,7 +1488,7 @@
         (mid 4.7071 -0.7071)
         (end 5 0)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -1415,30 +1536,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Reducer
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Reducer
+    (on_board no)
+    (property Reference FIT
       (at 0 -10 0)
       (effects
         (font
@@ -1460,7 +1586,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Reducer fitting, joins two line sizes"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "fitting reducer fit"
       (at 0 0 0)
       (effects
         (font
@@ -1522,30 +1654,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Tee
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Tee
+    (on_board no)
+    (property Reference FIT
       (at 0 -10 0)
       (effects
         (font
@@ -1567,7 +1704,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Three-way tee fitting"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "fitting tee three way fit"
       (at 0 0 0)
       (effects
         (font
@@ -1595,7 +1738,7 @@
           (xy -5 0)
           (xy 5 0))
         (stroke
-          (width 0.2000)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1604,7 +1747,7 @@
           (xy 0 0)
           (xy 0 -5))
         (stroke
-          (width 0.2000)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1612,7 +1755,7 @@
         (center 0 0)
         (radius 0.4000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -1643,41 +1786,46 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -8 90)
         (length 3)
-        (name ""
+        (name BRANCH
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "3"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Coriolis Flow Meter"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Coriolis_FM
+    (on_board no)
+    (property Reference FT
       (at 0 -5 0)
       (effects
         (font
@@ -1699,12 +1847,23 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Coriolis flow meter, inline mass flow sensor"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument flow coriolis meter mass ft"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function FT
+      (at 0 5 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
     (symbol "Coriolis Flow Meter_1_1"
       (rectangle private
         (start -8 8)
@@ -1730,11 +1889,6 @@
           (type default))
         (fill
           (type none)))
-      (text FT
-        (at 0 5 0)
-        (effects
-          (font
-            (size 1.5000 1.5000))))
       (polyline
         (pts
           (xy 0 2.5000)
@@ -1760,7 +1914,7 @@
           (xy 1.5000 1.2000)
           (xy 2.5000 0))
         (stroke
-          (width 0.1500)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1772,7 +1926,7 @@
           (xy 1.5000 -1.2000)
           (xy 2.5000 0))
         (stroke
-          (width 0.1500)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -1801,32 +1955,37 @@
         (fill
           (type outline)))
       (pin passive line
-        (at -5 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 6)
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 5 0 180)
-        (length 3)
-        (name ""
+        (at 8 0 180)
+        (length 6)
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Flow Indicator"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Flow_Indicator
+    (on_board no)
+    (property Reference FI
       (at 0 -10 0)
       (effects
         (font
@@ -1848,12 +2007,23 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Flow indicator, local flow display"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument flow indicator display fi"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function FI
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
     (symbol "Flow Indicator_1_1"
       (rectangle private
         (start -8 8)
@@ -1879,11 +2049,6 @@
           (type default))
         (fill
           (type none)))
-      (text FI
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.5000 1.5000))))
       (polyline
         (pts
           (xy 0 -2.5000)
@@ -1896,19 +2061,24 @@
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Flow Transmitter"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Flow_Transmitter
+    (on_board no)
+    (property Reference FT
       (at 0 -10 0)
       (effects
         (font
@@ -1930,12 +2100,23 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Flow transmitter, electrical flow sensor"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument flow transmitter sensor ft"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function FT
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
     (symbol "Flow Transmitter_1_1"
       (rectangle private
         (start -8 8)
@@ -1961,11 +2142,6 @@
           (type default))
         (fill
           (type none)))
-      (text FT
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.5000 1.5000))))
       (polyline
         (pts
           (xy 0 -2.5000)
@@ -1978,19 +2154,24 @@
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Level Indicator"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Level_Indicator
+    (on_board no)
+    (property Reference LI
       (at 0 -10 0)
       (effects
         (font
@@ -2012,12 +2193,23 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Level indicator, local level display"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument level indicator display li"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function LI
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
     (symbol "Level Indicator_1_1"
       (rectangle private
         (start -8 8)
@@ -2043,11 +2235,6 @@
           (type default))
         (fill
           (type none)))
-      (text LI
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.5000 1.5000))))
       (polyline
         (pts
           (xy 0 -2.5000)
@@ -2060,19 +2247,24 @@
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Level Transmitter"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Level_Transmitter
+    (on_board no)
+    (property Reference LT
       (at 0 -10 0)
       (effects
         (font
@@ -2094,12 +2286,23 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Level transmitter, electrical level sensor"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument level transmitter sensor lt"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function LT
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
     (symbol "Level Transmitter_1_1"
       (rectangle private
         (start -8 8)
@@ -2125,11 +2328,6 @@
           (type default))
         (fill
           (type none)))
-      (text LT
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.5000 1.5000))))
       (polyline
         (pts
           (xy 0 -2.5000)
@@ -2142,109 +2340,24 @@
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
-          (effects
-            (font
-              (size 1.2700 1.2700)))))))
-  (symbol "Pressure Gauge"
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_Gauge
-      (at 0 -10 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))))
-    (property Value ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))))
-    (property Footprint ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property Datasheet ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property Description ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (symbol "Pressure Gauge_0_1"
-      (polyline
-        (pts
-          (xy -1 1)
-          (xy 1 -1))
-        (stroke
-          (width 0)
-          (type default))
-        (fill
-          (type none)))
-      (circle
-        (center 0 0)
-        (radius 2)
-        (stroke
-          (width 0)
-          (type default))
-        (fill
-          (type none))))
-    (symbol "Pressure Gauge_1_1"
-      (rectangle private
-        (start -8 8)
-        (end 8 -8)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -5 5)
-        (end 5 -5)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy -0.5000 0.5000)
-          (xy -0.2500 0.7500)
-          (xy -1.2500 1.2500)
-          (xy -0.7500 0.2500)
-          (xy -0.5000 0.5000))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type outline)))
-      (pin passive line
-        (at 0 -5 90)
-        (length 3)
-        (name ""
-          (effects
-            (font
-              (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Pressure Indicator"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_Indicator
+    (on_board no)
+    (property Reference PI
       (at 0 -10 0)
       (effects
         (font
@@ -2266,18 +2379,29 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pressure indicator, local pressure display"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument pressure indicator display pi"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function PI
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
     (symbol "Pressure Indicator_0_1"
       (circle
         (center 0 0)
         (radius 2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -2298,27 +2422,27 @@
           (type dot))
         (fill
           (type none)))
-      (text PI
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.2700 1.2700))))
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Pressure Switch"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_Switch
+    (on_board no)
+    (property Reference PS
       (at 0 -10 0)
       (effects
         (font
@@ -2340,12 +2464,23 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pressure switch, contact that changes state at a set pressure"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument pressure switch ps"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function PS
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
     (symbol "Pressure Switch_1_1"
       (rectangle private
         (start -8 8)
@@ -2371,11 +2506,6 @@
           (type default))
         (fill
           (type none)))
-      (text PS
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.5000 1.5000))))
       (polyline
         (pts
           (xy 0 -2.5000)
@@ -2388,19 +2518,24 @@
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Pressure Transducer"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_Transducer
+    (on_board no)
+    (property Reference PT
       (at 0 -10 0)
       (effects
         (font
@@ -2422,18 +2557,29 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pressure transducer, electrical pressure sensor"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument pressure transducer sensor pt"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function PT
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
     (symbol "Pressure Transducer_0_1"
       (circle
         (center 0 0)
         (radius 2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -2454,27 +2600,27 @@
           (type dot))
         (fill
           (type none)))
-      (text PT
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.2700 1.2700))))
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol RTD
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference RTD
+    (on_board no)
+    (property Reference TE
       (at 0 -10 0)
       (effects
         (font
@@ -2496,12 +2642,23 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Resistance temperature detector, temperature sensor"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument temperature rtd pt100 sensor te"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function TE
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
     (symbol "RTD_1_1"
       (rectangle private
         (start -8 8)
@@ -2527,11 +2684,6 @@
           (type default))
         (fill
           (type none)))
-      (text TE
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.5000 1.5000))))
       (polyline
         (pts
           (xy 0 -2.5000)
@@ -2544,19 +2696,24 @@
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Thermocouple
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Thermocouple
+    (on_board no)
+    (property Reference TE
       (at 0 -10 0)
       (effects
         (font
@@ -2578,18 +2735,29 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Thermocouple, temperature sensor"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property ki_keywords "instrument temperature thermocouple sensor te"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Function TE
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
     (symbol "Thermocouple_0_1"
       (circle
         (center 0 0)
         (radius 2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -2610,27 +2778,27 @@
           (type dot))
         (fill
           (type none)))
-      (text TC
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.2700 1.2700))))
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name PROCESS
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Pump
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pump
+    (on_board no)
+    (property Reference P
       (at 0 -10 0)
       (effects
         (font
@@ -2652,7 +2820,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description Pump
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "pump p"
       (at 0 0 0)
       (effects
         (font
@@ -2663,7 +2837,7 @@
         (center 0 0)
         (radius 2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -2689,7 +2863,7 @@
           (xy 2 0)
           (xy -1.2500 -1.5000))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -2699,7 +2873,7 @@
           (xy -1.2500 1.5000)
           (xy -1.2500 -1.5000))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -2728,32 +2902,37 @@
         (fill
           (type outline)))
       (pin passive line
-        (at -5 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 6)
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 5 0 180)
-        (length 3)
-        (name ""
+        (at 8 0 180)
+        (length 6)
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Pyro Valve NC"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pyro_NC_Valve
+    (on_board no)
+    (property Reference PYV
       (at 0 -10 0)
       (effects
         (font
@@ -2775,7 +2954,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pyrotechnic valve, normally closed"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve pyro pyrotechnic normally closed nc pyv"
       (at 0 0 0)
       (effects
         (font
@@ -2873,30 +3058,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Pyro Valve NO"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pyro_NO_Valve
+    (on_board no)
+    (property Reference PYV
       (at 0 -10 0)
       (effects
         (font
@@ -2918,7 +3108,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pyrotechnic valve, normally open"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve pyro pyrotechnic normally open no pyv"
       (at 0 0 0)
       (effects
         (font
@@ -3016,30 +3212,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Squib
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Squib
+    (on_board no)
+    (property Reference SQB
       (at 0 -10 0)
       (effects
         (font
@@ -3061,7 +3262,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Squib, pyrotechnic initiator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "squib pyrotechnic initiator sqb"
       (at 0 0 0)
       (effects
         (font
@@ -3155,30 +3362,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Quick Disconnect - Both Sealed"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Quick_Disconnect_Sealed
+    (on_board no)
+    (property Reference QD
       (at 0 -10 0)
       (effects
         (font
@@ -3200,7 +3412,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Quick disconnect, both sides seal when uncoupled"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "quick disconnect coupling sealed both qd"
       (at 0 0 0)
       (effects
         (font
@@ -3211,7 +3429,7 @@
         (start -5 2)
         (end 5 -2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3219,7 +3437,7 @@
         (center -3.5000 0)
         (radius 1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3228,7 +3446,7 @@
           (xy -5 0)
           (xy 5 0))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3237,7 +3455,7 @@
           (xy -2 0)
           (xy -4 -2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3246,7 +3464,7 @@
           (xy -2 0)
           (xy -4 2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3255,7 +3473,7 @@
           (xy 0 1)
           (xy 0 -1))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3264,7 +3482,7 @@
           (xy 2 0)
           (xy 4 -2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3273,7 +3491,7 @@
           (xy 2 0)
           (xy 4 2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3281,7 +3499,7 @@
         (center 3.5000 0)
         (radius 1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -3329,30 +3547,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Quick Disconnect - Destination Sealed"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Quick_Disconnect_Destination_Sealed
+    (on_board no)
+    (property Reference QD
       (at 0 -10 0)
       (effects
         (font
@@ -3374,7 +3597,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Quick disconnect, destination side seals when uncoupled"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "quick disconnect coupling sealed destination qd"
       (at 0 0 0)
       (effects
         (font
@@ -3385,7 +3614,7 @@
         (start -5 2)
         (end 5 -2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3394,7 +3623,7 @@
           (xy -5 0)
           (xy 5 0))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3403,7 +3632,7 @@
           (xy -2 0)
           (xy -4 -2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3412,7 +3641,7 @@
           (xy -2 0)
           (xy -4 2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3421,7 +3650,7 @@
           (xy 0 1)
           (xy 0 -1))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3430,7 +3659,7 @@
           (xy 2 0)
           (xy 4 -2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3439,7 +3668,7 @@
           (xy 2 0)
           (xy 4 2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3447,7 +3676,7 @@
         (center 3.5000 0)
         (radius 1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -3495,30 +3724,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Quick Disconnect - No Sealing"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Quick_Disconnect_No_Sealing
+    (on_board no)
+    (property Reference QD
       (at 0 -10 0)
       (effects
         (font
@@ -3540,7 +3774,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Quick disconnect, neither side seals when uncoupled"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "quick disconnect coupling unsealed qd"
       (at 0 0 0)
       (effects
         (font
@@ -3551,7 +3791,7 @@
         (start -5 2)
         (end 5 -2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3560,7 +3800,7 @@
           (xy -5 0)
           (xy 5 0))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3569,7 +3809,7 @@
           (xy -2 0)
           (xy -4 -2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3578,7 +3818,7 @@
           (xy -2 0)
           (xy -4 2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3587,7 +3827,7 @@
           (xy 0 1)
           (xy 0 -1))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3596,7 +3836,7 @@
           (xy 2 0)
           (xy 4 -2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3605,7 +3845,7 @@
           (xy 2 0)
           (xy 4 2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -3653,30 +3893,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Quick Disconnect - Source Sealed"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Quick_Disconnect_Source_Sealed
+    (on_board no)
+    (property Reference QD
       (at 0 -10 0)
       (effects
         (font
@@ -3698,7 +3943,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Quick disconnect, source side seals when uncoupled"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "quick disconnect coupling sealed source qd"
       (at 0 0 0)
       (effects
         (font
@@ -3709,7 +3960,7 @@
         (start -5 2)
         (end 5 -2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3717,7 +3968,7 @@
         (center -3.5000 0)
         (radius 1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3726,7 +3977,7 @@
           (xy -5 0)
           (xy 5 0))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3735,7 +3986,7 @@
           (xy -2 0)
           (xy -4 -2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3744,7 +3995,7 @@
           (xy -2 0)
           (xy -4 2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3753,7 +4004,7 @@
           (xy 0 1)
           (xy 0 -1))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3762,7 +4013,7 @@
           (xy 2 0)
           (xy 4 -2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3771,7 +4022,7 @@
           (xy 2 0)
           (xy 4 2))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -3819,30 +4070,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Back Pressure Regulator"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Back_Pressure_Regulator
+    (on_board no)
+    (property Reference BPR
       (at 0 -10 0)
       (effects
         (font
@@ -3864,7 +4120,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Back pressure regulator, holds a steady upstream pressure"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "regulator back pressure upstream bpr"
       (at 0 0 0)
       (effects
         (font
@@ -3876,7 +4138,7 @@
           (xy -5.0800 -3.8100)
           (xy -5.0800 -3.8100))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3885,7 +4147,7 @@
           (xy -5.0800 -3.8100)
           (xy -5.0800 -3.8100))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3894,7 +4156,7 @@
           (xy -4 -3)
           (xy 3 -3))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -3903,7 +4165,7 @@
           (xy 0 5.7500)
           (xy 0 5.7500))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -4033,30 +4295,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Pressure Regulator"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_Regulator
+    (on_board no)
+    (property Reference PCV
       (at 0 -10 0)
       (effects
         (font
@@ -4078,7 +4345,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pressure regulator, holds a steady downstream pressure"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "regulator pressure control downstream pcv"
       (at 0 0 0)
       (effects
         (font
@@ -4090,7 +4363,7 @@
           (xy -5.0800 -3.8100)
           (xy -5.0800 -3.8100))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -4099,7 +4372,7 @@
           (xy -5.0800 -3.8100)
           (xy -5.0800 -3.8100))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -4108,7 +4381,7 @@
           (xy -4 -3)
           (xy 3 -3))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -4117,7 +4390,7 @@
           (xy 0 5.7500)
           (xy 0 5.7500))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -4247,30 +4520,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Cavitating Venturi"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Cavitating_Venturi
+    (on_board no)
+    (property Reference CAV
       (at 0 -10 0)
       (effects
         (font
@@ -4292,7 +4570,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Cavitating venturi, holds a fixed flow rate"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "cavitating venturi flow restriction cav"
       (at 0 0 0)
       (effects
         (font
@@ -4364,30 +4648,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Restriction Orifice"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Restriction_Orifice
+    (on_board no)
+    (property Reference RO
       (at 0 -10 0)
       (effects
         (font
@@ -4409,7 +4698,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Restriction orifice, fixed flow restriction"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "restriction orifice ro"
       (at 0 0 0)
       (effects
         (font
@@ -4486,30 +4781,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - 3 Way Ball"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference "3_Way_Ball_Valve"
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -4531,7 +4831,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Three-way ball valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve three way 3 ball v"
       (at 0 0 0)
       (effects
         (font
@@ -4591,7 +4897,7 @@
         (center 0 0)
         (radius 1.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -4622,41 +4928,46 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name BRANCH
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "3"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - 3 Way Globe"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference "3_Way_Ball_Valve"
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -4678,7 +4989,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Three-way globe valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve three way 3 globe v"
       (at 0 0 0)
       (effects
         (font
@@ -4738,7 +5055,7 @@
         (center 0 0)
         (radius 0.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -4769,41 +5086,46 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name BRANCH
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "3"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - 3 Way"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference "3_Way_Valve"
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -4825,7 +5147,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Three-way valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve three way 3 tee v"
       (at 0 0 0)
       (effects
         (font
@@ -4908,41 +5236,46 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name BRANCH
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "3"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - 4 Way"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference "4_Way_Valve"
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -4964,7 +5297,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Four-way valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve four way 4 cross v"
       (at 0 0 0)
       (effects
         (font
@@ -5058,52 +5397,57 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -8 90)
         (length 3)
-        (name ""
+        (name "BRANCH2"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "4"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name BRANCH
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "3"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Angle Ball"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Angle_Ball_Valve
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -5125,7 +5469,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Angle ball valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve angle right-angle ball v"
       (at 0 0 0)
       (effects
         (font
@@ -5174,7 +5524,7 @@
         (center 0 0)
         (radius 1.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -5192,11 +5542,11 @@
           (type outline)))
       (polyline
         (pts
-          (xy 6 0)
-          (xy 6 0.2500)
-          (xy 7 0)
-          (xy 6 -0.2500)
-          (xy 6 0))
+          (xy 0 6)
+          (xy 0.2500 6)
+          (xy 0 7)
+          (xy -0.2500 6)
+          (xy 0 6))
         (stroke
           (width 0.1000)
           (type default))
@@ -5205,30 +5555,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Angle Globe"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Angle_Globe_Valve
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -5250,7 +5605,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Angle globe valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve angle right-angle globe v"
       (at 0 0 0)
       (effects
         (font
@@ -5299,7 +5660,7 @@
         (center 0 0)
         (radius 0.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -5317,11 +5678,11 @@
           (type outline)))
       (polyline
         (pts
-          (xy 6 0)
-          (xy 6 0.2500)
-          (xy 7 0)
-          (xy 6 -0.2500)
-          (xy 6 0))
+          (xy 0 6)
+          (xy 0.2500 6)
+          (xy 0 7)
+          (xy -0.2500 6)
+          (xy 0 6))
         (stroke
           (width 0.1000)
           (type default))
@@ -5330,30 +5691,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Ball Hydraulic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Ball_Hydraulic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -5375,7 +5741,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Ball valve, hydraulically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve ball hydraulic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -5477,30 +5849,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Ball Manual"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Ball_Manual_Valve
+    (on_board no)
+    (property Reference HV
       (at 0 -10 0)
       (effects
         (font
@@ -5522,7 +5899,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Ball valve, manually operated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve ball manual hand hv"
       (at 0 0 0)
       (effects
         (font
@@ -5620,30 +6003,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Ball Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Ball_Pneumatic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -5665,7 +6053,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Ball valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve ball pneumatic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -5781,30 +6175,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Ball Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Ball_Servo_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -5826,7 +6225,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Ball valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve ball servo actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -5896,7 +6301,7 @@
           (type default))
         (fill
           (type none)))
-      (text S
+      (text M
         (at 0 4 0)
         (effects
           (font
@@ -5928,30 +6333,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Ball"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Ball_Valve
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -5973,7 +6383,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Ball valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve ball unactuated v"
       (at 0 0 0)
       (effects
         (font
@@ -6053,30 +6469,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Butterfly Hydraulic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Butterfly_Hydraulic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -6098,7 +6519,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Butterfly valve, hydraulically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve butterfly hydraulic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -6161,7 +6588,7 @@
         (center 0 0)
         (radius 0.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -6214,30 +6641,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Butterfly Manual"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Butterfly_Manual_Valve
+    (on_board no)
+    (property Reference HV
       (at 0 -10 0)
       (effects
         (font
@@ -6259,7 +6691,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Butterfly valve, manually operated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve butterfly manual hand hv"
       (at 0 0 0)
       (effects
         (font
@@ -6322,7 +6760,7 @@
         (center 0 0)
         (radius 0.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -6371,30 +6809,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Butterfly Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Butterfly_Pneumatic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -6416,7 +6859,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Butterfly valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve butterfly pneumatic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -6479,7 +6928,7 @@
         (center 0 0)
         (radius 0.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -6546,30 +6995,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Butterfly Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Butterfly_Servo_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -6591,7 +7045,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Butterfly valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve butterfly servo actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -6654,7 +7114,7 @@
         (center 0 0)
         (radius 0.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -6675,7 +7135,7 @@
           (type default))
         (fill
           (type none)))
-      (text S
+      (text M
         (at 0 4 0)
         (effects
           (font
@@ -6707,30 +7167,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Butterfly"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Butterfly_Valve
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -6752,7 +7217,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Butterfly valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve butterfly unactuated v"
       (at 0 0 0)
       (effects
         (font
@@ -6815,7 +7286,7 @@
         (center 0 0)
         (radius 0.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -6846,30 +7317,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Check"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Check_Valve
+    (on_board no)
+    (property Reference CV
       (at 0 -10 0)
       (effects
         (font
@@ -6891,7 +7367,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Check valve, permits flow in one direction only"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve check non-return one-way cv"
       (at 0 0 0)
       (effects
         (font
@@ -6957,7 +7439,7 @@
           (xy 4 1.2500)
           (xy 4.5000 1.7500))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -6988,30 +7470,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Diaphragm Hydraulic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Diaphragm_Hydraulic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -7033,7 +7520,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Diaphragm valve, hydraulically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve diaphragm hydraulic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -7136,30 +7629,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Diaphragm Manual"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Diaphragm_Manual_Valve
+    (on_board no)
+    (property Reference HV
       (at 0 -10 0)
       (effects
         (font
@@ -7181,7 +7679,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Diaphragm valve, manually operated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve diaphragm manual hand hv"
       (at 0 0 0)
       (effects
         (font
@@ -7280,30 +7784,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Diaphragm Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Diaphragm_Pneumatic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -7325,7 +7834,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Diaphragm valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve diaphragm pneumatic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -7442,30 +7957,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Diaphragm Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Diaphragm_Servo_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -7487,7 +8007,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Diaphragm valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve diaphragm servo actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -7558,7 +8084,7 @@
           (type default))
         (fill
           (type none)))
-      (text S
+      (text M
         (at 0 4 0)
         (effects
           (font
@@ -7590,30 +8116,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Diaphragm"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Diaphragm_Valve
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -7635,7 +8166,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Diaphragm valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve diaphragm unactuated v"
       (at 0 0 0)
       (effects
         (font
@@ -7716,30 +8253,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Gate Hydraulic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Gate_Hydraulic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -7761,7 +8303,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Gate valve, hydraulically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve gate hydraulic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -7863,30 +8411,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Gate Manual"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Gate_Manual_Valve
+    (on_board no)
+    (property Reference HV
       (at 0 -10 0)
       (effects
         (font
@@ -7908,7 +8461,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Gate valve, manually operated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve gate manual hand hv"
       (at 0 0 0)
       (effects
         (font
@@ -8006,30 +8565,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Gate Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Gate_Pneumatic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -8051,7 +8615,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Gate valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve gate pneumatic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -8167,30 +8737,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Gate Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Gate_Servo_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -8212,7 +8787,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Gate valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve gate servo actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -8282,7 +8863,7 @@
           (type default))
         (fill
           (type none)))
-      (text S
+      (text M
         (at 0 4 0)
         (effects
           (font
@@ -8314,30 +8895,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Gate"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Gate_Valve
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -8359,7 +8945,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Gate valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve gate unactuated v"
       (at 0 0 0)
       (effects
         (font
@@ -8439,30 +9031,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Globe Hydraulic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Globe_Hydraulic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -8484,7 +9081,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Globe valve, hydraulically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve globe hydraulic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -8575,33 +9178,46 @@
           (type default))
         (fill
           (type outline)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Globe Manual"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Globe_Manual_Valve
+    (on_board no)
+    (property Reference HV
       (at 0 -10 0)
       (effects
         (font
@@ -8623,7 +9239,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Globe valve, manually operated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve globe manual hand hv"
       (at 0 0 0)
       (effects
         (font
@@ -8710,33 +9332,46 @@
           (type default))
         (fill
           (type outline)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Globe Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Globe_Pneumatic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -8758,7 +9393,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Globe valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve globe pneumatic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -8863,33 +9504,46 @@
           (type default))
         (fill
           (type outline)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Globe Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Globe_Servo_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -8911,7 +9565,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Globe valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve globe servo actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -8973,7 +9633,7 @@
           (type default))
         (fill
           (type none)))
-      (text S
+      (text M
         (at 0 4 0)
         (effects
           (font
@@ -9002,33 +9662,46 @@
           (type default))
         (fill
           (type outline)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Globe"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Globe_Valve
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -9050,7 +9723,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Globe valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve globe unactuated v"
       (at 0 0 0)
       (effects
         (font
@@ -9119,33 +9798,46 @@
           (type default))
         (fill
           (type outline)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Needle Hydraulic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Needle_Hydraulic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -9167,7 +9859,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Needle valve, hydraulically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve needle hydraulic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -9258,30 +9956,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Needle Manual"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Needle_Manual_Valve
+    (on_board no)
+    (property Reference HV
       (at 0 -10 0)
       (effects
         (font
@@ -9303,7 +10006,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Needle valve, manually operated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve needle manual hand hv"
       (at 0 0 0)
       (effects
         (font
@@ -9390,30 +10099,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Needle Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Needle_Pneumatic_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -9435,7 +10149,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Needle valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve needle pneumatic actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -9540,30 +10260,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Needle Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Needle_Servo_Valve
+    (on_board no)
+    (property Reference XV
       (at 0 -10 0)
       (effects
         (font
@@ -9585,7 +10310,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Needle valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve needle servo actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -9668,7 +10399,7 @@
           (type default))
         (fill
           (type none)))
-      (text S
+      (text M
         (at 0 4 0)
         (effects
           (font
@@ -9676,30 +10407,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Needle"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Needle_Valve
+    (on_board no)
+    (property Reference V
       (at 0 -10 0)
       (effects
         (font
@@ -9721,7 +10457,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Needle valve, no actuator"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve needle unactuated v"
       (at 0 0 0)
       (effects
         (font
@@ -9790,30 +10532,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Pressure Relief"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_Relief_Valve
+    (on_board no)
+    (property Reference PRV
       (at 0 -10 0)
       (effects
         (font
@@ -9835,7 +10582,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pressure relief valve, vents through its side port above set pressure"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve pressure relief safety prv"
       (at 0 0 0)
       (effects
         (font
@@ -9920,30 +10673,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
-      (pin open_emitter line
+      (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name VENT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Valve - Pressure and Vacuum Relief"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_and_Vacuum_Relief_Valve
+    (on_board no)
+    (property Reference PVRV
       (at 0 -10 0)
       (effects
         (font
@@ -9965,7 +10723,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Pressure and vacuum relief valve, protects against over and under pressure"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "valve pressure vacuum relief safety pvrv"
       (at 0 0 0)
       (effects
         (font
@@ -10071,41 +10835,46 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
-      (pin open_emitter line
+      (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name VENT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "3"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Vent - Covered"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Vent
+    (on_board no)
+    (property Reference VENT
       (at 0 -10 0)
       (effects
         (font
@@ -10127,7 +10896,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Vent to atmosphere, covered"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "vent atmosphere covered"
       (at 0 0 0)
       (effects
         (font
@@ -10161,22 +10936,27 @@
           (type default))
         (fill
           (type outline)))
-      (pin output clock
+      (pin passive clock
         (at 0 0 0)
         (length 3)
-        (name ""
+        (name PORT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Vent - Uncovered"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Vent
+    (on_board no)
+    (property Reference VENT
       (at 0 -10 0)
       (effects
         (font
@@ -10198,7 +10978,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Vent to atmosphere, uncovered"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "vent atmosphere uncovered open"
       (at 0 0 0)
       (effects
         (font
@@ -10235,19 +11021,24 @@
       (pin passive line
         (at 0 0 0)
         (length 3)
-        (name ""
+        (name PORT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Bottle - Dip Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Dip_Tube_Bottle
+    (on_board no)
+    (property Reference CYL
       (at 0 -10 0)
       (effects
         (font
@@ -10269,7 +11060,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Gas bottle with a dip tube"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle cylinder dip tube liquid vessel cyl"
       (at 0 0 0)
       (effects
         (font
@@ -10281,7 +11078,7 @@
           (xy -4 28)
           (xy -4 -6))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10291,7 +11088,7 @@
           (xy 4 -6)
           (xy 4 28))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10300,7 +11097,7 @@
         (mid 0 32)
         (end -4 28)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10309,7 +11106,7 @@
           (xy 0 32)
           (xy 0 -5))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -10353,26 +11150,31 @@
           (xy -1 35)
           (xy -1 32))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
       (pin passive line
         (at 0 38 270)
         (length 3)
-        (name ""
+        (name PORT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Bottle - Large"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Bottle_L
+    (on_board no)
+    (property Reference CYL
       (at 0 -12 0)
       (effects
         (font
@@ -10394,7 +11196,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Large gas bottle"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle cylinder large gas cyl"
       (at 0 0 0)
       (effects
         (font
@@ -10406,7 +11214,7 @@
           (xy -5 42)
           (xy -5 -8))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10416,7 +11224,7 @@
           (xy 5 -8)
           (xy 5 42))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10425,7 +11233,7 @@
         (mid 0 47)
         (end -5 42)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -10469,26 +11277,31 @@
           (xy -1.2000 51)
           (xy -1.2000 47))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
       (pin passive line
         (at 0 54 270)
         (length 3)
-        (name ""
+        (name PORT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Bottle - Small"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Bottle_S
+    (on_board no)
+    (property Reference CYL
       (at 0 -8 0)
       (effects
         (font
@@ -10510,7 +11323,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Small gas bottle"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle cylinder small gas cyl"
       (at 0 0 0)
       (effects
         (font
@@ -10522,7 +11341,7 @@
           (xy -3 20)
           (xy -3 -5))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10532,7 +11351,7 @@
           (xy 3 -5)
           (xy 3 20))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10541,7 +11360,7 @@
         (mid 0 23)
         (end -3 20)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -10577,26 +11396,31 @@
           (xy -0.7500 26)
           (xy -0.7500 23))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
       (pin passive line
         (at 0 29 270)
         (length 3)
-        (name ""
+        (name PORT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Bottle
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Bottle
+    (on_board no)
+    (property Reference CYL
       (at 0 -10 0)
       (effects
         (font
@@ -10618,7 +11442,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Gas bottle"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle cylinder gas vessel cyl"
       (at 0 0 0)
       (effects
         (font
@@ -10630,7 +11460,7 @@
           (xy -4 28)
           (xy -4 -6))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10640,7 +11470,7 @@
           (xy 4 -6)
           (xy 4 28))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10649,7 +11479,7 @@
         (mid 0 32)
         (end -4 28)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -10693,26 +11523,31 @@
           (xy -1 35)
           (xy -1 32))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
       (pin passive line
         (at 0 38 270)
         (length 3)
-        (name ""
+        (name PORT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Sample Cylinder - Large"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference SC_L
+    (on_board no)
+    (property Reference CYL
       (at 0 -6 0)
       (effects
         (font
@@ -10734,7 +11569,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Large sample cylinder, inline"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder large vessel inline cyl"
       (at 0 0 0)
       (effects
         (font
@@ -10745,7 +11586,7 @@
         (start -3 2)
         (end 3 -2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10754,7 +11595,7 @@
         (mid -5 0)
         (end -3 2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10763,7 +11604,7 @@
         (mid 5 0)
         (end 3 -2)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -10787,30 +11628,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Sample Cylinder - Small"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference SC_S
+    (on_board no)
+    (property Reference CYL
       (at 0 -3 0)
       (effects
         (font
@@ -10832,7 +11678,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Small sample cylinder, inline"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder small vessel inline cyl"
       (at 0 0 0)
       (effects
         (font
@@ -10843,7 +11695,7 @@
         (start -1.5000 1)
         (end 1.5000 -1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10852,7 +11704,7 @@
         (mid -2.5000 0)
         (end -1.5000 1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10861,7 +11713,7 @@
         (mid 2.5000 0)
         (end 1.5000 -1)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -10875,32 +11727,37 @@
         (fill
           (type none)))
       (pin passive line
-        (at -5.5000 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 5.5000)
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 5.5000 0 180)
-        (length 3)
-        (name ""
+        (at 8 0 180)
+        (length 5.5000)
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Sample Cylinder"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference SC
+    (on_board no)
+    (property Reference CYL
       (at 0 -5 0)
       (effects
         (font
@@ -10922,7 +11779,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Sample cylinder, inline"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder vessel inline cyl"
       (at 0 0 0)
       (effects
         (font
@@ -10933,7 +11796,7 @@
         (start -2 1.5000)
         (end 2 -1.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10942,7 +11805,7 @@
         (mid -3.5000 0)
         (end -2 1.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none)))
@@ -10951,7 +11814,7 @@
         (mid 3.5000 0)
         (end 2 -1.5000)
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type none))))
@@ -10973,32 +11836,37 @@
         (fill
           (type none)))
       (pin passive line
-        (at -6.5000 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 4.5000)
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 6.5000 0 180)
-        (length 3)
-        (name ""
+        (at 8 0 180)
+        (length 4.5000)
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Tank - Horizontal"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Tank_H
+    (on_board no)
+    (property Reference TK
       (at 0 -7 0)
       (effects
         (font
@@ -11020,7 +11888,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Horizontal tank"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel horizontal tk"
       (at 0 0 0)
       (effects
         (font
@@ -11072,30 +11946,35 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Tank - Large"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Tank_L
+    (on_board no)
+    (property Reference TK
       (at 0 -20 0)
       (effects
         (font
@@ -11117,7 +11996,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Large vertical tank"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel large vertical tk"
       (at 0 0 0)
       (effects
         (font
@@ -11167,32 +12052,37 @@
         (fill
           (type none)))
       (pin passive line
-        (at 0 15.5000 270)
-        (length 3)
-        (name ""
+        (at 0 16 270)
+        (length 3.5000)
+        (name TOP
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 0 -15.5000 90)
-        (length 3)
-        (name ""
+        (at 0 -16 90)
+        (length 3.5000)
+        (name BOTTOM
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Tank - Small"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Tank_S
+    (on_board no)
+    (property Reference TK
       (at 0 -8 0)
       (effects
         (font
@@ -11214,7 +12104,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Small vertical tank"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel small vertical tk"
       (at 0 0 0)
       (effects
         (font
@@ -11264,32 +12160,37 @@
         (fill
           (type none)))
       (pin passive line
-        (at 0 4.7500 270)
-        (length 3)
-        (name ""
+        (at 0 5 270)
+        (length 3.2500)
+        (name TOP
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 0 -4.7500 90)
-        (length 3)
-        (name ""
+        (at 0 -5 90)
+        (length 3.2500)
+        (name BOTTOM
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol "Tank - Sphere"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Tank_Sph
+    (on_board no)
+    (property Reference TK
       (at 0 -10 0)
       (effects
         (font
@@ -11311,7 +12212,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Spherical tank"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel sphere spherical tk"
       (at 0 0 0)
       (effects
         (font
@@ -11345,30 +12252,35 @@
       (pin passive line
         (at 0 6 270)
         (length 3)
-        (name ""
+        (name TOP
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -6 90)
         (length 3)
-        (name ""
+        (name BOTTOM
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
   (symbol Tank
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Tank
+    (on_board no)
+    (property Reference TK
       (at 0 -10 0)
       (effects
         (font
@@ -11390,7 +12302,13 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property Description "Vertical tank"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel vertical tk"
       (at 0 0 0)
       (effects
         (font
@@ -11442,22 +12360,22 @@
       (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name TOP
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -8 90)
         (length 3)
-        (name ""
+        (name BOTTOM
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700))))))))

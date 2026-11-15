@@ -4,32 +4,43 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol "Valve - Check"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Check_Valve
+    (on_board no)
+    (property "Reference" "CV"
       (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Check valve, permits flow in one direction only"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve check non-return one-way cv"
       (at 0 0 0)
       (effects
         (font
@@ -95,10 +106,11 @@
           (xy 4 1.2500)
           (xy 4.5000 1.7500))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
-          (type outline)))      (polyline
+          (type outline)))
+      (polyline
         (pts
           (xy -6 0)
           (xy -6 0.2500)
@@ -122,26 +134,25 @@
           (type default))
         (fill
           (type outline)))
-
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name "IN"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name "OUT"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700))))))))

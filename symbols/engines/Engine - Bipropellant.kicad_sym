@@ -4,32 +4,43 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol "Engine - Bipropellant"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Engine_Bipropellant
+    (on_board no)
+    (property "Reference" "ENG"
       (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Bipropellant rocket engine"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "engine rocket bipropellant thruster eng"
       (at 0 0 0)
       (effects
         (font
@@ -84,7 +95,7 @@
           (xy -2.2500 13)
           (xy -2 12))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -106,7 +117,7 @@
           (xy 1.7500 13)
           (xy 2 12))
         (stroke
-          (width 0)
+          (width 0.1000)
           (type default))
         (fill
           (type outline)))
@@ -125,22 +136,22 @@
       (pin passive line
         (at -2 15 270)
         (length 3)
-        (name ""
+        (name "IN1"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 2 15 270)
         (length 3)
-        (name ""
+        (name "IN2"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700))))))))

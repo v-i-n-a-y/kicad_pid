@@ -4,32 +4,43 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol "Burst Disk - Vacuum"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Vacuum_Burst_Disk
+    (on_board no)
+    (property "Reference" "BD"
       (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Burst disk, ruptures under a set vacuum"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "burst disk rupture bursting vacuum bd"
       (at 0 0 0)
       (effects
         (font
@@ -109,13 +120,13 @@
         (fill
           (type outline)))
       (pin passive line
-        (at -5 0 0)
-        (length 3)
-        (name ""
+        (at -8 0 0)
+        (length 6)
+        (name "PORT"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700))))))))

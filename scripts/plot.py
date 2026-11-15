@@ -2,12 +2,26 @@
 # Copyright 2026 Vinay Williams
 
 import os
+import re
 import sys
 
 from utils import file_changed
 
 
+def _remove_previous(symbol_path, outdir):
+    """Drop earlier exports of this symbol so a changed unit count cannot
+    leave orphaned <Name>.svg or <Name>_unitN.svg files behind."""
+    base = os.path.splitext(os.path.basename(symbol_path))[0]
+    for f in os.listdir(outdir):
+        stem, ext = os.path.splitext(f)
+        if ext == ".svg" and (
+            stem == base or re.fullmatch(re.escape(base) + r"_unit\d+", stem)
+        ):
+            os.remove(os.path.join(outdir, f))
+
+
 def export_symbol(symbol, outdir):
+    _remove_previous(symbol, outdir)
     command = f"kicad-cli sym export svg '{symbol}' --output '{outdir}'"
     exit_code = os.system(command)
 
@@ -34,17 +48,18 @@ def _strip_unit_suffix(symbol_path, outdir):
         os.replace(src, dst)
 
 
-def export(symboldir, output_dir):
+def export(symboldir, output_dir, export_all=False):
     """
     Export library symbols as SVGs, mirroring symboldir's subdir structure
-    under output_dir.
+    under output_dir. Only symbols with uncommitted git changes are exported
+    unless export_all is set.
     """
 
     jobs = []
     for root, _, files in os.walk(symboldir):
-        for f in files:
+        for f in sorted(files):
             sym_path = os.path.join(root, f)
-            if f.endswith(".kicad_sym") and file_changed(sym_path):
+            if f.endswith(".kicad_sym") and (export_all or file_changed(sym_path)):
                 rel = os.path.relpath(root, symboldir)
                 out_dir = output_dir if rel == "." else os.path.join(output_dir, rel)
                 os.makedirs(out_dir, exist_ok=True)
@@ -59,6 +74,45 @@ def export(symboldir, output_dir):
 
     print(f"All changed symbols in {symboldir} exported to {output_dir}")
     return True
+
+
+_UNIT_SUFFIX = re.compile(r"^(.*)_unit\d+$")
+
+
+def _has_source(svg_name, src_dir):
+    """True if svg_name (<Name>.svg or <Name>_unitN.svg) still has a
+    <Name>.kicad_sym in src_dir."""
+    stem = os.path.splitext(svg_name)[0]
+    candidates = [stem]
+    m = _UNIT_SUFFIX.match(stem)
+    if m:
+        candidates.append(m.group(1))
+    return any(
+        os.path.isfile(os.path.join(src_dir, c + ".kicad_sym")) for c in candidates
+    )
+
+
+def remove_stale(symboldir, output_dir):
+    """
+    Delete every SVG under output_dir whose source .kicad_sym no longer exists
+    in the matching subdirectory of symboldir, then delete category
+    directories left empty (output_dir itself is kept). Returns the number of
+    SVGs removed.
+    """
+
+    removed = 0
+    for root, dirs, files in os.walk(output_dir, topdown=False):
+        rel = os.path.relpath(root, output_dir)
+        src_dir = symboldir if rel == "." else os.path.join(symboldir, rel)
+        for f in files:
+            if f.endswith(".svg") and not _has_source(f, src_dir):
+                os.remove(os.path.join(root, f))
+                print(f"Removed stale {os.path.join(rel, f) if rel != '.' else f}")
+                removed += 1
+        if rel != "." and not os.listdir(root):
+            os.rmdir(root)
+            print(f"Removed empty directory {rel}")
+    return removed
 
 
 def generate_readme(plots_dir):
@@ -103,21 +157,25 @@ def usage():
     Prints the script's usage
     """
 
-    print("Usage: {} <symbol path> <output directory>".format(sys.argv[0]))
+    print(
+        f"Usage: {sys.argv[0]} [--all] <symbol path> <output directory>\n"
+        "  --all  export every symbol, not only those with git changes"
+    )
     sys.exit(1)
 
 
 if __name__ == "__main__":
     print("Rocketry P&ID KiCAD - Plotting\n")
 
-    if len(sys.argv) != 3:
+    args = sys.argv[1:]
+    export_all = "--all" in args
+    args = [a for a in args if a != "--all"]
+    if len(args) != 2:
         usage()
-    else:
-        symboldir = sys.argv[1]
-        outdir = sys.argv[2]
 
-        print(f"Individual Symbol Path: {symboldir}")
-        print(f"Output Path: {outdir}\n")
+    symboldir, outdir = args
+    print(f"Individual Symbol Path: {symboldir}")
+    print(f"Output Path: {outdir}\n")
 
     if not os.path.isdir(outdir):
         print(f"The output directory '{outdir}' does not exist.", file=sys.stderr)
@@ -127,5 +185,7 @@ if __name__ == "__main__":
         print(f"The symbols directory '{symboldir}' does not exist.", file=sys.stderr)
         sys.exit(1)
 
-    if export(symboldir, outdir):
+    removed = remove_stale(symboldir, outdir)
+    exported = export(symboldir, outdir, export_all)
+    if exported or removed:
         generate_readme(outdir)

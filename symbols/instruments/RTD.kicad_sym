@@ -4,37 +4,53 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol "RTD"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference RTD
+    (on_board no)
+    (property "Reference" "TE"
       (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Resistance temperature detector, temperature sensor"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "ki_keywords" "instrument temperature rtd pt100 sensor te"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "TE"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
     (symbol "RTD_1_1"
       (rectangle private
         (start -8 8)
@@ -60,11 +76,6 @@
           (type default))
         (fill
           (type none)))
-      (text "TE"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.5000 1.5000))))
       (polyline
         (pts
           (xy 0 -2.5000)
@@ -77,11 +88,11 @@
       (pin passive line
         (at 0 -5 90)
         (length 3)
-        (name ""
+        (name "PROCESS"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700))))))))

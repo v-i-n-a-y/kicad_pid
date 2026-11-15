@@ -4,32 +4,43 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol "Valve - Pressure and Vacuum Relief"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Pressure_and_Vacuum_Relief_Valve
+    (on_board no)
+    (property "Reference" "PVRV"
       (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Pressure and vacuum relief valve, protects against over and under pressure"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve pressure vacuum relief safety pvrv"
       (at 0 0 0)
       (effects
         (font
@@ -135,33 +146,33 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name "IN"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
-      (pin open_emitter line
+      (pin passive line
         (at 0 8 270)
         (length 3)
-        (name ""
+        (name "VENT"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "3"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name "OUT"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700))))))))

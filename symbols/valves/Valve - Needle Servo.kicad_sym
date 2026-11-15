@@ -4,32 +4,43 @@
   (generator kicad_symbol_editor)
   (generator_version "8.0")
   (symbol "Valve - Needle Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
     (exclude_from_sim no)
     (in_bom yes)
-    (on_board yes)
-    (property Reference Needle_Servo_Valve
+    (on_board no)
+    (property "Reference" "XV"
       (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
+    (property "Value" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Footprint ""
+    (property "Footprint" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Datasheet ""
+    (property "Datasheet" ""
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description ""
+    (property "Description" "Needle valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve needle servo actuated xv"
       (at 0 0 0)
       (effects
         (font
@@ -112,7 +123,7 @@
           (type default))
         (fill
           (type none)))
-      (text S
+      (text M
         (at 0 4 0)
         (effects
           (font
@@ -120,22 +131,22 @@
       (pin passive line
         (at -8 0 0)
         (length 3)
-        (name ""
+        (name "IN"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
         (length 3)
-        (name ""
+        (name "OUT"
           (effects
             (font
               (size 1.2700 1.2700))))
-        (number ""
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700))))))))

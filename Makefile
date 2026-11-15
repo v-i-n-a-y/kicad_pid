@@ -15,3 +15,9 @@ registry:
 
 precommit:
 	@python3 scripts/precommit.py pid_kicad.kicad_sym symbols/
+
+normalise:
+	@python3 scripts/normalise.py symbols/
+
+lint:
+	@python3 scripts/lint.py symbols/
