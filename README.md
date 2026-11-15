@@ -8,6 +8,10 @@ This repository contains a set of P&ID symbols as KiCAD symbols. The symbol set 
 
 We put together this symbol set to standardise our P&ID diagrams for easier collaborations and coherence.
 
+## Maintenance
+
+Since that original collaboration, the library has been updated and taken forward solely by Vinay Williams (Kingston University Rocket Engineering). Every commit in this repository's history is his. The 2026 revision was carried out by him alone. It added pin numbering, ISA-style reference prefixes, descriptions and keywords, a common connection grid, automated linting, a to-scale symbol registry, and the sized tank, gas cylinder and Swagelok sample cylinder families.
+
 ## Symbols
 
 There is one .kicad_sym file per symbol which is contained in the symbols folder. To use, add the relevant .kicad_sym files to your project library.
