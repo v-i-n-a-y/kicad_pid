@@ -399,41 +399,30 @@ def cover_story(st: dict, symbols: "list[Symbol]", categories: int, rev: tuple) 
             ("LINEABOVE", (0, 0), (-1, 0), 0.4, HAIRLINE),
         ]
     )
-    conventions = [
+    notes = [
+        "All connection points lie on whole millimetres. Use a 1 mm connection grid.",
+        "Two-port inline symbols connect at x = \u00b18 mm.",
         (
-            "Connection points sit on whole millimetres. Set the schematic "
-            "connection grid to 1 mm and wires always land on a pin."
+            "Pins are numbered for flow direction: 1\u00a0IN, 2\u00a0OUT, 3\u00a0BRANCH, "
+            "4\u00a0BRANCH2. Tanks use 1\u00a0TOP and 2\u00a0BOTTOM, single ports 1\u00a0PORT."
         ),
-        (
-            "Inline two-port symbols (valves, pumps, filters and so on) connect "
-            "at x = \u00b18 mm, a 16 mm connection box."
-        ),
-        (
-            "Pins are numbered so that a netlist shows flow direction. Inline "
-            "symbols use 1 IN and 2 OUT, tees and crosses add 3 BRANCH and "
-            "4 BRANCH2, tanks use 1 TOP and 2 BOTTOM and single-port symbols "
-            "use 1 PORT."
-        ),
-        (
-            "Reference prefixes follow ISA 5.1 style. KiCad appends the "
-            "annotation number, so the first ball valve placed is V1."
-        ),
-        "The letters inside an instrument bubble come from an editable Function field.",
+        "Reference prefixes follow ISA 5.1. KiCad appends the loop number (V1, PT3).",
+        "Instrument letters are held in the editable Function field.",
     ]
-    rows = [[Paragraph("Conventions", st["h2"])]]
-    for c in conventions:
-        rows.append([Paragraph(escape(c), st["body"])])
-    panel = Table(rows, colWidths=[CONTENT_W])
+    rows = [[Paragraph("GENERAL NOTES", st["label"]), ""]]
+    for i, n in enumerate(notes, 1):
+        rows.append([Paragraph(f"{i}.", st["body"]), Paragraph(escape(n), st["body"])])
+    panel = Table(rows, colWidths=[8 * mm, CONTENT_W - 8 * mm])
     panel.setStyle(
         [
-            ("LEFTPADDING", (0, 0), (-1, -1), 5 * mm),
-            ("RIGHTPADDING", (0, 0), (-1, -1), 5 * mm),
-            ("TOPPADDING", (0, 0), (-1, -1), 1.4 * mm),
-            ("BOTTOMPADDING", (0, 0), (-1, -1), 1.4 * mm),
-            ("TOPPADDING", (0, 0), (-1, 0), 4 * mm),
-            ("BOTTOMPADDING", (0, -1), (-1, -1), 4 * mm),
-            ("BOX", (0, 0), (-1, -1), 0.4, HAIRLINE),
-            ("LINEBEFORE", (0, 0), (0, -1), 2.2, ACCENT),
+            ("SPAN", (0, 0), (-1, 0)),
+            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+            ("TOPPADDING", (0, 0), (-1, -1), 1.2 * mm),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 1.2 * mm),
+            ("BOTTOMPADDING", (0, 0), (-1, 0), 2.5 * mm),
+            ("LINEBELOW", (0, 0), (-1, 0), 0.4, HAIRLINE),
         ]
     )
     rule = Table([[""]], colWidths=[28 * mm], rowHeights=[1])
