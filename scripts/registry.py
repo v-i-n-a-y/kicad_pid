@@ -1,5 +1,14 @@
 # Copyright 2026 Vinay Williams
 
+"""
+Build the symbol registry, a to-scale PDF reference of every symbol.
+
+Needs kicad-cli on the PATH and the Python packages reportlab, pillow and
+svglib (pip install reportlab pillow svglib).  With svglib the symbol drawings
+are vector.  Without it the build warns and falls back to 400 dpi rasters,
+which also need rsvg-convert on the PATH.
+"""
+
 import io
 import subprocess
 import sys
@@ -7,6 +16,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 from registry_data import Symbol, category_title, export_symbols, prefix_table
+from reportlab.graphics.shapes import Drawing, Group
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_RIGHT
 from reportlab.lib.pagesizes import A4
@@ -241,6 +251,32 @@ def pack_rows(symbols: "list[Symbol]") -> "list[list[tuple]]":
     return rows
 
 
+def symbol_drawing(s: Symbol, w_pt: float, h_pt: float):
+    """
+    Make the flowable that draws one symbol at the registry scale
+
+    Arguments
+
+    s - Symbol
+        Symbol to draw, vector or raster
+    w_pt - float
+        Width on the page in points
+    h_pt - float
+        Height on the page in points
+
+    Returns
+
+    Flowable
+        A new Drawing for a vector symbol, an Image for a raster one
+    """
+    if s.drawing is None:
+        return Image(io.BytesIO(s.png), width=w_pt, height=h_pt)
+    flowable = Drawing(w_pt, h_pt)
+    flowable.add(Group(s.drawing, transform=(SCALE, 0, 0, SCALE, 0, 0)))
+    flowable.hAlign = "CENTER"
+    return flowable
+
+
 def symbol_row(row: "list[tuple]", st: dict, category: str) -> Table:
     """
     Lay out one grid row as a single table that is never split
@@ -268,7 +304,7 @@ def symbol_row(row: "list[tuple]", st: dict, category: str) -> Table:
     for s, span in row:
         width = span * COLUMN_W - 2 * CELL_PAD
         w_pt, h_pt = s.width_mm * mm * SCALE, s.height_mm * mm * SCALE
-        drawings += [Image(io.BytesIO(s.png), width=w_pt, height=h_pt)]
+        drawings += [symbol_drawing(s, w_pt, h_pt)]
         nm = escape(s.name).replace(" - ", " - ")
         names += [Paragraph(nm, st["name"])]
         refs += [

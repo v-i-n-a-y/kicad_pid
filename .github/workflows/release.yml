@@ -1,0 +1,72 @@
+# Copyright 2026 Vinay Williams
+
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Check the tag matches VERSION
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version=$(tr -d '[:space:]' < VERSION)
+          if [ "$TAG" != "v$version" ]; then
+            echo "Tag $TAG does not match VERSION v$version" >&2
+            exit 1
+          fi
+
+      - name: Lint the symbols
+        run: python3 scripts/lint.py symbols/
+
+      - name: Build the packages
+        run: python3 scripts/package.py dist/
+
+      - name: Write the release notes
+        run: |
+          version=$(tr -d '[:space:]' < VERSION)
+          cat > release-notes.md <<NOTES
+          Rocketry P&ID Symbols $version for KiCad 8.0 and later.
+
+          ## Which file to download
+
+          | Your system | Download | How to run |
+          | --- | --- | --- |
+          | Any, no Python needed | kicad_pid-$version.zip | In KiCad, Plugin and Content Manager, Install from File |
+          | Windows | kicad_pid-$version-windows.zip | Unzip, double-click install.bat |
+          | macOS | kicad_pid-$version-macos.zip | Unzip, double-click install.command, or if macOS refuses, type sh then a space in Terminal, drag install.command in and press Enter |
+          | Linux | kicad_pid-$version-linux.tar.gz | Unpack, run ./install.sh |
+
+          The Windows, macOS and Linux downloads need Python 3 and add the library to every KiCad version found. Close KiCad first and restart it afterwards. Each one also holds pid_registry.pdf, a to-scale reference of every symbol.
+
+          ## Installing the KiCad package
+
+          1. Download kicad_pid-$version.zip. Do not unzip it.
+          2. In KiCad, open Plugin and Content Manager from the main window.
+          3. Choose Install from File and pick the zip.
+          4. Open the symbol chooser in the schematic editor and look for the P&ID symbols.
+
+          KiCad prefixes the names of libraries that come from packages (PCM_ by default), so this route normally lists the library as PCM_pid_kicad. The Windows, macOS and Linux downloads name it pid_kicad, so choose one route and stay with it.
+
+          SHA256SUMS.txt lists the checksum of every file.
+          NOTES
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" dist/* \
+            --title "Rocketry P&ID Symbols $TAG" \
+            --notes-file release-notes.md

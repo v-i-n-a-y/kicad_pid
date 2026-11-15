@@ -17,6 +17,7 @@ INLINE_CATEGORIES = {
     "quick-disconnects",
     "pyrotechnics",
     "instruments",
+    "equipment",
 }
 INLINE_X = 8
 

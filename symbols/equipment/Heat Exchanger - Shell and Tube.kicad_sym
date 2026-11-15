@@ -1,0 +1,219 @@
+
+(kicad_symbol_lib
+  (version 20231120)
+  (generator kicad_symbol_editor)
+  (generator_version "8.0")
+  (symbol "Heat Exchanger - Shell and Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "E"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Shell and tube heat exchanger, tube side left and right, shell side top and bottom"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "heat exchanger shell and tube condenser cooler tube bundle e"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Heat Exchanger - Shell and Tube_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -5 4)
+        (end 5 -4)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 4)
+          (xy -3.5 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3.5 4)
+          (xy 3.5 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 -2)
+          (xy 3.5 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 0)
+          (xy 3.5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 2)
+          (xy 3.5 2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -3.5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.25)
+          (xy -5 0)
+          (xy -6 -0.25)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.25)
+          (xy 7 0)
+          (xy 6 -0.25)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -2 6)
+          (xy -1.75 6)
+          (xy -2 5)
+          (xy -2.25 6)
+          (xy -2 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 2 -4)
+          (xy 2.25 -4)
+          (xy 2 -5)
+          (xy 1.75 -4)
+          (xy 2 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at -2 8 270)
+        (length 4)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 2 -8 90)
+        (length 4)
+        (name "BRANCH2"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "4"
+          (effects
+            (font
+              (size 1.2700 1.2700))))))))

@@ -21,3 +21,6 @@ normalise:
 
 lint:
 	@python3 scripts/lint.py symbols/
+
+package:
+	@python3 scripts/package.py dist/

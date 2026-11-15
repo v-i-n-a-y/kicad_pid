@@ -1,5 +1,31 @@
 # P&ID symbol gallery
 
+## annotation
+
+### Interface Boundary
+
+<img src="annotation/Interface%20Boundary.svg" width="500">
+
+### Line Number Tag
+
+<img src="annotation/Line%20Number%20Tag.svg" width="500">
+
+### Line Type Legend
+
+<img src="annotation/Line%20Type%20Legend.svg" width="500">
+
+### Off-Sheet Connector - In
+
+<img src="annotation/Off-Sheet%20Connector%20-%20In.svg" width="500">
+
+### Off-Sheet Connector - Out
+
+<img src="annotation/Off-Sheet%20Connector%20-%20Out.svg" width="500">
+
+### Umbilical
+
+<img src="annotation/Umbilical.svg" width="500">
+
 ## burst-disks
 
 ### Burst Disk - Pressure
@@ -11,6 +37,10 @@
 <img src="burst-disks/Burst%20Disk%20-%20Vacuum.svg" width="500">
 
 ## engines
+
+### Cooling Jacket
+
+<img src="engines/Cooling%20Jacket.svg" width="500">
 
 ### Engine - Bipropellant
 
@@ -24,6 +54,40 @@
 
 <img src="engines/Engine%20-%20Solid.svg" width="500">
 
+### Igniter - Pyrotechnic
+
+<img src="engines/Igniter%20-%20Pyrotechnic.svg" width="500">
+
+### Igniter - Torch
+
+<img src="engines/Igniter%20-%20Torch.svg" width="500">
+
+### Injector
+
+<img src="engines/Injector.svg" width="500">
+
+## equipment
+
+### Flame Arrestor
+
+<img src="equipment/Flame%20Arrestor.svg" width="500">
+
+### Gas Booster
+
+<img src="equipment/Gas%20Booster.svg" width="500">
+
+### Heat Exchanger - Coil
+
+<img src="equipment/Heat%20Exchanger%20-%20Coil.svg" width="500">
+
+### Heat Exchanger - Shell and Tube
+
+<img src="equipment/Heat%20Exchanger%20-%20Shell%20and%20Tube.svg" width="500">
+
+### Vacuum Pump
+
+<img src="equipment/Vacuum%20Pump.svg" width="500">
+
 ## filters
 
 ### Filter - Conical
@@ -35,6 +99,14 @@
 <img src="filters/Filter.svg" width="500">
 
 ## fittings
+
+### Blind Flange
+
+<img src="fittings/Blind%20Flange.svg" width="500">
+
+### Bulkhead
+
+<img src="fittings/Bulkhead.svg" width="500">
 
 ### Cap
 
@@ -48,9 +120,17 @@
 
 <img src="fittings/Elbow.svg" width="500">
 
+### Flange
+
+<img src="fittings/Flange.svg" width="500">
+
 ### Flexible Hose
 
 <img src="fittings/Flexible%20Hose.svg" width="500">
+
+### Plug
+
+<img src="fittings/Plug.svg" width="500">
 
 ### Reducer
 
@@ -60,11 +140,35 @@
 
 <img src="fittings/Tee.svg" width="500">
 
+### Union
+
+<img src="fittings/Union.svg" width="500">
+
 ## instruments
 
 ### Coriolis Flow Meter
 
 <img src="instruments/Coriolis%20Flow%20Meter.svg" width="500">
+
+### Differential Pressure Indicator
+
+<img src="instruments/Differential%20Pressure%20Indicator.svg" width="500">
+
+### Differential Pressure Transmitter
+
+<img src="instruments/Differential%20Pressure%20Transmitter.svg" width="500">
+
+### Flow Element - Orifice Plate
+
+<img src="instruments/Flow%20Element%20-%20Orifice%20Plate.svg" width="500">
+
+### Flow Element - Turbine
+
+<img src="instruments/Flow%20Element%20-%20Turbine.svg" width="500">
+
+### Flow Element - Venturi
+
+<img src="instruments/Flow%20Element%20-%20Venturi.svg" width="500">
 
 ### Flow Indicator
 
@@ -82,6 +186,14 @@
 
 <img src="instruments/Level%20Transmitter.svg" width="500">
 
+### Load Cell
+
+<img src="instruments/Load%20Cell.svg" width="500">
+
+### Oxygen Detector
+
+<img src="instruments/Oxygen%20Detector.svg" width="500">
+
 ### Pressure Indicator
 
 <img src="instruments/Pressure%20Indicator.svg" width="500">
@@ -97,6 +209,18 @@
 ### RTD
 
 <img src="instruments/RTD.svg" width="500">
+
+### Temperature Indicator
+
+<img src="instruments/Temperature%20Indicator.svg" width="500">
+
+### Temperature Switch
+
+<img src="instruments/Temperature%20Switch.svg" width="500">
+
+### Temperature Transmitter
+
+<img src="instruments/Temperature%20Transmitter.svg" width="500">
 
 ### Thermocouple
 
@@ -162,9 +286,33 @@
 
 ## valves
 
+### Valve - 3 Way Ball Pneumatic
+
+<img src="valves/Valve%20-%203%20Way%20Ball%20Pneumatic.svg" width="500">
+
+### Valve - 3 Way Ball Servo
+
+<img src="valves/Valve%20-%203%20Way%20Ball%20Servo.svg" width="500">
+
+### Valve - 3 Way Ball Solenoid
+
+<img src="valves/Valve%20-%203%20Way%20Ball%20Solenoid.svg" width="500">
+
 ### Valve - 3 Way Ball
 
 <img src="valves/Valve%20-%203%20Way%20Ball.svg" width="500">
+
+### Valve - 3 Way Globe Pneumatic
+
+<img src="valves/Valve%20-%203%20Way%20Globe%20Pneumatic.svg" width="500">
+
+### Valve - 3 Way Globe Servo
+
+<img src="valves/Valve%20-%203%20Way%20Globe%20Servo.svg" width="500">
+
+### Valve - 3 Way Globe Solenoid
+
+<img src="valves/Valve%20-%203%20Way%20Globe%20Solenoid.svg" width="500">
 
 ### Valve - 3 Way Globe
 
@@ -178,9 +326,33 @@
 
 <img src="valves/Valve%20-%204%20Way.svg" width="500">
 
+### Valve - Angle Ball Pneumatic
+
+<img src="valves/Valve%20-%20Angle%20Ball%20Pneumatic.svg" width="500">
+
+### Valve - Angle Ball Servo
+
+<img src="valves/Valve%20-%20Angle%20Ball%20Servo.svg" width="500">
+
+### Valve - Angle Ball Solenoid
+
+<img src="valves/Valve%20-%20Angle%20Ball%20Solenoid.svg" width="500">
+
 ### Valve - Angle Ball
 
 <img src="valves/Valve%20-%20Angle%20Ball.svg" width="500">
+
+### Valve - Angle Globe Pneumatic
+
+<img src="valves/Valve%20-%20Angle%20Globe%20Pneumatic.svg" width="500">
+
+### Valve - Angle Globe Servo
+
+<img src="valves/Valve%20-%20Angle%20Globe%20Servo.svg" width="500">
+
+### Valve - Angle Globe Solenoid
+
+<img src="valves/Valve%20-%20Angle%20Globe%20Solenoid.svg" width="500">
 
 ### Valve - Angle Globe
 
@@ -202,6 +374,10 @@
 
 <img src="valves/Valve%20-%20Ball%20Servo.svg" width="500">
 
+### Valve - Ball Solenoid
+
+<img src="valves/Valve%20-%20Ball%20Solenoid.svg" width="500">
+
 ### Valve - Ball
 
 <img src="valves/Valve%20-%20Ball.svg" width="500">
@@ -221,6 +397,10 @@
 ### Valve - Butterfly Servo
 
 <img src="valves/Valve%20-%20Butterfly%20Servo.svg" width="500">
+
+### Valve - Butterfly Solenoid
+
+<img src="valves/Valve%20-%20Butterfly%20Solenoid.svg" width="500">
 
 ### Valve - Butterfly
 
@@ -246,6 +426,10 @@
 
 <img src="valves/Valve%20-%20Diaphragm%20Servo.svg" width="500">
 
+### Valve - Diaphragm Solenoid
+
+<img src="valves/Valve%20-%20Diaphragm%20Solenoid.svg" width="500">
+
 ### Valve - Diaphragm
 
 <img src="valves/Valve%20-%20Diaphragm.svg" width="500">
@@ -265,6 +449,10 @@
 ### Valve - Gate Servo
 
 <img src="valves/Valve%20-%20Gate%20Servo.svg" width="500">
+
+### Valve - Gate Solenoid
+
+<img src="valves/Valve%20-%20Gate%20Solenoid.svg" width="500">
 
 ### Valve - Gate
 
@@ -286,6 +474,10 @@
 
 <img src="valves/Valve%20-%20Globe%20Servo.svg" width="500">
 
+### Valve - Globe Solenoid
+
+<img src="valves/Valve%20-%20Globe%20Solenoid.svg" width="500">
+
 ### Valve - Globe
 
 <img src="valves/Valve%20-%20Globe.svg" width="500">
@@ -305,6 +497,10 @@
 ### Valve - Needle Servo
 
 <img src="valves/Valve%20-%20Needle%20Servo.svg" width="500">
+
+### Valve - Needle Solenoid
+
+<img src="valves/Valve%20-%20Needle%20Solenoid.svg" width="500">
 
 ### Valve - Needle
 
@@ -361,6 +557,14 @@
 ### Bottle - 50 L
 
 <img src="vessels/Bottle%20-%2050%20L.svg" width="500">
+
+### COPV
+
+<img src="vessels/COPV.svg" width="500">
+
+### Dewar
+
+<img src="vessels/Dewar.svg" width="500">
 
 ### Sample Cylinder - Large - Outage Tube
 

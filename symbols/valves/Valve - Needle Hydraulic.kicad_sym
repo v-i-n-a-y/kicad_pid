@@ -46,6 +46,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Needle Hydraulic_1_1"
       (rectangle private
         (start -8 8)

@@ -2,8 +2,12 @@
 
 """
 Data side of the symbol registry: read the symbol library, order it for an
-engineering reader, export each symbol to a cropped 400 dpi raster and derive
+engineering reader, export each symbol to a cropped vector drawing and derive
 the reference prefix table.  The page layout lives in registry.py.
+
+Drawings are vector (svglib turns each kicad-cli SVG into a reportlab group).
+If svglib is not installed the export falls back, with a warning, to a cropped
+400 dpi raster made with rsvg-convert.
 """
 
 import io
@@ -19,6 +23,15 @@ from typing import NamedTuple
 import kisexp
 from PIL import Image
 
+try:
+    from lxml import etree
+    from reportlab.graphics.shapes import Group
+    from svglib.svglib import svg2rlg
+except ImportError:  # vector route unavailable, raster fallback is used
+    etree = Group = svg2rlg = None
+
+SVG_NS = "{http://www.w3.org/2000/svg}"
+MM_TO_PT = 72 / 25.4
 RASTER_DPI = 400
 CROP_MARGIN_MM = 1.0  # fixed margin around the drawn content, every symbol
 
@@ -64,7 +77,8 @@ class Symbol(NamedTuple):
     name: str
     reference: str
     description: str
-    png: bytes  # cropped raster, 400 dpi
+    png: "bytes | None"  # cropped 400 dpi raster, only in the raster fallback
+    drawing: object  # cropped reportlab Group in points, None in the raster fallback
     width_mm: float
     height_mm: float
 
@@ -218,6 +232,66 @@ def hide_reference(src: Path, dst: Path) -> None:
     kisexp.write_file(str(dst), tree)
 
 
+def max_stroke(node) -> float:
+    """
+    Find the widest stroke in a reportlab shape tree
+
+    Arguments
+
+    node - Group | Shape
+        Shape or group to search
+
+    Returns
+
+    float
+        Widest stroke width in points, 0 if nothing is stroked
+    """
+    widest = 0.0
+    if getattr(node, "strokeColor", None) is not None:
+        widest = float(getattr(node, "strokeWidth", 0) or 0)
+    for child in getattr(node, "contents", []):
+        widest = max(widest, max_stroke(child))
+    return widest
+
+
+def crop_vector(svg: Path) -> "tuple[None, object, float, float] | None":
+    """
+    Convert an exported SVG to a vector drawing cropped to its drawn content
+
+    The crop is the bounds of the geometry grown by half the widest stroke, which
+    is what the raster route measures, plus the same fixed margin.  The SVG's own
+    text elements are dropped first because kicad-cli writes them invisible
+    (opacity 0) beside the stroked glyph outlines that actually show
+
+    Arguments
+
+    svg - Path
+        SVG written by kicad-cli
+
+    Returns
+
+    tuple | None
+        None for the raster, a Group translated so the crop box starts at the
+        origin, width in mm and height in mm, or None if nothing could be drawn
+    """
+    parser = etree.XMLParser(load_dtd=False, resolve_entities=False, no_network=True)
+    tree = etree.parse(str(svg), parser)
+    for text in list(tree.getroot().iter(SVG_NS + "text")):
+        text.getparent().remove(text)
+    drawing = svg2rlg(io.BytesIO(etree.tostring(tree)))
+    if drawing is None or not drawing.contents:
+        return None
+    bounds = drawing.getBounds()
+    if bounds is None or (bounds[2] <= bounds[0] and bounds[3] <= bounds[1]):
+        return None
+    pad = CROP_MARGIN_MM * MM_TO_PT + max_stroke(drawing) / 2
+    left, bottom, right, top = bounds
+    width = right - left + 2 * pad
+    height = top - bottom + 2 * pad
+    group = Group(*drawing.contents, transform=(1, 0, 0, 1, pad - left, pad - bottom))
+    return None, group, width / MM_TO_PT, height / MM_TO_PT
+
+
 def crop_to_content(svg: Path) -> "tuple[bytes, float, float] | None":
     """
     Rasterise an exported SVG and crop it to its drawn content plus a fixed margin
@@ -233,7 +307,8 @@ def crop_to_content(svg: Path) -> "tuple[bytes, float, float] | None":
     Returns
 
     tuple | None
-        PNG bytes, width in mm and height in mm, or None if nothing could be drawn
+        PNG bytes, None for the vector drawing, width in mm and height in mm, or
+        None if nothing could be drawn
     """
     proc = subprocess.run(
         ["rsvg-convert", "-f", "png", "-d", str(RASTER_DPI), "-p", str(RASTER_DPI)]
@@ -257,7 +332,7 @@ def crop_to_content(svg: Path) -> "tuple[bytes, float, float] | None":
     out = io.BytesIO()
     canvas.save(out, format="PNG", optimize=True, dpi=(RASTER_DPI, RASTER_DPI))
     mm = 25.4 / RASTER_DPI
-    return out.getvalue(), canvas.width * mm, canvas.height * mm
+    return out.getvalue(), None, canvas.width * mm, canvas.height * mm
 
 
 def export_one(info: SymbolInfo, work: Path) -> "list[Symbol]":
@@ -293,7 +368,7 @@ def export_one(info: SymbolInfo, work: Path) -> "list[Symbol]":
         return []
     symbols = []
     for svg in svgs:
-        cropped = crop_to_content(svg)
+        cropped = crop_vector(svg) if svg2rlg else crop_to_content(svg)
         if cropped is None:
             print(f"Warning: nothing drawn for {info.path}", file=sys.stderr)
             continue
@@ -321,10 +396,16 @@ def export_symbols(symbols_dir: Path) -> "list[Symbol]":
     list[Symbol]
         Cropped symbols in registry order
     """
-    if shutil.which("kicad-cli") is None or shutil.which("rsvg-convert") is None:
-        raise SystemExit(
-            "kicad-cli and rsvg-convert are required to build the registry"
+    if shutil.which("kicad-cli") is None:
+        raise SystemExit("kicad-cli is required to build the registry")
+    if svg2rlg is None:
+        print(
+            "Warning: svglib is not installed, so the drawings are rasterised at "
+            f"{RASTER_DPI} dpi instead of vector (pip install svglib)",
+            file=sys.stderr,
         )
+        if shutil.which("rsvg-convert") is None:
+            raise SystemExit("svglib or rsvg-convert is required to draw the registry")
     infos = list_symbols(symbols_dir)
     with tempfile.TemporaryDirectory() as tmp:
         work = Path(tmp)

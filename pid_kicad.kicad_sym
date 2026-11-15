@@ -200,6 +200,104 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "Blind Flange"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FIT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Blind flange, closes the end of a flanged line"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "fitting flange blind closed end fit"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Blind Flange_0_1"
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 0 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start 0.7500 3)
+        (end 1.7500 -3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline))))
+    (symbol "Blind Flange_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "PORT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
   (symbol "Bottle - 10 L"
     (pin_numbers
       (hide yes))
@@ -1108,6 +1206,165 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "Bulkhead"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FIT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Bulkhead fitting, passes a line through a panel or wall"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "fitting bulkhead panel wall feedthrough fit"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Bulkhead_0_1"
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -2.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -0.5000 0)
+          (xy 0.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2.5000 0)
+          (xy 5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2.5000 1.5000)
+        (end -0.5000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start 0.5000 1.5000)
+        (end 2.5000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 6)
+          (xy 0 -6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Bulkhead_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
   (symbol "Burst Disk - Pressure"
     (pin_numbers
       (hide yes))
@@ -1364,6 +1621,338 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "COPV"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "CYL"
+      (at 0 -15 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Composite overwrapped pressure vessel (COPV), single port"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "copv composite overwrapped pressure vessel cylinder bottle gas storage cyl"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Volume" ""
+      (at 5.5 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "COPV_1_1"
+      (rectangle private
+        (start -4 13)
+        (end 4 -12)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 7)
+          (xy -3.8 -9))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3.8 -9)
+          (xy 3.8 7))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3 7)
+          (xy -3 -9))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 -9)
+          (xy 3 7))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 3.8 7)
+        (mid 0 10)
+        (end -3.8 7)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -3.8 -9)
+        (mid 0 -12)
+        (end 3.8 -9)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 3 7)
+        (mid 0 9.2)
+        (end -3 7)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -3 -9)
+        (mid 0 -11.2)
+        (end 3 -9)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1.2 9.8)
+          (xy 1.2 13)
+          (xy -1.2 13)
+          (xy -1.2 9.8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 -8.6)
+          (xy 3.8 -7.8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 -8.6)
+          (xy -3 -7.8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 -7)
+          (xy 3.8 -6.2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 -7)
+          (xy -3 -6.2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 -5.4)
+          (xy 3.8 -4.6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 -5.4)
+          (xy -3 -4.6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 -3.8)
+          (xy 3.8 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 -3.8)
+          (xy -3 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 -2.2)
+          (xy 3.8 -1.4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 -2.2)
+          (xy -3 -1.4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 -0.6)
+          (xy 3.8 0.2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 -0.6)
+          (xy -3 0.2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 1)
+          (xy 3.8 1.8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 1)
+          (xy -3 1.8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 2.6)
+          (xy 3.8 3.4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 2.6)
+          (xy -3 3.4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 4.2)
+          (xy 3.8 5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 4.2)
+          (xy -3 5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 5.8)
+          (xy 3.8 6.6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 5.8)
+          (xy -3 6.6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 16 270)
+        (length 3)
+        (name "PORT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
   (symbol Cap
     (pin_numbers
       (hide yes))
@@ -1562,6 +2151,210 @@
           (xy 6 0.2500)
           (xy 7 0)
           (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Cooling Jacket"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "E"
+      (at 0 -8 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Regenerative cooling jacket around a thrust chamber and nozzle, inlet left and outlet right"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "cooling jacket regenerative engine chamber nozzle coolant heat exchanger e"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Cooling Jacket_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2.5 7)
+          (xy -2.5 2)
+          (xy -1 -1)
+          (xy -3.5 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2.5 7)
+          (xy 2.5 2)
+          (xy 1 -1)
+          (xy 3.5 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2.5 7)
+          (xy 2.5 7))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.7 8.2)
+          (xy -3.7 2)
+          (xy -2.2 -1)
+          (xy -4.7 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3.7 8.2)
+          (xy 3.7 2)
+          (xy 2.2 -1)
+          (xy 4.7 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.7 8.2)
+          (xy 3.7 8.2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 -5)
+          (xy -4.7 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3.5 -5)
+          (xy 4.7 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -2.7 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 5 0)
+          (xy 2.7 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.25)
+          (xy -5 0)
+          (xy -6 -0.25)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.25)
+          (xy 7 0)
+          (xy 6 -0.25)
           (xy 6 0))
         (stroke
           (width 0.1000)
@@ -1901,6 +2694,426 @@
             (font
               (size 1.2700 1.2700))))
         (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Dewar"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "TK"
+      (at 0 -14 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Vacuum jacketed cryogenic dewar, top fill and vent ports"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "dewar cryogenic vacuum jacketed double wall vessel tank fill vent lh2 lox ln2 tk"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Volume" ""
+      (at 6.5 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Dewar_1_1"
+      (rectangle private
+        (start -5.5 13)
+        (end 5.5 -11)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -5 8)
+          (xy -5 -8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 5 -8)
+          (xy 5 8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 5 8)
+        (mid 0 10.5)
+        (end -5 8)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -5 -8)
+        (mid 0 -10.5)
+        (end 5 -8)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.8 6.8)
+          (xy -3.8 -6.8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3.8 -6.8)
+          (xy 3.8 6.8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 3.8 6.8)
+        (mid 0 8.8)
+        (end -3.8 6.8)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -3.8 -6.8)
+        (mid 0 -8.8)
+        (end 3.8 -6.8)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 10)
+          (xy -2 8.3436))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2 10)
+          (xy 2 8.3436))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 12)
+          (xy -1.75 12)
+          (xy -2 11)
+          (xy -2.25 12)
+          (xy -2 12))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 2 10)
+          (xy 1.75 10)
+          (xy 2 11)
+          (xy 2.25 10)
+          (xy 2 10))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -2 13 270)
+        (length 3)
+        (name "TOP"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 2 13 270)
+        (length 3)
+        (name "TOP2"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Differential Pressure Indicator"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "PDI"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Differential pressure indicator, local display with high pressure (left) and low pressure (right) connections"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument differential pressure dp delta indicator display hp lp pdi"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "PDI"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Differential Pressure Indicator_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 -1.5000)
+          (xy -2 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2 -1.5000)
+          (xy 2 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -2 -5 90)
+        (length 3)
+        (name "HP"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 2 -5 90)
+        (length 3)
+        (name "LP"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Differential Pressure Transmitter"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "PDT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Differential pressure transmitter, electrical sensor with high pressure (left) and low pressure (right) connections"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument differential pressure dp delta transmitter sensor hp lp pdt"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "PDT"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Differential Pressure Transmitter_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 -1.5000)
+          (xy -2 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2 -1.5000)
+          (xy 2 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -2 -5 90)
+        (length 3)
+        (name "HP"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 2 -5 90)
+        (length 3)
+        (name "LP"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
@@ -2734,6 +3947,308 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "Flame Arrestor"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FA"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Inline flame arrestor"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "flame arrestor arrester flashback inline fa"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Flame Arrestor_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -3 3)
+        (end 3 -3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3 -3)
+          (xy 3 3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3 0)
+          (xy 0 3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 3 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3 3)
+          (xy 3 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3 0)
+          (xy 0 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 3 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.25)
+          (xy -5 0)
+          (xy -6 -0.25)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.25)
+          (xy 7 0)
+          (xy 6 -0.25)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 5)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 5)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Flange"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FIT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Flanged joint, bolted pair of flanges in a line"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "fitting flange flanged joint bolted fit"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Flange_0_1"
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy 5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -0.7500 3)
+          (xy -0.7500 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0.7500 3)
+          (xy 0.7500 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Flange_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
   (symbol "Flexible Hose"
     (pin_numbers
       (hide yes))
@@ -2939,6 +4454,500 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "Flow Element - Orifice Plate"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FE"
+      (at 0 -5 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Orifice plate flow element, inline differential pressure flow sensor"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument flow element orifice plate differential pressure inline fe"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "FE"
+      (at 0 5 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Flow Element - Orifice Plate_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 5)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 2.5000)
+          (xy 0 1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 0)
+          (xy 2 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0.5000)
+          (xy 0 1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 -0.5000)
+          (xy 0 -1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5000 0)
+          (xy -3.5000 0.2500)
+          (xy -2.5000 0)
+          (xy -3.5000 -0.2500)
+          (xy -3.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 3.5000 0)
+          (xy 3.5000 0.2500)
+          (xy 4.5000 0)
+          (xy 3.5000 -0.2500)
+          (xy 3.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 6)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 6)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Flow Element - Turbine"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FE"
+      (at 0 -5 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Turbine flow element, inline primary flow sensor"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument flow element turbine meter inline fe"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "FE"
+      (at 0 5 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Flow Element - Turbine_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 5)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 2.5000)
+          (xy 0 1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2.5000 1.5000)
+        (end 2.5000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 1)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0 1))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -0.8660 -0.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 0.8660 -0.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5000 0)
+          (xy -3.5000 0.2500)
+          (xy -2.5000 0)
+          (xy -3.5000 -0.2500)
+          (xy -3.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 3.5000 0)
+          (xy 3.5000 0.2500)
+          (xy 4.5000 0)
+          (xy 3.5000 -0.2500)
+          (xy 3.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 6)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 6)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Flow Element - Venturi"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FE"
+      (at 0 -5 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Venturi flow element, inline differential pressure flow sensor"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument flow element venturi differential pressure inline fe"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "FE"
+      (at 0 5 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Flow Element - Venturi_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 5)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 2.5000)
+          (xy 0 1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2.5000 1.5000)
+          (xy -0.8000 0.6000)
+          (xy 0.8000 0.6000)
+          (xy 2.5000 1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2.5000 -1.5000)
+          (xy -0.8000 -0.6000)
+          (xy 0.8000 -0.6000)
+          (xy 2.5000 -1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2.5000 1.5000)
+          (xy -2.5000 -1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2.5000 1.5000)
+          (xy 2.5000 -1.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5000 0)
+          (xy -3.5000 0.2500)
+          (xy -2.5000 0)
+          (xy -3.5000 -0.2500)
+          (xy -3.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 3.5000 0)
+          (xy 3.5000 0.2500)
+          (xy 4.5000 0)
+          (xy 3.5000 -0.2500)
+          (xy 3.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 6)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 6)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
   (symbol "Flow Indicator"
     (pin_numbers
       (hide yes))
@@ -3125,6 +5134,1175 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "Gas Booster"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "C"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Air driven gas booster compressor, drive air port on top"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "gas booster compressor air driven haskel pneumatic pressure intensifier c"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Gas Booster_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -4 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 4 0)
+          (xy 5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.25)
+          (xy -5 0)
+          (xy -6 -0.25)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.25)
+          (xy 7 0)
+          (xy 6 -0.25)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (circle
+        (center 0 0)
+        (radius 4)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2.83 2.83)
+          (xy 4 0)
+          (xy -2.83 -2.83))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 5)
+          (xy 0 4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -0.5 7)
+          (xy 0.5 7)
+          (xy 0 6)
+          (xy -0.5 7))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Heat Exchanger - Coil"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "E"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Heat exchanger, coil in bath, process connections left and right, service connections top and bottom"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "heat exchanger coil bath immersion cooler heater vaporiser vaporizer e"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Heat Exchanger - Coil_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.25)
+          (xy -5 0)
+          (xy -6 -0.25)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.25)
+          (xy 7 0)
+          (xy 6 -0.25)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -3 -6)
+          (xy -3.25 -6)
+          (xy -3 -5)
+          (xy -2.75 -6)
+          (xy -3 -6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 3 6)
+          (xy 2.75 6)
+          (xy 3 7)
+          (xy 3.25 6)
+          (xy 3 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -3 0)
+          (xy -3 2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -3 2)
+        (mid -2 3)
+        (end -1 2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -1 2)
+          (xy -1 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -1 -2)
+        (mid 0 -3)
+        (end 1 -2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1 -2)
+          (xy 1 2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 1 2)
+        (mid 2 3)
+        (end 3 2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 2)
+          (xy 3 0)
+          (xy 5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at -3 -8 90)
+        (length 3)
+        (name "BRANCH2"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "4"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 3 8 270)
+        (length 3)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Heat Exchanger - Shell and Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "E"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Shell and tube heat exchanger, tube side left and right, shell side top and bottom"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "heat exchanger shell and tube condenser cooler tube bundle e"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Heat Exchanger - Shell and Tube_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -5 4)
+        (end 5 -4)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 4)
+          (xy -3.5 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3.5 4)
+          (xy 3.5 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 -2)
+          (xy 3.5 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 0)
+          (xy 3.5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.5 2)
+          (xy 3.5 2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -3.5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.25)
+          (xy -5 0)
+          (xy -6 -0.25)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.25)
+          (xy 7 0)
+          (xy 6 -0.25)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -2 6)
+          (xy -1.75 6)
+          (xy -2 5)
+          (xy -2.25 6)
+          (xy -2 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 2 -4)
+          (xy 2.25 -4)
+          (xy 2 -5)
+          (xy 1.75 -4)
+          (xy 2 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at -2 8 270)
+        (length 4)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 2 -8 90)
+        (length 4)
+        (name "BRANCH2"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "4"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Igniter - Pyrotechnic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "ENG"
+      (at 0 -8 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Pyrotechnic igniter, squib initiated charge"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "igniter ignitor pyrotechnic squib charge pyrogen engine ignition eng"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Igniter - Pyrotechnic_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2.5 4)
+        (end 2.5 -2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -1.5 0)
+        (end 1.5 -1.5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -1.5 3.5)
+          (xy 1.5 1))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1.5 3.5)
+          (xy -1.5 1))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2.5 -2)
+          (xy -1 -3.5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2.5 -2)
+          (xy 1 -3.5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -1 -3.5)
+          (xy -1 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1 -3.5)
+          (xy 1 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -1 -4)
+          (xy 0 -5)
+          (xy 1 -4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 5)
+          (xy 0.25 5)
+          (xy 0 4)
+          (xy -0.25 5)
+          (xy 0 5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at 0 8 270)
+        (length 4)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Igniter - Torch"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "ENG"
+      (at 0 -8 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Torch igniter, spark ignited, two propellant inlets"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "igniter ignitor torch spark propellant engine ignition eng"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Igniter - Torch_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3 5)
+          (xy 3 5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3 5)
+          (xy -3 0)
+          (xy -1 -2)
+          (xy -1 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 5)
+          (xy 3 0)
+          (xy 1 -2)
+          (xy 1 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -1 -3)
+          (xy -1.5 -4)
+          (xy 0 -5.5)
+          (xy 1.5 -4)
+          (xy 1 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0.8 3.5)
+          (xy -0.6 1.3)
+          (xy 0.5 1.3)
+          (xy -0.8 -0.8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 6)
+          (xy -1.75 6)
+          (xy -2 5)
+          (xy -2.25 6)
+          (xy -2 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 2 6)
+          (xy 2.25 6)
+          (xy 2 5)
+          (xy 1.75 6)
+          (xy 2 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -2 8 270)
+        (length 3)
+        (name "IN1"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 2 8 270)
+        (length 3)
+        (name "IN2"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Injector"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "ENG"
+      (at 0 -8 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Rocket engine injector, two propellant inlets"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "injector engine rocket propellant plenum manifold eng"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Injector_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -5 3)
+        (end 5 -3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 0 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -4 -3)
+          (xy -4 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 -3)
+          (xy -2 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2 -3)
+          (xy 2 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 4 -3)
+          (xy 4 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3 4)
+          (xy -2.75 4)
+          (xy -3 3)
+          (xy -3.25 4)
+          (xy -3 4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 3 4)
+          (xy 3.25 4)
+          (xy 3 3)
+          (xy 2.75 4)
+          (xy 3 4))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -3 8 270)
+        (length 5)
+        (name "IN1"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 3 8 270)
+        (length 5)
+        (name "IN2"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Interface Boundary"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "IB"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Interface boundary marker, dash-dot line with an editable Boundary label"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "interface boundary battery limit dashed marker scope ib"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Boundary" "Vehicle / GSE"
+      (at 0 7.5000 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Interface Boundary_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 6)
+          (xy 0 -6))
+        (stroke
+          (width 0.1000)
+          (type dash_dot))
+        (fill
+          (type none)))))
   (symbol "Level Indicator"
     (pin_numbers
       (hide yes))
@@ -3304,6 +6482,846 @@
         (at 0 -5 90)
         (length 3)
         (name "PROCESS"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Line Number Tag"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "LN"
+      (at 0 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Line number tag, boxed label with an editable Line field"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "line number tag label pipe designation ln"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Line" "1-GN2-001"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Line Number Tag_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -8 2)
+        (end 8 -2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))))
+  (symbol "Line Type Legend"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "LEG"
+      (at 0 -14 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Legend of line types per ISA 5.1: process, pneumatic, electrical, software and capillary"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "legend line types isa 5.1 key process pneumatic electrical software capillary leg"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Line Type Legend_1_1"
+      (rectangle private
+        (start -20 20)
+        (end 20 -20)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -16 12)
+        (end 16 -12)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text "LINE TYPES"
+        (at 0 10 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (polyline
+        (pts
+          (xy -16 8)
+          (xy 16 8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -14 6)
+          (xy -5 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text "Process line"
+        (at -3 6 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))
+          (justify left)))
+      (polyline
+        (pts
+          (xy -14 2)
+          (xy -5 2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -11.9000 1.2000)
+          (xy -11.1000 2.8000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -11.1000 1.2000)
+          (xy -10.3000 2.8000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -7.9000 1.2000)
+          (xy -7.1000 2.8000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -7.1000 1.2000)
+          (xy -6.3000 2.8000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text "Pneumatic signal"
+        (at -3 2 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))
+          (justify left)))
+      (polyline
+        (pts
+          (xy -14 -2)
+          (xy -12.5000 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -11.5000 -2)
+          (xy -10 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -9 -2)
+          (xy -7.5000 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6.5000 -2)
+          (xy -5 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text "Electrical signal"
+        (at -3 -2 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))
+          (justify left)))
+      (polyline
+        (pts
+          (xy -14 -6)
+          (xy -13 -6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -12 -6)
+          (xy -10 -6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -9 -6)
+          (xy -7 -6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 -6)
+          (xy -5 -6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center -12.5000 -6)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center -9.5000 -6)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center -6.5000 -6)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text "Software link"
+        (at -3 -6 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))
+          (justify left)))
+      (polyline
+        (pts
+          (xy -14 -10)
+          (xy -5 -10))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -11.7000 -10.7000)
+          (xy -10.3000 -9.3000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -11.7000 -9.3000)
+          (xy -10.3000 -10.7000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -8.7000 -10.7000)
+          (xy -7.3000 -9.3000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -8.7000 -9.3000)
+          (xy -7.3000 -10.7000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text "Capillary line"
+        (at -3 -10 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))
+          (justify left)))))
+  (symbol "Load Cell"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "WT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Load cell, weight or force transmitter"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument load cell weight force mass transmitter sensor wt"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "WT"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Load Cell_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 -2.5000)
+          (xy 0 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 -5)
+          (xy 2 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 -5 90)
+        (length 3)
+        (name "PROCESS"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Off-Sheet Connector - In"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "OPC"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Off-sheet connector for a line arriving from another sheet, with an editable Sheet field"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "off-sheet off-page connector in incoming continuation sheet opc"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Sheet" "2"
+      (at -1 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Off-Sheet Connector - In_0_1"
+      (polyline
+        (pts
+          (xy -5 3)
+          (xy 2 3)
+          (xy 5 0)
+          (xy 2 -3)
+          (xy -5 -3)
+          (xy -5 3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Off-Sheet Connector - In_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "PORT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Off-Sheet Connector - Out"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "OPC"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Off-sheet connector for a line leaving to another sheet, with an editable Sheet field"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "off-sheet off-page connector out outgoing continuation sheet opc"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Sheet" "2"
+      (at -1 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Off-Sheet Connector - Out_0_1"
+      (polyline
+        (pts
+          (xy -5 3)
+          (xy 2 3)
+          (xy 5 0)
+          (xy 2 -3)
+          (xy -5 -3)
+          (xy -5 3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Off-Sheet Connector - Out_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "PORT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Oxygen Detector"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "AT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Oxygen (O2) detector, gas analyser transmitter"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument oxygen o2 detector analyser analyzer gas sensor at"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "AT"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Oxygen Detector_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 -2.5000)
+          (xy 0 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 -5 90)
+        (length 3)
+        (name "PROCESS"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Plug"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FIT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Plug, closes a port or the end of a line"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "fitting plug closed port end fit"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Plug_0_1"
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -1.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -1.5000 1.5000)
+        (end 1.5000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline))))
+    (symbol "Plug_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "PORT"
           (effects
             (font
               (size 1.2700 1.2700))))
@@ -7515,6 +11533,285 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "Temperature Indicator"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "TI"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Temperature indicator, local temperature display"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument temperature indicator display ti"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "TI"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Temperature Indicator_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 -2.5000)
+          (xy 0 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 -5 90)
+        (length 3)
+        (name "PROCESS"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Temperature Switch"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "TS"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Temperature switch, contact that changes state at a set temperature"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument temperature switch ts"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "TS"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Temperature Switch_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 -2.5000)
+          (xy 0 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 -5 90)
+        (length 3)
+        (name "PROCESS"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Temperature Transmitter"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "TT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Temperature transmitter, electrical temperature sensor"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "instrument temperature transmitter sensor tt"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Function" "TT"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.5000 1.5000))))
+    (symbol "Temperature Transmitter_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 2.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 -2.5000)
+          (xy 0 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 -5 90)
+        (length 3)
+        (name "PROCESS"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
   (symbol Thermocouple
     (pin_numbers
       (hide yes))
@@ -7597,6 +11894,450 @@
             (font
               (size 1.2700 1.2700))))
         (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Umbilical"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "UMB"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Umbilical, disconnect interface between vehicle and ground support equipment"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "umbilical disconnect interface vehicle gse ground umb"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Umbilical_0_1"
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -3 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 3 0)
+          (xy 5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -3 2)
+        (end -0.7500 -2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start 0.7500 2)
+        (end 3 -2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -0.7500 0)
+          (xy 0.7500 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 5)
+          (xy 0 -5))
+        (stroke
+          (width 0.1000)
+          (type dash_dot))
+        (fill
+          (type none))))
+    (symbol "Umbilical_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Union"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "FIT"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Union fitting, threaded coupling that can be undone without cutting the line"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "fitting union coupling threaded fit"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Union_0_1"
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -1.5000 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1.5000 0)
+          (xy 5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -1.5000 2)
+        (end 1.5000 -2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 2)
+          (xy 0 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Union_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Vacuum Pump"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "VP"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Vacuum pump, inlet on the left and exhaust on the right"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "vacuum pump rough roughing scroll rotary vane vp"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (symbol "Vacuum Pump_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -5 0)
+          (xy -4 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 4 0)
+          (xy 5 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.25)
+          (xy -5 0)
+          (xy -6 -0.25)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.25)
+          (xy 7 0)
+          (xy 6 -0.25)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (circle
+        (center 0 0)
+        (radius 4)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2.2 2)
+          (xy -2.2 0)
+          (xy 2.2 -2)
+          (xy 2.2 2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700)))))))
@@ -7908,6 +12649,578 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "Valve - 3 Way Ball Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Three-way ball valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve three way 3 ball pneumatic actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - 3 Way Ball Pneumatic_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2 -3)
+          (xy -2 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 0 -5)
+        (mid -1.4142 -4.4142)
+        (end -2 -3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 2 -3)
+        (mid 1.4142 -4.4142)
+        (end 0 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - 3 Way Ball Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Three-way ball valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve three way 3 ball servo actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - 3 Way Ball Servo_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 -3)
+        (end 2 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text M
+        (at 0 -4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - 3 Way Ball Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Three-way ball valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve three way 3 ball solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - 3 Way Ball Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 -3)
+        (end 2 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
+        (at 0 -4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
   (symbol "Valve - 3 Way Globe"
     (pin_numbers
       (hide yes))
@@ -8033,6 +13346,578 @@
           (type default))
         (fill
           (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - 3 Way Globe Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Three-way globe valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve three way 3 globe pneumatic actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - 3 Way Globe Pneumatic_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2 -3)
+          (xy -2 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 0 -5)
+        (mid -1.4142 -4.4142)
+        (end -2 -3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 2 -3)
+        (mid 1.4142 -4.4142)
+        (end 0 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - 3 Way Globe Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Three-way globe valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve three way 3 globe servo actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - 3 Way Globe Servo_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 -3)
+        (end 2 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text M
+        (at 0 -4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "BRANCH"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "3"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - 3 Way Globe Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Three-way globe valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve three way 3 globe solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - 3 Way Globe Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 -3)
+        (end 2 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
+        (at 0 -4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
       (pin passive line
         (at -8 0 0)
         (length 3)
@@ -8374,6 +14259,512 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
+  (symbol "Valve - Angle Ball Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Angle ball valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve angle right-angle ball pneumatic actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Angle Ball Pneumatic_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 6)
+          (xy 0.2500 6)
+          (xy 0 7)
+          (xy -0.2500 6)
+          (xy 0 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2 -3)
+          (xy -2 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 0 -5)
+        (mid -1.4142 -4.4142)
+        (end -2 -3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 2 -3)
+        (mid 1.4142 -4.4142)
+        (end 0 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Angle Ball Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Angle ball valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve angle right-angle ball servo actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Angle Ball Servo_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 6)
+          (xy 0.2500 6)
+          (xy 0 7)
+          (xy -0.2500 6)
+          (xy 0 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 -3)
+        (end 2 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text M
+        (at 0 -4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Angle Ball Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Angle ball valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve angle right-angle ball solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Angle Ball Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 6)
+          (xy 0.2500 6)
+          (xy 0 7)
+          (xy -0.2500 6)
+          (xy 0 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 -3)
+        (end 2 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
+        (at 0 -4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
   (symbol "Valve - Angle Globe"
     (pin_numbers
       (hide yes))
@@ -8488,6 +14879,512 @@
           (type default))
         (fill
           (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Angle Globe Pneumatic"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Angle globe valve, pneumatically actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve angle right-angle globe pneumatic actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Angle Globe Pneumatic_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 6)
+          (xy 0.2500 6)
+          (xy 0 7)
+          (xy -0.2500 6)
+          (xy 0 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 2 -3)
+          (xy -2 -3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 0 -5)
+        (mid -1.4142 -4.4142)
+        (end -2 -3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 2 -3)
+        (mid 1.4142 -4.4142)
+        (end 0 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Angle Globe Servo"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Angle globe valve, servo actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve angle right-angle globe servo actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Angle Globe Servo_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 6)
+          (xy 0.2500 6)
+          (xy 0 7)
+          (xy -0.2500 6)
+          (xy 0 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 -3)
+        (end 2 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text M
+        (at 0 -4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 8 270)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Angle Globe Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Angle globe valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve angle right-angle globe solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Angle Globe Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -2 5)
+          (xy 2 5)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 6)
+          (xy 0.2500 6)
+          (xy 0 7)
+          (xy -0.2500 6)
+          (xy 0 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 -3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 -3)
+        (end 2 -5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
+        (at 0 -4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
       (pin passive line
         (at -8 0 0)
         (length 3)
@@ -8689,6 +15586,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Ball Hydraulic_1_1"
       (rectangle private
         (start -8 8)
@@ -9001,6 +15904,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Ball Pneumatic_1_1"
       (rectangle private
         (start -8 8)
@@ -9173,6 +16082,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Ball Servo_1_1"
       (rectangle private
         (start -8 8)
@@ -9238,6 +16153,170 @@
         (fill
           (type none)))
       (text M
+        (at 0 4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Ball Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Ball valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve ball solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Ball Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 1)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 5)
+        (end 2 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
         (at 0 4 0)
         (effects
           (font
@@ -9481,6 +16560,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Butterfly Hydraulic_1_1"
       (rectangle private
         (start -8 8)
@@ -9821,6 +16906,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Butterfly Pneumatic_1_1"
       (rectangle private
         (start -8 8)
@@ -10007,6 +17098,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Butterfly Servo_1_1"
       (rectangle private
         (start -8 8)
@@ -10086,6 +17183,184 @@
         (fill
           (type none)))
       (text M
+        (at 0 4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Butterfly Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Butterfly valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve butterfly solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Butterfly Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -5 2)
+          (xy -5 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -4.5000 -1.7500)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 4.5000 1.7500))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 5 2)
+          (xy 5 -2))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 5)
+        (end 2 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
         (at 0 4 0)
         (effects
           (font
@@ -10469,6 +17744,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Diaphragm Hydraulic_1_1"
       (rectangle private
         (start -8 8)
@@ -10783,6 +18064,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Diaphragm Pneumatic_1_1"
       (rectangle private
         (start -8 8)
@@ -10956,6 +18243,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Diaphragm Servo_1_1"
       (rectangle private
         (start -8 8)
@@ -11022,6 +18315,171 @@
         (fill
           (type none)))
       (text M
+        (at 0 4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Diaphragm Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Diaphragm valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve diaphragm solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Diaphragm Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -3 0)
+        (mid 0 2)
+        (end 3 0)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 5)
+        (end 2 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
         (at 0 4 0)
         (effects
           (font
@@ -11251,6 +18709,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Gate Hydraulic_1_1"
       (rectangle private
         (start -8 8)
@@ -11563,6 +19027,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Gate Pneumatic_1_1"
       (rectangle private
         (start -8 8)
@@ -11735,6 +19205,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Gate Servo_1_1"
       (rectangle private
         (start -8 8)
@@ -11800,6 +19276,170 @@
         (fill
           (type none)))
       (text M
+        (at 0 4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Gate Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Gate valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve gate solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Gate Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -0.3000 -2)
+        (end 0.3000 2)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 5)
+        (end 2 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
         (at 0 4 0)
         (effects
           (font
@@ -12029,6 +19669,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Globe Hydraulic_1_1"
       (rectangle private
         (start -8 8)
@@ -12341,6 +19987,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Globe Pneumatic_1_1"
       (rectangle private
         (start -8 8)
@@ -12513,6 +20165,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Globe Servo_1_1"
       (rectangle private
         (start -8 8)
@@ -12570,6 +20228,170 @@
         (fill
           (type none)))
       (text M
+        (at 0 4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (polyline
+        (pts
+          (xy -6 0)
+          (xy -6 0.2500)
+          (xy -5 0)
+          (xy -6 -0.2500)
+          (xy -6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 6 0)
+          (xy 6 0.2500)
+          (xy 7 0)
+          (xy 6 -0.2500)
+          (xy 6 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (circle
+        (center 0 0)
+        (radius 0.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Globe Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Globe valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve globe solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Globe Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 5)
+        (end 2 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
         (at 0 4 0)
         (effects
           (font
@@ -12796,6 +20618,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Needle Hydraulic_1_1"
       (rectangle private
         (start -8 8)
@@ -13086,6 +20914,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Needle Pneumatic_1_1"
       (rectangle private
         (start -8 8)
@@ -13247,6 +21081,12 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Valve - Needle Servo_1_1"
       (rectangle private
         (start -8 8)
@@ -13325,6 +21165,159 @@
         (fill
           (type none)))
       (text M
+        (at 0 4 0)
+        (effects
+          (font
+            (size 1.2700 1.2700))))
+      (pin passive line
+        (at -8 0 0)
+        (length 3)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 3)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Valve - Needle Solenoid"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "XV"
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Needle valve, solenoid actuated"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "valve needle solenoid actuated xv"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Fail Position" ""
+      (at 3 4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Valve - Needle Solenoid_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy -5 2)
+          (xy -5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 0)
+          (xy 5 2)
+          (xy 5 -2)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 1)
+          (xy 0 -1))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 -1)
+          (xy -0.2500 -1)
+          (xy 0 -2)
+          (xy 0.2500 -1)
+          (xy 0 -1))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type outline)))
+      (polyline
+        (pts
+          (xy 0 3)
+          (xy 0 0))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (rectangle
+        (start -2 5)
+        (end 2 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (text S
         (at 0 4 0)
         (effects
           (font

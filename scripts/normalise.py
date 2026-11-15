@@ -349,6 +349,35 @@ _add(
 )
 _add("Squib", "SQB", "Squib, pyrotechnic initiator", "squib pyrotechnic initiator sqb")
 
+
+def _load_tables():
+    """
+    Load extra symbol entries from scripts/tables
+
+    Each module there defines ENTRIES, a list of
+    (name, prefix, description, keywords) tuples, so new symbol families
+    can be added without editing this file.
+    """
+
+    import importlib.util
+
+    folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tables")
+    if not os.path.isdir(folder):
+        return
+    for fname in sorted(os.listdir(folder)):
+        if not fname.endswith(".py") or fname.startswith("_"):
+            continue
+        spec = importlib.util.spec_from_file_location(
+            fname[:-3], os.path.join(folder, fname)
+        )
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        for entry in module.ENTRIES:
+            _add(*entry)
+
+
+_load_tables()
+
 PREFIXES = {entry[0] for entry in SYMBOLS.values()}
 
 # Fallback for vessel size variants not in the table, matched on the name start.
@@ -396,9 +425,24 @@ def lookup(name):
 
 
 # Prefixes whose single pin is a process connection rather than a plain port.
-INSTRUMENT_PREFIXES = {"PT", "PI", "PS", "TE", "FT", "FI", "LT", "LI"}
+INSTRUMENT_PREFIXES = {
+    "PT",
+    "PI",
+    "PS",
+    "TE",
+    "FT",
+    "FI",
+    "LT",
+    "LI",
+    "TT",
+    "TI",
+    "TS",
+    "WT",
+    "AT",
+}
 RELIEF_PREFIXES = {"PRV", "PVRV"}
 ENGINE_PREFIXES = {"ENG"}
+DP_PREFIXES = {"PDT", "PDI"}
 
 
 class NormaliseError(Exception):
@@ -441,6 +485,16 @@ def plan_pins(prefix, pins):
             plan[i] = (str(rank), f"IN{rank}")
         return plan
 
+    if prefix in DP_PREFIXES and n == 2 and at[0][1] == at[1][1] != 0:
+        high, low = sorted(range(n), key=lambda i: at[i][0])
+        plan[high] = ("1", "HP")
+        plan[low] = ("2", "LP")
+        return plan
+    if n == 2 and all(y > 0 for x, y in at) and at[0][0] != at[1][0]:
+        first, second = sorted(range(n), key=lambda i: at[i][0])
+        plan[first] = ("1", "TOP")
+        plan[second] = ("2", "TOP2")
+        return plan
     left = [i for i in range(n) if at[i][1] == 0 and at[i][0] < 0]
     right = [i for i in range(n) if at[i][1] == 0 and at[i][0] > 0]
     if len(left) == 1 and len(right) <= 1:

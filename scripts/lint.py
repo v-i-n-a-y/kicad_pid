@@ -20,7 +20,7 @@ sys.path.insert(0, REPO)
 import kisexp
 from normalise import PREFIXES
 
-from rules import linewidth, pins, properties
+from rules import geometry, linewidth, pins, properties
 
 
 def find_files(root):
@@ -77,6 +77,7 @@ def lint_file(path, root):
     messages = []
     for symbol in symbols:
         messages += linewidth.check(symbol)
+        messages += geometry.check(symbol)
         messages += pins.check(symbol, category)
         messages += properties.check(symbol, PREFIXES)
     return messages
