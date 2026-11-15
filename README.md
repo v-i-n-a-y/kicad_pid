@@ -69,6 +69,8 @@ We are open to contribution to the symbol set. Please follow the conventions abo
 
 Two make targets help contributors. Run `make normalise` after editing a symbol to apply the conventions (Reference prefix, Description, keywords, stroke width 0.1, pin numbers and names, hidden pin labels) and `make lint` to check them. The lint also runs as a pre-commit hook and fails the commit if any rule is broken. A new symbol needs an entry in the table at the top of `scripts/normalise.py` before the normaliser will accept it.
 
+`make registry` builds `pid_registry.pdf`, a to-scale reference of every symbol. It exports the symbols afresh with `kicad-cli` (the `plots/` argument is not used) and needs `rsvg-convert` plus the Python packages `reportlab` and `pillow` (`pip install reportlab pillow`). The page font is IBM Plex Sans, vendored in `fonts/` under the SIL Open Font Licence (`fonts/OFL.txt`); the build falls back to Helvetica with a warning if the font files are missing.
+
 Note: By contributing you agree to license it under the same MIT license as the rest of kicad_pid
 
 ## License

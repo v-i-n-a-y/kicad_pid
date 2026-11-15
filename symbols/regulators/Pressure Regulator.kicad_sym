@@ -49,35 +49,8 @@
     (symbol "Pressure Regulator_0_1"
       (polyline
         (pts
-          (xy -5.0800 -3.8100)
-          (xy -5.0800 -3.8100))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy -5.0800 -3.8100)
-          (xy -5.0800 -3.8100))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (polyline
-        (pts
           (xy -4 -3)
           (xy 3 -3))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy 0 5.7500)
-          (xy 0 5.7500))
         (stroke
           (width 0.1000)
           (type default))

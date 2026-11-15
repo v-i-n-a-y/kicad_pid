@@ -1,7 +1,9 @@
 # Copyright 2026 Vinay Williams
 
 """
-Lint the symbol sources.  Prints one line per violation as
+Lint the symbol sources.
+
+Prints one line per violation in the form
 
     <file>: <message>
 
@@ -22,6 +24,20 @@ from rules import linewidth, pins, properties
 
 
 def find_files(root):
+    """
+    Find every symbol file under a directory
+
+    Arguments
+
+    root - str
+        Directory to search, recursively
+
+    Returns
+
+    files - list
+        Full paths of the .kicad_sym files, sorted
+    """
+
     files = []
     for dirpath, _, names in os.walk(root):
         files.extend(
@@ -31,7 +47,25 @@ def find_files(root):
 
 
 def lint_file(path, root):
-    """Return the violation messages for one symbol file."""
+    """
+    Check one symbol file against every lint rule
+
+    A file that cannot be parsed, or that holds no symbol, is reported as a
+    violation rather than raised.
+
+    Arguments
+
+    path - str
+        The symbol file to check
+    root - str
+        The symbols directory the file sits under, used to find its category
+
+    Returns
+
+    messages - list
+        Violation messages, empty if the file passes
+    """
+
     try:
         tree = kisexp.read_file(path)
     except (ValueError, OSError) as exc:
@@ -49,6 +83,20 @@ def lint_file(path, root):
 
 
 def main(symbols_dir):
+    """
+    Lint every symbol file under a directory and print the violations
+
+    Arguments
+
+    symbols_dir - str
+        Directory holding the symbol sources
+
+    Returns
+
+    status - int
+        0 if there are no violations, 1 if there are any or no files were found
+    """
+
     files = find_files(symbols_dir)
     if not files:
         print(f"{symbols_dir}: no .kicad_sym files found")
@@ -62,6 +110,8 @@ def main(symbols_dir):
 
 
 if __name__ == "__main__":
+    print("Rocketry P&ID KiCAD - Lint Symbols\n")
+
     if len(sys.argv) != 2:
         print(f"Usage: {sys.argv[0]} <symbols directory>", file=sys.stderr)
         sys.exit(2)

@@ -1,354 +1,854 @@
 # Copyright 2026 Vinay Williams
 
-import os
-import re
+import io
 import subprocess
 import sys
-import tempfile
 from pathlib import Path
-from typing import NamedTuple
 from xml.sax.saxutils import escape
 
+from registry_data import Symbol, category_title, export_symbols, prefix_table
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER
+from reportlab.lib.enums import TA_CENTER, TA_RIGHT
 from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.lib.units import inch, mm
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.lib.units import mm
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
+    BaseDocTemplate,
+    Frame,
     Image,
     KeepTogether,
+    NextPageTemplate,
     PageBreak,
+    PageTemplate,
     Paragraph,
-    SimpleDocTemplate,
     Spacer,
     Table,
-    TableStyle,
 )
 
+TITLE = "P&ID Symbol Registry"
+SUBTITLE = "KiCad symbol library for rocket propulsion fluid systems"
+AUTHOR = "Vinay Williams"
+
+# Palette
+TEXT = colors.HexColor("#1F2933")
+SECONDARY = colors.HexColor("#6B7280")
+HAIRLINE = colors.HexColor("#D2D6DC")
+ACCENT = colors.HexColor("#1F4E79")
+
 PAGE_W, PAGE_H = A4
-MARGIN = 18 * mm
-USABLE_W = PAGE_W - 2 * MARGIN
-USABLE_H = PAGE_H - 2 * MARGIN
+MARGIN = 15 * mm
+CONTENT_W = PAGE_W - 2 * MARGIN
+# Running header and footer sit inside the 15 mm margin; the body frame
+# starts below the header rule and ends above the footer rule.
+HEADER_RULE_Y = PAGE_H - MARGIN - 8 * mm
+FOOTER_RULE_Y = MARGIN + 8 * mm
+FRAME_TOP = HEADER_RULE_Y - 6 * mm
+FRAME_BOTTOM = FOOTER_RULE_Y + 6 * mm
 
-# Every symbol is drawn at the same physical scale: one millimetre on the
-# symbol is SCALE millimetres on the page. SCALE is chosen from the symbols
-# themselves (see choose_scale) but never exceeds MAX_SCALE.
-MAX_SCALE = 1.5
-MAX_HEIGHT_FRACTION = 0.6  # the tallest symbol may use this much of a page
-MIN_CELL_W = 34 * mm  # narrowest cell, so labels stay readable
-CELL_GAP = 2 * mm
-RASTER_DPI = 300
+COLUMNS = 4
+COLUMN_W = CONTENT_W / COLUMNS
+CELL_PAD = 2 * mm
+# One common physical scale: 1 mm on the symbol is SCALE mm on the page.
+SCALE = 1.25
+MAX_DESCRIPTION_LINES = 3
 
-UNIT_TO_MM = {"mm": 1.0, "cm": 10.0, "in": 25.4, "pt": 25.4 / 72, "px": 25.4 / 96}
-UNIT_SUFFIX = re.compile(r"^(.*)_unit\d+$")
-
-
-class Symbol(NamedTuple):
-    category: str
-    name: str
-    svg_path: str
-    width_mm: float
-    height_mm: float
-    reference: str
-    description: str
+FONT_DIR = Path(__file__).resolve().parent.parent / "fonts"
+FONT_FILES = {
+    "Plex": "IBMPlexSans-Regular.ttf",
+    "Plex-Medium": "IBMPlexSans-Medium.ttf",
+    "Plex-SemiBold": "IBMPlexSans-SemiBold.ttf",
+}
+FONTS = {"regular": "Plex", "medium": "Plex-Medium", "semibold": "Plex-SemiBold"}
 
 
-def parse_svg_size_mm(svg_path: str) -> tuple | None:
-    """Return (width, height) in mm from the SVG root element. Uses the
-    width/height attributes and their units; falls back to the viewBox, which
-    kicad-cli writes in mm."""
-    with open(svg_path, encoding="utf-8", errors="replace") as fh:
-        head = fh.read(4096)
-    m = re.search(r"<svg\b[^>]*>", head, re.DOTALL)
-    if not m:
-        return None
-    tag = m.group(0)
+def register_fonts() -> None:
+    """
+    Register IBM Plex Sans, falling back to Helvetica with a warning
 
-    def attr(name: str) -> str | None:
-        a = re.search(rf'\s{name}\s*=\s*"([^"]*)"', tag)
-        return a.group(1).strip() if a else None
-
-    def to_mm(value: str | None) -> float | None:
-        if not value:
-            return None
-        v = re.fullmatch(r"([0-9.eE+-]+)\s*([a-z%]*)", value)
-        if not v or v.group(2) == "%":
-            return None
-        unit = v.group(2) or "px"
-        return float(v.group(1)) * UNIT_TO_MM[unit] if unit in UNIT_TO_MM else None
-
-    w, h = to_mm(attr("width")), to_mm(attr("height"))
-    if w and h:
-        return w, h
-    vb = attr("viewBox")
-    if vb:
-        parts = [float(x) for x in re.split(r"[\s,]+", vb) if x]
-        if len(parts) == 4 and parts[2] > 0 and parts[3] > 0:
-            return parts[2], parts[3]
-    return None
-
-
-def _prop(text: str, key: str) -> str:
-    m = re.search(
-        rf'\(property\s+"?{key}"?\s+(?:"((?:[^"\\]|\\.)*)"|([^\s()"]+))', text
+    Plex is vendored in fonts/ as TrueType; reportlab cannot use CFF outlines
+    """
+    if all((FONT_DIR / f).is_file() for f in FONT_FILES.values()):
+        for name, f in FONT_FILES.items():
+            pdfmetrics.registerFont(TTFont(name, str(FONT_DIR / f)))
+        return
+    print(
+        f"Warning: IBM Plex Sans not found in {FONT_DIR}; using Helvetica.",
+        file=sys.stderr,
     )
-    if not m:
-        return ""
-    value = m.group(1) if m.group(1) is not None else m.group(2)
-    return re.sub(r"\\(.)", r"\1", value).strip()
-
-
-def read_properties(sym_path: str) -> tuple:
-    """Return (reference, description) of the first symbol in a .kicad_sym;
-    either may be empty or absent."""
-    text = Path(sym_path).read_text(encoding="utf-8", errors="replace")
-    return _prop(text, "Reference"), _prop(text, "Description")
-
-
-def derive_symbols_dir(plots_dir: str) -> str:
-    """symbols/ next to plots/ (the repository layout)."""
-    return os.path.join(
-        os.path.dirname(os.path.abspath(plots_dir.rstrip("/\\"))), "symbols"
+    FONTS.update(
+        regular="Helvetica", medium="Helvetica-Bold", semibold="Helvetica-Bold"
     )
 
 
-def collect_symbols(plots_dir: str, symbols_dir: str) -> "list[Symbol]":
-    """Return one Symbol per SVG, built only from .kicad_sym files that exist
-    in symbols_dir (so stale plots are ignored). Sorted by category then name."""
-    symbols: list[Symbol] = []
-    for cat in sorted(os.listdir(symbols_dir)):
-        cat_dir = os.path.join(symbols_dir, cat)
-        if not os.path.isdir(cat_dir):
-            continue
-        plot_dir = os.path.join(plots_dir, cat)
-        svgs = (
-            sorted(f for f in os.listdir(plot_dir) if f.endswith(".svg"))
-            if os.path.isdir(plot_dir)
-            else []
-        )
-        for f in sorted(os.listdir(cat_dir)):
-            if not f.endswith(".kicad_sym"):
-                continue
-            base = Path(f).stem
-            ref, desc = read_properties(os.path.join(cat_dir, f))
-            found = [
-                s
-                for s in svgs
-                if Path(s).stem == base
-                or (
-                    UNIT_SUFFIX.match(Path(s).stem)
-                    and UNIT_SUFFIX.match(Path(s).stem).group(1) == base
-                )
-            ]
-            if not found:
-                print(f"Warning: no plot for {cat}/{f}", file=sys.stderr)
-            for s in found:
-                path = os.path.join(plot_dir, s)
-                size = parse_svg_size_mm(path)
-                if size is None:
-                    print(f"Warning: cannot read size of {path}", file=sys.stderr)
-                    continue
-                symbols.append(Symbol(cat, Path(s).stem, path, *size, ref, desc))
-    symbols.sort(key=lambda x: (x.category, x.name))
-    return symbols
+def revision() -> tuple:
+    """
+    Read the revision of the library from git
+
+    Returns
+
+    tuple
+        Short commit hash and commit date (D Month YYYY), or ("unknown", "") outside git
+    """
+    repo = Path(__file__).resolve().parent.parent
+    try:
+        out = subprocess.run(
+            ["git", "-C", str(repo), "log", "-1", "--format=%h %cs"],
+            capture_output=True,
+            text=True,
+            check=True,
+        ).stdout.split()
+        year, month, day = out[1].split("-")
+    except (OSError, subprocess.CalledProcessError, IndexError, ValueError):
+        return "unknown", ""
+    months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ]
+    return out[0], f"{int(day)} {months[int(month) - 1]} {year}"
 
 
-def choose_scale(symbols: "list[Symbol]") -> float:
-    """One page-mm per symbol-mm factor for every symbol. Capped at MAX_SCALE;
-    reduced if the widest symbol would not fit the page width or the tallest
-    would use more than MAX_HEIGHT_FRACTION of the page height."""
-    max_w = max(s.width_mm for s in symbols) * mm
-    max_h = max(s.height_mm for s in symbols) * mm
-    return min(MAX_SCALE, USABLE_W / max_w, MAX_HEIGHT_FRACTION * USABLE_H / max_h)
+def make_styles() -> dict:
+    """
+    Build the paragraph styles of the document
+
+    Returns
+
+    dict
+        Style name to ParagraphStyle
+    """
+    f = FONTS
+
+    def style(name, **kw):
+        base = {
+            "fontName": f["regular"],
+            "textColor": TEXT,
+            "fontSize": 8,
+            "leading": 10,
+        }
+        base.update(kw)
+        return ParagraphStyle(name, **base)
+
+    return {
+        "title": style("title", fontName=f["semibold"], fontSize=30, leading=34),
+        "subtitle": style("subtitle", fontSize=12.5, leading=17, textColor=SECONDARY),
+        "h1": style(
+            "h1", fontName=f["semibold"], fontSize=13, leading=16, textColor=ACCENT
+        ),
+        "h2": style(
+            "h2", fontName=f["semibold"], fontSize=10, leading=13, textColor=ACCENT
+        ),
+        "body": style("body", fontSize=8.5, leading=12),
+        "label": style("label", fontSize=8, leading=11, textColor=SECONDARY),
+        "value": style("value", fontName=f["medium"], fontSize=8.5, leading=11),
+        "small": style("small", fontSize=7.5, leading=10),
+        "small_r": style("small_r", fontSize=7.5, leading=10, alignment=TA_RIGHT),
+        "prefix": style("prefix", fontName=f["semibold"], fontSize=8, leading=10),
+        "name": style(
+            "name", fontName=f["semibold"], fontSize=8, leading=10, alignment=TA_CENTER
+        ),
+        "ref": style(
+            "ref",
+            fontName=f["medium"],
+            fontSize=6.5,
+            leading=8,
+            textColor=ACCENT,
+            alignment=TA_CENTER,
+        ),
+        "desc": style(
+            "desc",
+            fontSize=7,
+            leading=9,
+            textColor=SECONDARY,
+            alignment=TA_CENTER,
+        ),
+    }
 
 
-def svg_to_png_bytes(svg_path: str, px_w: int, px_h: int) -> bytes | None:
-    result = subprocess.run(
-        ["rsvg-convert", "-f", "png", "-w", str(px_w), "-h", str(px_h), svg_path],
-        capture_output=True,
-        check=False,
-    )
-    return result.stdout if result.returncode == 0 else None
+def fit_lines(text: str, st: ParagraphStyle, width: float, max_lines: int) -> str:
+    """
+    Trim text so it wraps to at most max_lines lines
+
+    Arguments
+
+    text - str
+        Plain text to fit
+    st - ParagraphStyle
+        Style the text will be set in
+    width - float
+        Available width in points
+    max_lines - int
+        Longest acceptable wrapped length
+
+    Returns
+
+    str
+        The text, shortened with an ellipsis if it was too long
+    """
+    words = text.split()
+    candidate = " ".join(words)
+    while True:
+        p = Paragraph(escape(candidate), st)
+        p.wrap(width, 1000)
+        if len(p.blPara.lines) <= max_lines or not words:
+            return candidate
+        words.pop()
+        candidate = " ".join(words).rstrip(",;:") + "…"
 
 
-def category_title(slug: str) -> str:
-    return slug.replace("-", " ").title()
+def pack_rows(symbols: "list[Symbol]") -> "list[list[tuple]]":
+    """
+    Pack symbols into rows of COLUMNS equal columns
 
+    A symbol too wide for one column spans as many as it needs, so no symbol is
+    ever scaled or clipped
 
-def pack_rows(cells: "list[tuple[Symbol, float]]") -> "list[list[tuple]]":
-    """Greedy row packing; each cell is (symbol, cell width in points). A
-    symbol wider than the page takes a row of its own."""
-    rows: list[list[tuple]] = []
-    row: list[tuple] = []
-    used = 0.0
-    for cell in cells:
-        w = cell[1] + CELL_GAP
-        if row and used + w > USABLE_W:
+    Arguments
+
+    symbols - list[Symbol]
+        Symbols of one category in display order
+
+    Returns
+
+    list[list[tuple]]
+        Rows of (symbol, columns spanned)
+    """
+    rows, row, used = [], [], 0
+    for s in symbols:
+        span = 1
+        while (
+            s.width_mm * mm * SCALE + 2 * CELL_PAD > span * COLUMN_W and span < COLUMNS
+        ):
+            span += 1
+        if used + span > COLUMNS:
             rows.append(row)
-            row, used = [], 0.0
-        row.append(cell)
-        used += w
+            row, used = [], 0
+        row.append((s, span))
+        used += span
     if row:
         rows.append(row)
     return rows
 
 
-def build_registry(plots_dir: str, output_path: str, symbols_dir: str) -> None:
-    styles = getSampleStyleSheet()
+def symbol_row(row: "list[tuple]", st: dict, category: str) -> Table:
+    """
+    Lay out one grid row as a single table that is never split
 
-    title_style = ParagraphStyle(
-        "RegTitle",
-        parent=styles["Title"],
-        fontSize=28,
-        leading=34,
-        spaceAfter=4 * mm,
-        textColor=colors.HexColor("#1a1a2e"),
-    )
-    subtitle_style = ParagraphStyle(
-        "RegSubtitle",
-        parent=styles["Normal"],
-        fontSize=12,
-        leading=16,
-        textColor=colors.HexColor("#555555"),
-    )
-    cat_style = ParagraphStyle(
-        "CatHead",
-        parent=styles["Heading1"],
-        fontSize=13,
-        leading=16,
-        spaceBefore=6 * mm,
-        spaceAfter=3 * mm,
-        textColor=colors.HexColor("#2c3e50"),
-        borderPad=(0, 0, 2, 0),
-    )
-    name_style = ParagraphStyle(
-        "SymName",
-        parent=styles["Normal"],
-        fontSize=7.5,
-        leading=10,
-        alignment=TA_CENTER,
-        textColor=colors.HexColor("#333333"),
-    )
-    meta_style = ParagraphStyle(
-        "SymMeta",
-        parent=name_style,
-        fontSize=6.5,
-        leading=8,
-        textColor=colors.HexColor("#666666"),
-    )
+    The drawing row is as tall as the tallest drawing, so captions line up
+    across the row; names, tags and descriptions each have a row of their own
+    for the same reason
 
-    symbols = collect_symbols(plots_dir, symbols_dir)
-    if not symbols:
-        print("No SVG symbols found.", file=sys.stderr)
-        return
+    Arguments
 
-    scale = choose_scale(symbols)
-    print(f"Scale: {scale:.3f} (1 mm on the symbol = {scale:.3f} mm on the page)")
+    row - list[tuple]
+        (symbol, columns spanned) pairs
+    st - dict
+        Paragraph styles
+    category - str
+        Category slug, used for the running header
 
-    doc = SimpleDocTemplate(
-        output_path,
-        pagesize=A4,
+    Returns
+
+    Table
+        The row, carrying its category for the running header
+    """
+    drawings, names, refs, descs, cmds = [], [], [], [], []
+    col = 0
+    for s, span in row:
+        width = span * COLUMN_W - 2 * CELL_PAD
+        w_pt, h_pt = s.width_mm * mm * SCALE, s.height_mm * mm * SCALE
+        drawings += [Image(io.BytesIO(s.png), width=w_pt, height=h_pt)]
+        nm = escape(s.name).replace(" - ", " - ")
+        names += [Paragraph(nm, st["name"])]
+        refs += [
+            Paragraph(f"Ref {escape(s.reference)}" if s.reference else "", st["ref"])
+        ]
+        text = fit_lines(s.description, st["desc"], width, MAX_DESCRIPTION_LINES)
+        descs += [Paragraph(escape(text), st["desc"])]
+        end = col + span - 1
+        if span > 1:
+            for r in range(4):
+                cmds.append(("SPAN", (col, r), (end, r)))
+        if end < COLUMNS - 1:
+            cmds.append(("LINEAFTER", (end, 0), (end, -1), 0.4, HAIRLINE))
+        col = end + 1
+        # Placeholders hold the spanned columns so every table row has 4 cells
+        for lst in (drawings, names, refs, descs):
+            lst.extend([""] * (span - 1))
+    for lst in (drawings, names, refs, descs):
+        lst.extend([""] * (COLUMNS - len(lst)))
+    tallest = max(s.height_mm for s, _ in row) * mm * SCALE
+    table = Table(
+        [drawings, names, refs, descs],
+        colWidths=[COLUMN_W] * COLUMNS,
+        rowHeights=[tallest + 8 * mm, None, None, None],
+    )
+    table.setStyle(
+        [
+            ("ALIGN", (0, 0), (-1, 0), "CENTER"),
+            ("VALIGN", (0, 0), (-1, 0), "MIDDLE"),
+            ("VALIGN", (0, 1), (-1, -1), "TOP"),
+            ("LEFTPADDING", (0, 0), (-1, -1), CELL_PAD),
+            ("RIGHTPADDING", (0, 0), (-1, -1), CELL_PAD),
+            ("TOPPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 3), (-1, 3), 3 * mm),
+            ("TOPPADDING", (0, 2), (-1, 2), 0.5 * mm),
+            ("TOPPADDING", (0, 3), (-1, 3), 0.8 * mm),
+            ("LINEBELOW", (0, -1), (-1, -1), 0.4, HAIRLINE),
+        ]
+        + cmds
+    )
+    table.section = category
+    return table
+
+
+def heading(title: str, key: str, st: dict) -> Table:
+    """
+    Build an accent heading with an accent rule, kept with what follows it
+
+    Arguments
+
+    title - str
+        Heading text
+    key - str
+        Bookmark key used by the contents page and the PDF outline
+    st - dict
+        Paragraph styles
+
+    Returns
+
+    Table
+        Heading flowable carrying its section name for the running header
+    """
+    t = Table([[Paragraph(escape(title), st["h1"])]], colWidths=[CONTENT_W])
+    t.setStyle(
+        [
+            ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+            ("TOPPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 2 * mm),
+            ("LINEBELOW", (0, 0), (-1, -1), 0.9, ACCENT),
+        ]
+    )
+    t.keepWithNext = True
+    t.spaceBefore = 7 * mm
+    t.spaceAfter = 1 * mm
+    t.section = title
+    t.bookmark = (key, title)
+    return t
+
+
+def cover_story(st: dict, symbols: "list[Symbol]", categories: int, rev: tuple) -> list:
+    """
+    Build the cover page
+
+    Arguments
+
+    st - dict
+        Paragraph styles
+    symbols - list[Symbol]
+        All symbols, for the count
+    categories - int
+        Number of categories
+    rev - tuple
+        Short hash and commit date
+
+    Returns
+
+    list
+        Flowables for the cover page
+    """
+    rev_text = rev[0] + (f", {rev[1]}" if rev[1] else "")
+    facts = [
+        ("Symbols", str(len(symbols))),
+        ("Categories", str(categories)),
+        (
+            "Drawing scale",
+            f"{SCALE:g} : 1 for every symbol (1 mm on a symbol is {SCALE:g} mm on the page, printed at 100 per cent)",
+        ),
+        ("Revision", rev_text),
+        ("Maintained by", AUTHOR),
+        ("Licence", "MIT licence"),
+    ]
+    facts_t = Table(
+        [
+            [Paragraph(k, st["label"]), Paragraph(escape(v), st["value"])]
+            for k, v in facts
+        ],
+        colWidths=[34 * mm, CONTENT_W - 34 * mm],
+    )
+    facts_t.setStyle(
+        [
+            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("TOPPADDING", (0, 0), (-1, -1), 2.2 * mm),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 2.2 * mm),
+            ("LINEBELOW", (0, 0), (-1, -1), 0.4, HAIRLINE),
+            ("LINEABOVE", (0, 0), (-1, 0), 0.4, HAIRLINE),
+        ]
+    )
+    conventions = [
+        (
+            "Connection points sit on whole millimetres. Set the schematic "
+            "connection grid to 1 mm and wires always land on a pin."
+        ),
+        (
+            "Inline two-port symbols (valves, pumps, filters and so on) connect "
+            "at x = \u00b18 mm, a 16 mm connection box."
+        ),
+        (
+            "Pins are numbered so that a netlist shows flow direction. Inline "
+            "symbols use 1 IN and 2 OUT, tees and crosses add 3 BRANCH and "
+            "4 BRANCH2, tanks use 1 TOP and 2 BOTTOM and single-port symbols "
+            "use 1 PORT."
+        ),
+        (
+            "Reference prefixes follow ISA 5.1 style. KiCad appends the "
+            "annotation number, so the first ball valve placed is V1."
+        ),
+        "The letters inside an instrument bubble come from an editable Function field.",
+    ]
+    rows = [[Paragraph("Conventions", st["h2"])]]
+    for c in conventions:
+        rows.append([Paragraph(escape(c), st["body"])])
+    panel = Table(rows, colWidths=[CONTENT_W])
+    panel.setStyle(
+        [
+            ("LEFTPADDING", (0, 0), (-1, -1), 5 * mm),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 5 * mm),
+            ("TOPPADDING", (0, 0), (-1, -1), 1.4 * mm),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 1.4 * mm),
+            ("TOPPADDING", (0, 0), (-1, 0), 4 * mm),
+            ("BOTTOMPADDING", (0, -1), (-1, -1), 4 * mm),
+            ("BOX", (0, 0), (-1, -1), 0.4, HAIRLINE),
+            ("LINEBEFORE", (0, 0), (0, -1), 2.2, ACCENT),
+        ]
+    )
+    rule = Table([[""]], colWidths=[28 * mm], rowHeights=[1])
+    rule.setStyle([("LINEBELOW", (0, 0), (-1, -1), 2.2, ACCENT)])
+    rule.hAlign = "LEFT"
+    return [
+        Spacer(1, 48 * mm),
+        Paragraph(escape(TITLE), st["title"]),
+        Spacer(1, 5 * mm),
+        rule,
+        Spacer(1, 5 * mm),
+        Paragraph(escape(SUBTITLE), st["subtitle"]),
+        Spacer(1, 30 * mm),
+        facts_t,
+        Spacer(1, 16 * mm),
+        panel,
+    ]
+
+
+def contents_story(
+    st: dict, cats: "list[tuple]", pages: dict, prefixes: "list[tuple]"
+) -> list:
+    """
+    Build the contents page and the reference prefix table
+
+    Arguments
+
+    st - dict
+        Paragraph styles
+    cats - list[tuple]
+        (slug, title, symbol count) in document order
+    pages - dict
+        Slug to page number, from the first pass; "prefixes" is the prefix table
+    prefixes - list[tuple]
+        (prefix, used for) rows
+
+    Returns
+
+    list
+        Flowables for the contents page
+    """
+    rows = [
+        [
+            Paragraph(
+                f'<a href="#cat_{slug}" color="#1F2933">{escape(title)}</a>',
+                st["small"],
+            ),
+            Paragraph(str(count), st["small_r"]),
+            Paragraph(str(pages.get(slug, "")), st["small_r"]),
+        ]
+        for slug, title, count in cats
+    ]
+    rows.insert(
+        0,
+        [
+            Paragraph(
+                '<a href="#prefixes" color="#1F2933">Reference prefixes</a>',
+                st["small"],
+            ),
+            Paragraph("", st["small_r"]),
+            Paragraph(str(pages.get("prefixes", "")), st["small_r"]),
+        ],
+    )
+    head = [
+        Paragraph("Category", st["label"]),
+        Paragraph(
+            "Symbols", ParagraphStyle("lr", parent=st["label"], alignment=TA_RIGHT)
+        ),
+        Paragraph(
+            "Page", ParagraphStyle("lr2", parent=st["label"], alignment=TA_RIGHT)
+        ),
+    ]
+    toc = Table([head] + rows, colWidths=[CONTENT_W - 40 * mm, 20 * mm, 20 * mm])
+    toc.setStyle(table_style(header=True))
+    ptable = Table(
+        [[Paragraph("Prefix", st["label"]), Paragraph("Used for", st["label"])]]
+        + [
+            [Paragraph(escape(p), st["prefix"]), Paragraph(escape(u), st["small"])]
+            for p, u in prefixes
+        ],
+        colWidths=[22 * mm, CONTENT_W - 22 * mm],
+        repeatRows=1,
+    )
+    ptable.setStyle(table_style(header=True))
+    h_contents = heading("Contents", "contents", st)
+    h_contents.spaceBefore = 0
+    h_prefix = heading("Reference prefixes", "prefixes", st)
+    h_prefix.spaceBefore = 0
+    return [
+        h_contents,
+        toc,
+        PageBreak(),
+        h_prefix,
+        Paragraph(
+            "Each symbol carries an ISA 5.1 style Reference prefix; KiCad appends "
+            "the annotation number.",
+            ParagraphStyle(
+                "note", parent=st["small"], textColor=SECONDARY, spaceAfter=2 * mm
+            ),
+        ),
+        ptable,
+        PageBreak(),
+    ]
+
+
+def table_style(header: bool) -> list:
+    """
+    Compact hairline table style shared by the contents tables
+
+    Arguments
+
+    header - bool
+        True if the first row is a header row
+
+    Returns
+
+    list
+        Table style commands
+    """
+    cmds = [
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 2 * mm),
+        ("TOPPADDING", (0, 0), (-1, -1), 1.3 * mm),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 1.3 * mm),
+        ("LINEBELOW", (0, 0), (-1, -1), 0.4, HAIRLINE),
+    ]
+    if header:
+        cmds.append(("LINEBELOW", (0, 0), (-1, 0), 0.8, ACCENT))
+    return cmds
+
+
+class RegistryDoc(BaseDocTemplate):
+    """
+    A4 document with a running header and footer
+
+    Records the page each heading lands on and the section shown in each header
+    """
+
+    def __init__(self, target, total_pages: int, rev: tuple, **kw):
+        super().__init__(target, pagesize=A4, **kw)
+        self.total_pages = total_pages
+        self.rev = rev
+        self.heading_pages: dict = {}
+        self.page_section: dict = {}
+        frame = Frame(
+            MARGIN,
+            FRAME_BOTTOM,
+            CONTENT_W,
+            FRAME_TOP - FRAME_BOTTOM,
+            leftPadding=0,
+            rightPadding=0,
+            topPadding=0,
+            bottomPadding=0,
+            id="body",
+        )
+        self.addPageTemplates(
+            [
+                PageTemplate(id="cover", frames=[frame], onPageEnd=self.draw_cover),
+                PageTemplate(id="body", frames=[frame], onPageEnd=self.draw_running),
+            ]
+        )
+
+    def afterFlowable(self, flowable) -> None:
+        """
+        Record headings and sections, and add bookmarks
+
+        Arguments
+
+        flowable - Flowable
+            Flowable that has just been placed
+        """
+        section = getattr(flowable, "section", None)
+        if section and self.page not in self.page_section:
+            self.page_section[self.page] = section
+        mark = getattr(flowable, "bookmark", None)
+        if mark:
+            key, title = mark
+            self.canv.bookmarkPage(key)
+            self.canv.addOutlineEntry(title, key, 0)
+            self.heading_pages[key] = self.page
+
+    def draw_cover(self, canv, doc) -> None:
+        """
+        Page end callback for the cover, which has no header or footer
+
+        Arguments
+
+        canv - Canvas
+            Canvas of the page
+        doc - BaseDocTemplate
+            This document
+        """
+        canv.setTitle(TITLE)
+
+    def draw_running(self, canv, doc) -> None:
+        """
+        Page end callback drawing the running header and footer
+
+        Arguments
+
+        canv - Canvas
+            Canvas of the page
+        doc - BaseDocTemplate
+            This document
+        """
+        # A page with no heading of its own continues the previous section
+        page = doc.page
+        section = self.page_section.get(page)
+        if section is None:
+            section = self.page_section.get(page - 1, "")
+            self.page_section[page] = section
+        canv.saveState()
+        canv.setStrokeColor(HAIRLINE)
+        canv.setLineWidth(0.4)
+        canv.line(MARGIN, HEADER_RULE_Y, PAGE_W - MARGIN, HEADER_RULE_Y)
+        canv.line(MARGIN, FOOTER_RULE_Y, PAGE_W - MARGIN, FOOTER_RULE_Y)
+        spaced(
+            canv,
+            FONTS["medium"],
+            7.5,
+            SECONDARY,
+            0.5,
+            MARGIN,
+            HEADER_RULE_Y + 2.2 * mm,
+            TITLE.upper(),
+        )
+        spaced(
+            canv,
+            FONTS["medium"],
+            7.5,
+            ACCENT,
+            0.5,
+            PAGE_W - MARGIN,
+            HEADER_RULE_Y + 2.2 * mm,
+            section.upper(),
+            right=True,
+        )
+        rev_text = (
+            "Revision " + self.rev[0] + (f", {self.rev[1]}" if self.rev[1] else "")
+        )
+        spaced(
+            canv,
+            FONTS["regular"],
+            7,
+            SECONDARY,
+            0,
+            MARGIN,
+            FOOTER_RULE_Y - 4.2 * mm,
+            rev_text,
+        )
+        spaced(
+            canv,
+            FONTS["regular"],
+            7,
+            SECONDARY,
+            0,
+            PAGE_W - MARGIN,
+            FOOTER_RULE_Y - 4.2 * mm,
+            f"Page {page} of {self.total_pages}",
+            right=True,
+        )
+        canv.restoreState()
+
+
+def spaced(canv, font, size, colour, space, x, y, text, right=False) -> None:
+    """
+    Draw one line of letter spaced text
+
+    Arguments
+
+    canv - Canvas
+        Canvas to draw on
+    font - str
+        Registered font name
+    size - float
+        Font size in points
+    colour - Color
+        Text colour
+    space - float
+        Extra space between letters in points
+    x - float
+        Left edge, or right edge when right is set
+    y - float
+        Baseline
+    text - str
+        Text to draw
+    right - bool
+        Right align at x
+    """
+    width = pdfmetrics.stringWidth(text, font, size) + space * len(text)
+    t = canv.beginText(x - width if right else x, y)
+    t.setFont(font, size)
+    t.setFillColor(colour)
+    t.setCharSpace(space)
+    t.textOut(text)
+    canv.drawText(t)
+
+
+def build_story(
+    symbols: "list[Symbol]", pages: dict, rev: tuple, st: dict
+) -> "tuple[list, list]":
+    """
+    Build every flowable of the document
+
+    Arguments
+
+    symbols - list[Symbol]
+        Symbols in registry order
+    pages - dict
+        Slug to page number from the first pass
+    rev - tuple
+        Short hash and commit date
+    st - dict
+        Paragraph styles
+
+    Returns
+
+    tuple
+        The story and the (slug, title, count) list of categories
+    """
+    by_cat: dict[str, list] = {}
+    for s in symbols:
+        by_cat.setdefault(s.category, []).append(s)
+    cats = [(c, category_title(c), len(v)) for c, v in by_cat.items()]
+    cat_pages = {slug: pages.get(f"cat_{slug}", "") for slug in by_cat}
+    cat_pages["prefixes"] = pages.get("prefixes", "")
+    story = cover_story(st, symbols, len(cats), rev)
+    # The cover uses the header-free template, everything after it the other
+    story += [NextPageTemplate("body"), PageBreak()]
+    story += contents_story(st, cats, cat_pages, prefix_table(symbols))
+    for slug, title, _ in cats:
+        rows = [symbol_row(r, st, title) for r in pack_rows(by_cat[slug])]
+        # The heading always travels with the first row, never alone at a page foot
+        story.append(KeepTogether([heading(title, f"cat_{slug}", st), rows[0]]))
+        story += [KeepTogether([r]) for r in rows[1:]]
+    return story, cats
+
+
+def build_pdf(story: list, target, total: int, rev: tuple) -> RegistryDoc:
+    """
+    Run one layout pass
+
+    Arguments
+
+    story - list
+        Flowables (consumed by the build)
+    target - str | file
+        Output path or file object
+    total - int
+        Total page count shown in the footer
+    rev - tuple
+        Short hash and commit date
+
+    Returns
+
+    RegistryDoc
+        The finished document, holding page numbers
+    """
+    doc = RegistryDoc(
+        target,
+        total,
+        rev,
+        title=TITLE,
+        author=AUTHOR,
+        subject=SUBTITLE,
+        creator="scripts/registry.py",
         leftMargin=MARGIN,
         rightMargin=MARGIN,
         topMargin=MARGIN,
         bottomMargin=MARGIN,
     )
+    doc.build(story)
+    return doc
 
-    with tempfile.TemporaryDirectory() as tmpdir:
-        counter = 0
 
-        def make_image(sym: Symbol):
-            """Return an Image at the common scale, or a placeholder Paragraph."""
-            nonlocal counter
-            dw = sym.width_mm * mm * scale
-            dh = sym.height_mm * mm * scale
-            px_w = max(1, round(dw / inch * RASTER_DPI))
-            px_h = max(1, round(dh / inch * RASTER_DPI))
-            png = svg_to_png_bytes(sym.svg_path, px_w, px_h)
-            if png is None:
-                print(f"Warning: could not rasterise {sym.svg_path}", file=sys.stderr)
-                return Paragraph(f"[{escape(sym.name)}]", name_style), 10 * mm
-            counter += 1
-            tmp = os.path.join(tmpdir, f"{counter}.png")
-            Path(tmp).write_bytes(png)
-            return Image(tmp, width=dw, height=dh), dh
+def build_registry(output_path: str, symbols_dir: Path) -> None:
+    """
+    Build the registry PDF in two passes so that the contents page and the
+    footer carry the final page numbers
 
-        def make_row(row: "list[tuple]") -> Table:
-            images, labels, widths, heights = [], [], [], []
-            for sym, cell_w in row:
-                img, h = make_image(sym)
-                images.append(img)
-                heights.append(h)
-                widths.append(cell_w + CELL_GAP)
-                label = [Paragraph(escape(sym.name), name_style)]
-                if sym.reference:
-                    label.append(Paragraph(f"Ref: {escape(sym.reference)}", meta_style))
-                if sym.description:
-                    label.append(Paragraph(escape(sym.description), meta_style))
-                labels.append(label)
-            t = Table(
-                [images, labels],
-                colWidths=widths,
-                rowHeights=[max(heights) + 2 * mm, None],
-            )
-            t.setStyle(
-                TableStyle(
-                    [
-                        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-                        ("VALIGN", (0, 0), (-1, 0), "MIDDLE"),
-                        ("VALIGN", (0, 1), (-1, 1), "TOP"),
-                        ("LEFTPADDING", (0, 0), (-1, -1), 1 * mm),
-                        ("RIGHTPADDING", (0, 0), (-1, -1), 1 * mm),
-                        ("TOPPADDING", (0, 0), (-1, -1), 1 * mm),
-                        ("BOTTOMPADDING", (0, 0), (-1, -1), 1 * mm),
-                    ]
-                )
-            )
-            return t
+    Arguments
 
-        story: list = []
-
-        # Title page
-        story.append(Spacer(1, 50 * mm))
-        story.append(Paragraph("P&amp;ID KiCAD Symbol Registry", title_style))
-        story.append(
-            Paragraph(
-                "Aerospace Piping &amp; Instrumentation Diagram Symbols",
-                subtitle_style,
-            )
-        )
-        story.append(Spacer(1, 4 * mm))
-        story.append(
-            Paragraph(
-                f"All symbols are drawn at one common scale of {scale:.2f} : 1 "
-                "(page size to symbol size), so relative sizes are true.",
-                subtitle_style,
-            )
-        )
-        story.append(PageBreak())
-
-        by_cat: dict[str, list] = {}
-        for sym in symbols:
-            by_cat.setdefault(sym.category, []).append(sym)
-
-        for cat in sorted(by_cat):
-            cells = [(s, max(s.width_mm * mm * scale, MIN_CELL_W)) for s in by_cat[cat]]
-            rows = pack_rows(cells)
-            heading = Paragraph(category_title(cat), cat_style)
-            story.append(KeepTogether([heading, make_row(rows[0])]))
-            for row in rows[1:]:
-                story.append(make_row(row))
-            story.append(Spacer(1, 4 * mm))
-
-        doc.build(story)
-
-    print(f"Registry written to {output_path}")
+    output_path - str
+        PDF to write
+    symbols_dir - Path
+        Directory holding the symbol files
+    """
+    register_fonts()
+    symbols = export_symbols(symbols_dir)
+    if not symbols:
+        print("No symbols found.", file=sys.stderr)
+        sys.exit(1)
+    st = make_styles()
+    rev = revision()
+    story, _ = build_story(symbols, {}, rev, st)
+    first = build_pdf(story, io.BytesIO(), 0, rev)
+    total = first.page
+    story, _ = build_story(symbols, first.heading_pages, rev, st)
+    final = build_pdf(story, output_path, total, rev)
+    if final.page != total or final.heading_pages != first.heading_pages:
+        print("Warning: page numbers moved between passes.", file=sys.stderr)
+    print(f"Registry written to {output_path} ({total} pages, scale {SCALE:g} : 1)")
 
 
 def usage() -> None:
+    """
+    Usage
+
+    Prints the script's usage
+    """
     print(
         f"Usage: {sys.argv[0]} <plots directory> <output pdf path> [symbols directory]\n"
-        "  The symbols directory defaults to symbols/ next to the plots directory."
+        "  The plots directory is accepted for compatibility and not used; symbols\n"
+        "  are exported afresh. The symbols directory defaults to symbols/ next to it."
     )
     sys.exit(1)
 
@@ -359,20 +859,10 @@ if __name__ == "__main__":
     if len(sys.argv) not in (3, 4):
         usage()
 
-    plots_dir = sys.argv[1]
-    output_path = sys.argv[2]
-    symbols_dir = sys.argv[3] if len(sys.argv) == 4 else derive_symbols_dir(plots_dir)
-
-    if not os.path.isdir(plots_dir):
-        print(f"Plots directory '{plots_dir}' does not exist.", file=sys.stderr)
+    plots_dir = Path(sys.argv[1]).resolve()
+    sym_dir = Path(sys.argv[3]) if len(sys.argv) == 4 else plots_dir.parent / "symbols"
+    if not sym_dir.is_dir():
+        print(f"Symbols directory '{sym_dir}' does not exist.", file=sys.stderr)
         sys.exit(1)
 
-    if not os.path.isdir(symbols_dir):
-        print(
-            f"Symbols directory '{symbols_dir}' does not exist; "
-            "pass it as the third argument.",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-
-    build_registry(plots_dir, output_path, symbols_dir)
+    build_registry(sys.argv[2], sym_dir)

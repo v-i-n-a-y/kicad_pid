@@ -3,18 +3,18 @@
 """
 Normalise the symbol sources so every symbol follows the library conventions.
 
-For each .kicad_sym file under the given directory this rewrites, in place
-and idempotently
+For each .kicad_sym file under the given directory, rewrite the following in
+place. The rewrite is idempotent, so a second run changes nothing.
 
-* the Reference property (ISA style prefix, see SYMBOLS below),
-* the Description and ki_keywords properties (both hidden),
-* on_board no, in_bom yes,
-* every stroke width to 0.1,
-* every pin to type passive with a unique number and a name (1 IN, 2 OUT ...),
-* hidden pin names and numbers on the schematic.
+* the Reference property (ISA style prefix, see SYMBOLS below)
+* the Description and ki_keywords properties, both hidden
+* on_board no and in_bom yes
+* every stroke width set to 0.1
+* every pin set to type passive, with a unique number and a name (1 IN, 2 OUT ...)
+* hidden pin names and numbers on the schematic
 
-Graphics are left untouched apart from the stroke width.  Nothing is written
-if any symbol has no table entry or any pin cannot be classified.
+Graphics are left alone apart from the stroke width. Nothing is written if any
+symbol has no table entry or any pin cannot be classified.
 """
 
 import copy
@@ -40,6 +40,21 @@ SYMBOLS = {}
 
 
 def _add(name, prefix, description, keywords):
+    """
+    Add one symbol to the table, refusing a name that is already present
+
+    Arguments
+
+    name - str
+        Symbol name, unique across the table
+    prefix - str
+        Reference prefix, for example TK or PI
+    description - str
+        Description property for the symbol
+    keywords - str
+        Space separated search keywords for the symbol
+    """
+
     if name in SYMBOLS:
         raise ValueError("duplicate table entry: " + name)
     SYMBOLS[name] = (prefix, description, keywords)
@@ -346,7 +361,24 @@ VESSEL_PATTERNS = (
 
 
 def lookup(name):
-    """Return (prefix, description, keywords) for a symbol name, or None."""
+    """
+    Find the table entry for a symbol name
+
+    An exact table match is used first. Otherwise a name that starts with a
+    vessel word (Tank, Bottle, Gas Cylinder or Sample Cylinder) gets an entry
+    built from its name parts.
+
+    Arguments
+
+    name - str
+        The symbol name, as it appears in the symbol file
+
+    Returns
+
+    entry - tuple
+        (prefix, description, keywords), or None if no entry applies
+    """
+
     if name in SYMBOLS:
         return SYMBOLS[name]
     for start, prefix in VESSEL_PATTERNS:
@@ -370,15 +402,31 @@ ENGINE_PREFIXES = {"ENG"}
 
 
 class NormaliseError(Exception):
-    pass
+    """
+    A symbol could not be normalised
+    """
 
 
 def plan_pins(prefix, pins):
     """
-    Return [(number, name)] for the pins, in the same order as the pins list.
+    Work out the pin numbers and names for one symbol
 
-    Pins are classified by the connection point (x, y) of their (at x y angle).
+    Pins are classified by their connection point (x, y), and the layout found
+    sets their numbers and names. Raises NormaliseError if no known layout fits.
+
+    Arguments
+
+    prefix - str
+        Reference prefix of the symbol
+    pins - list
+        Pin nodes of the symbol
+
+    Returns
+
+    plan - list
+        (number, name) for each pin, in the same order as pins
     """
+
     n = len(pins)
     at = [kisexp.pin_at(p)[:2] for p in pins]
     plan = [None] * n
@@ -424,7 +472,23 @@ def plan_pins(prefix, pins):
 
 
 def _set_string_node(parent, name, value, template):
-    """Set parent's (name "value" ...) child, creating it from template."""
+    """
+    Set the text of a child node, creating the child if it is missing
+
+    A new child gets a copy of the template as its third element.
+
+    Arguments
+
+    parent - list
+        The node holding the child, changed in place
+    name - str
+        Head keyword of the child, for example name or number
+    value - str
+        The text to store, written in quotes
+    template - list
+        Effects node copied into a new child
+    """
+
     node = kisexp.child(parent, name)
     if node is None:
         node = [name, Str(""), copy.deepcopy(template)]
@@ -433,6 +497,18 @@ def _set_string_node(parent, name, value, template):
 
 
 def _ensure_hidden(prop):
+    """
+    Hide a property on the schematic
+
+    Adds an effects node with a default font size if the property has none,
+    then sets its hide flag to yes.
+
+    Arguments
+
+    prop - list
+        The property node, changed in place
+    """
+
     effects = kisexp.child(prop, "effects")
     if effects is None:
         effects = ["effects", ["font", ["size", "1.2700", "1.2700"]]]
@@ -445,7 +521,30 @@ def _ensure_hidden(prop):
 
 
 def _set_property(symbol, key, value, after_key):
-    """Set a property's value, creating it (hidden) after after_key if needed."""
+    """
+    Set the value of a symbol property, creating the property if it is missing
+
+    A new property is a copy of the property named after_key, or of the last
+    property if after_key is not found, and is inserted straight after that
+    source. The copy keeps the source's other children, such as its effects.
+
+    Arguments
+
+    symbol - list
+        The symbol node, changed in place
+    key - str
+        Name of the property to set
+    value - str
+        The value to store, written in quotes
+    after_key - str
+        Name of the property to copy and insert after, if key is missing
+
+    Returns
+
+    prop - list
+        The property node that now holds the value
+    """
+
     props = list(kisexp.children(symbol, "property"))
     prop = next((p for p in props if p[1] == key), None)
     if prop is None:
@@ -459,7 +558,28 @@ def _set_property(symbol, key, value, after_key):
 
 
 def normalise_symbol(symbol, filename):
-    """Normalise one top-level symbol node in place.  Returns the pin table."""
+    """
+    Normalise one top-level symbol node in place
+
+    Rewrites the flags, properties, stroke widths and pins to the library
+    conventions. Raises NormaliseError if the symbol has no table entry, a pin
+    cannot be classified or two pins would share a number.
+
+    Arguments
+
+    symbol - list
+        A symbol node, changed in place
+    filename - str
+        The file the symbol came from, used in error messages
+
+    Returns
+
+    table - list
+        (connection point, number, name) for each pin, sorted by number
+    prefix - str
+        Reference prefix given to the symbol
+    """
+
     name = str(symbol[1])
     entry = lookup(name)
     if entry is None:
@@ -483,7 +603,6 @@ def normalise_symbol(symbol, filename):
     ]
     symbol[2:2] = head
 
-    # properties
     for prop in kisexp.children(symbol, "property"):
         prop[1] = Str(prop[1])
         prop[2] = Str(prop[2])
@@ -493,12 +612,10 @@ def normalise_symbol(symbol, filename):
     keywords_prop = _set_property(symbol, "ki_keywords", keywords, "Description")
     _ensure_hidden(keywords_prop)
 
-    # stroke widths
     for node in kisexp.walk(symbol):
         if node and node[0] == "width" and len(node) == 2:
             node[1] = STROKE_WIDTH
 
-    # pins
     pins = kisexp.pins(symbol)
     plan = plan_pins(prefix, pins)
     numbers = [number for number, _ in plan]
@@ -514,6 +631,20 @@ def normalise_symbol(symbol, filename):
 
 
 def find_files(root):
+    """
+    Find every symbol file under a directory
+
+    Arguments
+
+    root - str
+        Directory to search, recursively
+
+    Returns
+
+    files - list
+        Full paths of the .kicad_sym files, sorted
+    """
+
     files = []
     for dirpath, _, names in os.walk(root):
         for name in names:
@@ -523,11 +654,46 @@ def find_files(root):
 
 
 def fmt_pin(at, number, name):
+    """
+    Format one pin for the summary table
+
+    Arguments
+
+    at - tuple
+        Connection point as (x, y, angle)
+    number - str
+        Pin number
+    name - str
+        Pin name
+
+    Returns
+
+    text - str
+        The pin as "number name (x,y)"
+    """
+
     x, y, _ = at
     return f"{number} {name} ({x:g},{y:g})"
 
 
 def main(symbols_dir):
+    """
+    Normalise every symbol file under a directory and print a summary table
+
+    Nothing is written if any file cannot be parsed or any symbol cannot be
+    normalised. Otherwise only the files whose text changes are rewritten.
+
+    Arguments
+
+    symbols_dir - str
+        Directory holding the symbol sources
+
+    Returns
+
+    status - int
+        0 on success, 1 if no files were found or there were problems
+    """
+
     files = find_files(symbols_dir)
     if not files:
         print("No .kicad_sym files found in " + symbols_dir, file=sys.stderr)
@@ -576,6 +742,8 @@ def main(symbols_dir):
 
 
 if __name__ == "__main__":
+    print("Rocketry P&ID KiCAD - Normalise Symbols\n")
+
     if len(sys.argv) != 2:
         print(f"Usage: {sys.argv[0]} <symbols directory>", file=sys.stderr)
         sys.exit(1)

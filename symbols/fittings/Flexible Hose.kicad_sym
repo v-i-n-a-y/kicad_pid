@@ -109,15 +109,6 @@
           (type default))
         (fill
           (type none)))
-      (polyline
-        (pts
-          (xy -1.2500 -10)
-          (xy -1.2500 -10))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
       (arc
         (start 2 1)
         (mid 1.2929 0.7071)

@@ -1,79 +1,86 @@
-# Copyright 2024 Kingston University Rocket Engineering
 # Copyright 2026 Vinay Williams
 
-import sys
 import os
-import sexp
+import sys
+
+import kisexp
+import utils
 
 
-def find_existing_paths(outdir):
-    """Map symbol-name -> existing .kicad_sym path under outdir (recursive)."""
-    paths = {}
-    for root, _, files in os.walk(outdir):
-        for f in files:
-            if f.endswith(".kicad_sym"):
-                paths[f[: -len(".kicad_sym")]] = os.path.join(root, f)
-    return paths
+def destinations(root):
+    """
+    Find where each symbol already lives
+
+    Arguments
+
+    root - str
+        Directory containing the symbol sources
+
+    Returns
+
+    known - dict
+        Symbol name mapped to the file that holds it
+    """
+
+    known = {}
+    for path in utils.symbol_files(root):
+        known.setdefault(utils.symbol_name(path), path)
+    return known
 
 
 def split_lib(libpath, outdir):
     """
-    Split Monolith Library
+    Split the monolith library into one file per symbol
+
+    A symbol that already has a file under outdir goes back to that file. A new
+    symbol goes to outdir/uncategorised, to be moved into a category by hand.
 
     Arguments
 
     libpath - str
-        Path to monolith library
+        Path to the monolith library
     outdir - str
-        Directory to output individual footprints
+        Directory containing the symbol sources
+
+    Returns
+
+    counts - tuple
+        Files written and files left unchanged
     """
 
-    with open(libpath, "r") as f:
-        lib_data = sexp.parse(f.read(), parse_nums=True)
-
-    header = lib_data[:4]
-    existing = find_existing_paths(outdir)
-
-    components = []
-    current_lib = None
-
-    for entry in lib_data[4:]:
-        if isinstance(entry, list) and entry[0] == "symbol":
-            symbol = entry[1]
-            if current_lib and current_lib != symbol:
-                save_lib(header, current_lib, components, outdir, existing)
-                components.clear()
-            current_lib = symbol
-            components.append(entry)
-        else:
-            components.append(entry)
-
-    if components:
-        save_lib(header, current_lib, components, outdir, existing)
-
-
-def save_lib(header, lib_name, components, outdir, existing):
-    """
-    Save a single symbol back to its existing location if known,
-    else into outdir's root.
-    """
-    lib_file = existing.get(lib_name, os.path.join(outdir, f"{lib_name}.kicad_sym"))
-    os.makedirs(os.path.dirname(lib_file), exist_ok=True)
-
-    print("Writing: " + lib_file)
-    with open(lib_file, "w") as f:
-        f.write(sexp.generate([*header, components[0]]))
+    tree = kisexp.read_file(libpath)
+    if not tree or tree[0] != "kicad_symbol_lib":
+        raise ValueError(f"{libpath}: not a KiCad symbol library")
+    known = destinations(outdir)
+    written = unchanged = 0
+    for node in kisexp.symbols(tree):
+        name = str(node[1])
+        if not name or any(c in name for c in "/\\\0"):
+            raise ValueError(f"symbol name {name!r} cannot be used as a file name")
+        default = os.path.join(outdir, utils.UNCATEGORISED, name + utils.SYMBOL_SUFFIX)
+        path = known.get(name, default)
+        text = kisexp.dump(utils.library_tree([node], quote_generator=False)) + "\n"
+        if os.path.isfile(path):
+            with open(path, encoding="utf-8") as f:
+                if f.read() == text:
+                    unchanged += 1
+                    continue
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        utils.write_text(path, text)
+        written += 1
+        print(f"Writing: {path}")
+    return written, unchanged
 
 
 def usage():
     """
-    Usgae
+    Usage
 
     Prints the script's usage
     """
 
-    print("Usage: {} <compiled lib path> <output directory>".format(sys.argv[0]))
-    sys.exit(1)
+    print(f"Usage: {sys.argv[0]} <compiled lib path> <symbols directory>")
+    sys.exit(2)
 
 
 if __name__ == "__main__":
@@ -81,17 +88,18 @@ if __name__ == "__main__":
 
     if len(sys.argv) != 3:
         usage()
-    else:
-        libpath = sys.argv[1]
-        outdir = sys.argv[2]
+    libpath, outdir = sys.argv[1:]
 
-        if not os.path.exists(libpath):
-            print(f"Error: The file {libpath} does not exist.", file=sys.stderr)
-            sys.exit(1)
+    if not os.path.isfile(libpath):
+        print(f"Error: The file {libpath} does not exist.", file=sys.stderr)
+        sys.exit(1)
+    if not os.path.isdir(outdir):
+        print(f"Error: The directory {outdir} does not exist.", file=sys.stderr)
+        sys.exit(1)
 
-        if not os.path.isdir(outdir):
-            print(f"Error: The directory {outdir} does not exist.", file=sys.stderr)
-            sys.exit(1)
-
-        split_lib(libpath, outdir)
-        print(f"Library has been split and saved to {outdir}\n\n")
+    try:
+        written, unchanged = split_lib(libpath, outdir)
+    except (OSError, ValueError) as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        sys.exit(1)
+    print(f"Library split into {outdir}: {written} written, {unchanged} unchanged")

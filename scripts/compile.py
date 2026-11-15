@@ -1,49 +1,64 @@
-# Copyright 2024 Kingston University Rocket Engineering
 # Copyright 2026 Vinay Williams
 
-import sys
 import os
-import sexp
+import sys
+
+import kisexp
+import utils
 
 
-def combine_libs(libdir, outlib):
+def collect(root):
     """
-    Combine individual libraries
+    Gather the symbols of every source file
+
+    Symbols are sorted by name rather than path, so the library order does not
+    depend on the category folder a symbol sits in.
 
     Arguments
 
-    liddir - str
-        Directory containing individual footprints
-    outlib - str
-        Directory to output merged library
+    root - str
+        Directory containing the symbol sources
+
+    Returns
+
+    nodes - list
+        Symbol nodes, sorted by name
     """
 
-    combined_data = [
-        "kicad_symbol_lib",
-        ["version 20231120"],
-        ['generator "kicad_symbol_editor"'],
-        ['generator_version "8.0"'],
-    ]
+    nodes = []
+    origin = {}
+    for path in utils.symbol_files(root):
+        try:
+            tree = kisexp.read_file(path)
+        except (OSError, ValueError) as exc:
+            raise ValueError(f"{path}: cannot parse ({exc})") from exc
+        for node in kisexp.symbols(tree):
+            name = str(node[1])
+            if name in origin:
+                raise ValueError(f"{path}: symbol {name!r} is also in {origin[name]}")
+            origin[name] = path
+            nodes.append(node)
+    if not nodes:
+        raise ValueError(f"{root}: no symbols found")
+    return sorted(nodes, key=lambda node: str(node[1]))
 
-    lib_paths = []
-    for root, _, files in os.walk(libdir):
-        for f in files:
-            if f.endswith(".kicad_sym"):
-                lib_paths.append(os.path.join(root, f))
-    lib_paths.sort()
 
-    for lib_path in lib_paths:
-        print("Reading: " + lib_path)
+def compile_library(root):
+    """
+    Build the monolithic library text
 
-        with open(lib_path, "r") as f:
-            lib_data = sexp.parse(f.read(), parse_nums=True)
+    Arguments
 
-        for entry in lib_data[4:]:
-            if isinstance(entry, list) and entry and entry[0] == "symbol":
-                combined_data.append(entry)
+    root - str
+        Directory containing the symbol sources
 
-    with open(outlib, "w") as f:
-        f.write(sexp.generate(combined_data))
+    Returns
+
+    text - str
+        The KiCad 8 library
+    """
+
+    return utils.library_text(utils.library_tree(collect(root)))
 
 
 def usage():
@@ -53,8 +68,8 @@ def usage():
     Prints the script's usage
     """
 
-    print("Usage: {} <input directory> <output lib path>".format(sys.argv[0]))
-    sys.exit(1)
+    print(f"Usage: {sys.argv[0]} <symbols directory> <output lib path>")
+    sys.exit(2)
 
 
 if __name__ == "__main__":
@@ -62,23 +77,22 @@ if __name__ == "__main__":
 
     if len(sys.argv) != 3:
         usage()
-    else:
-        libdir = sys.argv[1]
-        outlib = sys.argv[2]
+    symbolsdir, outlib = sys.argv[1:]
 
-        if not os.path.isdir(libdir):
-            print(
-                f"Error: Source directory '{libdir}' does not exist.", file=sys.stderr
-            )
-            sys.exit(1)
+    if not os.path.isdir(symbolsdir):
+        print(
+            f"Error: Source directory '{symbolsdir}' does not exist.", file=sys.stderr
+        )
+        sys.exit(1)
+    outdir = os.path.dirname(os.path.abspath(outlib))
+    if not os.path.isdir(outdir):
+        print(f"Error: Output directory '{outdir}' does not exist.", file=sys.stderr)
+        sys.exit(1)
 
-        outlib_dir = os.path.dirname(outlib) or "."
-        if not os.path.isdir(outlib_dir):
-            print(
-                f"Error: The intended output directory '{outlib_dir}' does not exist.",
-                file=sys.stderr,
-            )
-            sys.exit(1)
-
-        combine_libs(libdir, outlib)
-        print(f"Libraries have been combined and saved to {outlib}")
+    try:
+        text = compile_library(symbolsdir)
+    except ValueError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        sys.exit(1)
+    utils.write_text(outlib, text)
+    print(f"Compiled {text.count(chr(10) + '  (symbol ')} symbols into {outlib}")
