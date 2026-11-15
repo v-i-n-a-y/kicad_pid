@@ -10,7 +10,7 @@ We put together this symbol set to standardise our P&ID diagrams for easier coll
 
 ## Maintenance
 
-Since that original collaboration, the library has been updated and taken forward solely by Vinay Williams (Kingston University Rocket Engineering). Every commit in this repository's history is his. The 2026 revision was carried out by him alone. It added pin numbering, ISA-style reference prefixes, descriptions and keywords, a common connection grid, automated linting, a to-scale symbol registry, and the sized tank, gas cylinder and Swagelok sample cylinder families.
+Since that original collaboration, the library has been updated and taken forward solely by Vinay Williams, in a personal capacity for his own projects. He is no longer a member of KURE, and this work is not affiliated with or endorsed by KURE or any of the university teams above. Every commit in this repository's history is his. The 2026 revision was carried out by him alone. It added pin numbering, ISA-style reference prefixes, descriptions and keywords, a common connection grid, automated linting, a to-scale symbol registry, and the sized tank, gas cylinder and Swagelok sample cylinder families.
 
 ## Symbols
 
