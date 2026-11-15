@@ -3,7 +3,7 @@
   (version 20231120)
   (generator kicad_symbol_editor)
   (generator_version "8.0")
-  (symbol "Bottle - Dip Tube"
+  (symbol "Sample Cylinder - Large - Outage Tube"
     (pin_numbers
       (hide yes))
     (pin_names
@@ -13,7 +13,7 @@
     (in_bom yes)
     (on_board no)
     (property "Reference" "CYL"
-      (at 0 -10 0)
+      (at 0 -6 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -34,42 +34,45 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property "Description" "Gas bottle with a dip tube"
+    (property "Description" "Sample cylinder, double-ended with outage tube, large (Swagelok 1000 to 3785 cm³)"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property "ki_keywords" "bottle cylinder dip tube liquid vessel cyl"
+    (property "ki_keywords" "sample cylinder swagelok large vessel cyl double-ended outage dip tube vapour space"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (symbol "Bottle - Dip Tube_0_1"
-      (polyline
-        (pts
-          (xy -4 28)
-          (xy -4 -6))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy -4 -6)
-          (xy 4 -6)
-          (xy 4 28))
+    (property "Volume" "1000 cm³"
+      (at 0 -8 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Large - Outage Tube_0_1"
+      (rectangle
+        (start -10.5 3)
+        (end 10.5 -3)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 4 28)
-        (mid 0 32)
-        (end -4 28)
+        (start -10.5 -3)
+        (mid -13.5 0)
+        (end -10.5 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 10.5 3)
+        (mid 13.5 0)
+        (end 10.5 -3)
         (stroke
           (width 0.1000)
           (type default))
@@ -77,65 +80,58 @@
           (type none)))
       (polyline
         (pts
-          (xy 0 32)
-          (xy 0 -5))
+          (xy -13.5 0.5)
+          (xy -8.1 0.5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -13.5 -0.5)
+          (xy -8.1 -0.5))
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none))))
-    (symbol "Bottle - Dip Tube_1_1"
+    (symbol "Sample Cylinder - Large - Outage Tube_1_1"
       (rectangle private
-        (start -20 20)
-        (end 20 -20)
+        (start -14 8)
+        (end 14 -8)
         (stroke
           (width 0.1000)
           (type dot))
         (fill
           (type none)))
       (rectangle private
-        (start -12 12)
-        (end 12 -12)
+        (start -14 3)
+        (end 14 -3)
         (stroke
           (width 0.1000)
           (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -8 8)
-        (end 8 -8)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -5 5)
-        (end 5 -5)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy 1 32)
-          (xy 1 35)
-          (xy -1 35)
-          (xy -1 32))
-        (stroke
-          (width 0.1000)
-          (type default))
         (fill
           (type none)))
       (pin passive line
-        (at 0 38 270)
-        (length 3)
-        (name "PORT"
+        (at -14 0 0)
+        (length 0.5)
+        (name "IN"
           (effects
             (font
               (size 1.2700 1.2700))))
         (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 14 0 180)
+        (length 0.5)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
           (effects
             (font
               (size 1.2700 1.2700))))))))

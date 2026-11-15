@@ -3,7 +3,7 @@
   (version 20231120)
   (generator kicad_symbol_editor)
   (generator_version "8.0")
-  (symbol "Bottle - Large"
+  (symbol "Sample Cylinder - Medium - Single-Ended"
     (pin_numbers
       (hide yes))
     (pin_names
@@ -13,7 +13,7 @@
     (in_bom yes)
     (on_board no)
     (property "Reference" "CYL"
-      (at 0 -12 0)
+      (at 0 -4 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -34,72 +34,51 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property "Description" "Large gas bottle"
+    (property "Description" "Sample cylinder, single-ended, medium (Swagelok 150 to 500 cm³)"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property "ki_keywords" "bottle cylinder large gas cyl"
+    (property "ki_keywords" "sample cylinder swagelok medium vessel cyl single-ended"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (symbol "Bottle - Large_0_1"
-      (polyline
-        (pts
-          (xy -5 42)
-          (xy -5 -8))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy -5 -8)
-          (xy 5 -8)
-          (xy 5 42))
+    (property "Volume" "300 cm³"
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Medium - Single-Ended_0_1"
+      (rectangle
+        (start -5.4 1.5)
+        (end 5.4 -1.5)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 5 42)
-        (mid 0 47)
-        (end -5 42)
+        (start -5.4 -1.5)
+        (mid -6.9 0)
+        (end -5.4 1.5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 5.4 1.5)
+        (mid 6.9 0)
+        (end 5.4 -1.5)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none))))
-    (symbol "Bottle - Large_1_1"
-      (rectangle private
-        (start -30 30)
-        (end 30 -30)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -20 20)
-        (end 20 -20)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -12 12)
-        (end 12 -12)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
+    (symbol "Sample Cylinder - Medium - Single-Ended_1_1"
       (rectangle private
         (start -8 8)
         (end 8 -8)
@@ -108,20 +87,17 @@
           (type dot))
         (fill
           (type none)))
-      (polyline
-        (pts
-          (xy 1.2 47)
-          (xy 1.2 51)
-          (xy -1.2 51)
-          (xy -1.2 47))
+      (rectangle private
+        (start -7 2)
+        (end 7 -2)
         (stroke
           (width 0.1000)
-          (type default))
+          (type dot))
         (fill
           (type none)))
       (pin passive line
-        (at 0 54 270)
-        (length 3)
+        (at -8 0 0)
+        (length 1.1)
         (name "PORT"
           (effects
             (font

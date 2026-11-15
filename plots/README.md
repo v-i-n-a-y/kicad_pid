@@ -33,8 +33,6 @@
 <img src='fittings/Elbow.svg' width='500' height='500'>
 ### Flexible Hose.svg
 <img src='fittings/Flexible Hose.svg' width='500' height='500'>
-### Reducer 2.svg
-<img src='fittings/Reducer 2.svg' width='500' height='500'>
 ### Reducer.svg
 <img src='fittings/Reducer.svg' width='500' height='500'>
 ### Tee.svg
@@ -52,8 +50,6 @@
 <img src='instruments/Level Indicator.svg' width='500' height='500'>
 ### Level Transmitter.svg
 <img src='instruments/Level Transmitter.svg' width='500' height='500'>
-### Pressure Gauge.svg
-<img src='instruments/Pressure Gauge.svg' width='500' height='500'>
 ### Pressure Indicator.svg
 <img src='instruments/Pressure Indicator.svg' width='500' height='500'>
 ### Pressure Switch.svg
@@ -114,8 +110,6 @@
 <img src='valves/Valve - 3 Way.svg' width='500' height='500'>
 ### Valve - 4 Way.svg
 <img src='valves/Valve - 4 Way.svg' width='500' height='500'>
-### Valve - Angle Ball 2.svg
-<img src='valves/Valve - Angle Ball 2.svg' width='500' height='500'>
 ### Valve - Angle Ball.svg
 <img src='valves/Valve - Angle Ball.svg' width='500' height='500'>
 ### Valve - Angle Globe.svg
@@ -134,8 +128,6 @@
 <img src='valves/Valve - Butterfly Hydraulic.svg' width='500' height='500'>
 ### Valve - Butterfly Manual.svg
 <img src='valves/Valve - Butterfly Manual.svg' width='500' height='500'>
-### Valve - Butterfly Pneumatic 2.svg
-<img src='valves/Valve - Butterfly Pneumatic 2.svg' width='500' height='500'>
 ### Valve - Butterfly Pneumatic.svg
 <img src='valves/Valve - Butterfly Pneumatic.svg' width='500' height='500'>
 ### Valve - Butterfly Servo.svg
@@ -170,8 +162,6 @@
 <img src='valves/Valve - Globe Manual.svg' width='500' height='500'>
 ### Valve - Globe Pneumatic.svg
 <img src='valves/Valve - Globe Pneumatic.svg' width='500' height='500'>
-### Valve - Globe Servo 2.svg
-<img src='valves/Valve - Globe Servo 2.svg' width='500' height='500'>
 ### Valve - Globe Servo.svg
 <img src='valves/Valve - Globe Servo.svg' width='500' height='500'>
 ### Valve - Globe.svg
@@ -200,31 +190,53 @@
 
 ## vessels
 
-### Bottle - Dip Tube 2.svg
-<img src='vessels/Bottle - Dip Tube 2.svg' width='500' height='500'>
-### Bottle - Dip Tube.svg
-<img src='vessels/Bottle - Dip Tube.svg' width='500' height='500'>
-### Bottle - Large.svg
-<img src='vessels/Bottle - Large.svg' width='500' height='500'>
-### Bottle - Small 2.svg
-<img src='vessels/Bottle - Small 2.svg' width='500' height='500'>
-### Bottle - Small.svg
-<img src='vessels/Bottle - Small.svg' width='500' height='500'>
-### Bottle.svg
-<img src='vessels/Bottle.svg' width='500' height='500'>
+### Bottle - 10 L - Dip Tube.svg
+<img src='vessels/Bottle - 10 L - Dip Tube.svg' width='500' height='500'>
+### Bottle - 10 L.svg
+<img src='vessels/Bottle - 10 L.svg' width='500' height='500'>
+### Bottle - 2 L - Dip Tube.svg
+<img src='vessels/Bottle - 2 L - Dip Tube.svg' width='500' height='500'>
+### Bottle - 2 L.svg
+<img src='vessels/Bottle - 2 L.svg' width='500' height='500'>
+### Bottle - 20 L - Dip Tube.svg
+<img src='vessels/Bottle - 20 L - Dip Tube.svg' width='500' height='500'>
+### Bottle - 20 L.svg
+<img src='vessels/Bottle - 20 L.svg' width='500' height='500'>
+### Bottle - 50 L - Dip Tube.svg
+<img src='vessels/Bottle - 50 L - Dip Tube.svg' width='500' height='500'>
+### Bottle - 50 L.svg
+<img src='vessels/Bottle - 50 L.svg' width='500' height='500'>
+### Sample Cylinder - Large - Outage Tube.svg
+<img src='vessels/Sample Cylinder - Large - Outage Tube.svg' width='500' height='500'>
+### Sample Cylinder - Large - Single-Ended.svg
+<img src='vessels/Sample Cylinder - Large - Single-Ended.svg' width='500' height='500'>
 ### Sample Cylinder - Large.svg
 <img src='vessels/Sample Cylinder - Large.svg' width='500' height='500'>
+### Sample Cylinder - Medium - Outage Tube.svg
+<img src='vessels/Sample Cylinder - Medium - Outage Tube.svg' width='500' height='500'>
+### Sample Cylinder - Medium - Single-Ended.svg
+<img src='vessels/Sample Cylinder - Medium - Single-Ended.svg' width='500' height='500'>
+### Sample Cylinder - Medium.svg
+<img src='vessels/Sample Cylinder - Medium.svg' width='500' height='500'>
+### Sample Cylinder - Small - Outage Tube.svg
+<img src='vessels/Sample Cylinder - Small - Outage Tube.svg' width='500' height='500'>
+### Sample Cylinder - Small - Single-Ended.svg
+<img src='vessels/Sample Cylinder - Small - Single-Ended.svg' width='500' height='500'>
 ### Sample Cylinder - Small.svg
 <img src='vessels/Sample Cylinder - Small.svg' width='500' height='500'>
-### Sample Cylinder.svg
-<img src='vessels/Sample Cylinder.svg' width='500' height='500'>
 ### Tank - Horizontal.svg
 <img src='vessels/Tank - Horizontal.svg' width='500' height='500'>
+### Tank - Large - Dip Tube.svg
+<img src='vessels/Tank - Large - Dip Tube.svg' width='500' height='500'>
 ### Tank - Large.svg
 <img src='vessels/Tank - Large.svg' width='500' height='500'>
+### Tank - Medium - Dip Tube.svg
+<img src='vessels/Tank - Medium - Dip Tube.svg' width='500' height='500'>
+### Tank - Medium.svg
+<img src='vessels/Tank - Medium.svg' width='500' height='500'>
+### Tank - Small - Dip Tube.svg
+<img src='vessels/Tank - Small - Dip Tube.svg' width='500' height='500'>
 ### Tank - Small.svg
 <img src='vessels/Tank - Small.svg' width='500' height='500'>
 ### Tank - Sphere.svg
 <img src='vessels/Tank - Sphere.svg' width='500' height='500'>
-### Tank.svg
-<img src='vessels/Tank.svg' width='500' height='500'>

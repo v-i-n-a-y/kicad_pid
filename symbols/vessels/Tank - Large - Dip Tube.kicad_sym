@@ -1,0 +1,128 @@
+
+(kicad_symbol_lib
+  (version 20231120)
+  (generator kicad_symbol_editor)
+  (generator_version "8.0")
+  (symbol "Tank - Large - Dip Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "TK"
+      (at 0 -18 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Vertical tank, large, with dip tube"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "tank vessel vertical large dip tube liquid tk"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Volume" ""
+      (at 7.5 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Tank - Large - Dip Tube_1_1"
+      (rectangle private
+        (start -20 20)
+        (end 20 -20)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -10 10)
+        (end 10 -10)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -6 13)
+        (end 6 -13)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -6 13)
+        (mid 0 16)
+        (end 6 13)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 6 -13)
+        (mid 0 -16)
+        (end -6 -13)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 16)
+          (xy 0 -12))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 16 270)
+        (length 3)
+        (name "TOP"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 -16 90)
+        (length 3)
+        (name "BOTTOM"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700))))))))

@@ -34,40 +34,45 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property "Description" "Large sample cylinder, inline"
+    (property "Description" "Sample cylinder, double-ended, large (Swagelok 1000 to 3785 cm³)"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property "ki_keywords" "sample cylinder large vessel inline cyl"
+    (property "ki_keywords" "sample cylinder swagelok large vessel cyl double-ended inline"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Volume" "1000 cm³"
+      (at 0 -8 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
     (symbol "Sample Cylinder - Large_0_1"
       (rectangle
-        (start -3 2)
-        (end 3 -2)
+        (start -10.5 3)
+        (end 10.5 -3)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start -3 -2)
-        (mid -5 0)
-        (end -3 2)
+        (start -10.5 -3)
+        (mid -13.5 0)
+        (end -10.5 3)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 3 2)
-        (mid 5 0)
-        (end 3 -2)
+        (start 10.5 3)
+        (mid 13.5 0)
+        (end 10.5 -3)
         (stroke
           (width 0.1000)
           (type default))
@@ -75,24 +80,24 @@
           (type none))))
     (symbol "Sample Cylinder - Large_1_1"
       (rectangle private
-        (start -12 8)
-        (end 12 -8)
+        (start -14 8)
+        (end 14 -8)
         (stroke
           (width 0.1000)
           (type dot))
         (fill
           (type none)))
       (rectangle private
-        (start -8 5)
-        (end 8 -5)
+        (start -14 3)
+        (end 14 -3)
         (stroke
           (width 0.1000)
           (type dot))
         (fill
           (type none)))
       (pin passive line
-        (at -8 0 0)
-        (length 3)
+        (at -14 0 0)
+        (length 0.5)
         (name "IN"
           (effects
             (font
@@ -102,8 +107,8 @@
             (font
               (size 1.2700 1.2700)))))
       (pin passive line
-        (at 8 0 180)
-        (length 3)
+        (at 14 0 180)
+        (length 0.5)
         (name "OUT"
           (effects
             (font

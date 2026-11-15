@@ -13,7 +13,7 @@
     (in_bom yes)
     (on_board no)
     (property "Reference" "TK"
-      (at 0 -20 0)
+      (at 0 -18 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -34,18 +34,24 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property "Description" "Large vertical tank"
+    (property "Description" "Vertical tank, large"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property "ki_keywords" "tank vessel large vertical tk"
+    (property "ki_keywords" "tank vessel vertical large tk"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property "Volume" ""
+      (at 7.5 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Tank - Large_1_1"
       (rectangle private
         (start -20 20)
@@ -64,26 +70,26 @@
         (fill
           (type none)))
       (rectangle
-        (start -7 12)
-        (end 7 -12)
+        (start -6 13)
+        (end 6 -13)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start -7 12)
-        (mid 0 15.5)
-        (end 7 12)
+        (start -6 13)
+        (mid 0 16)
+        (end 6 13)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 7 -12)
-        (mid 0 -15.5)
-        (end -7 -12)
+        (start 6 -13)
+        (mid 0 -16)
+        (end -6 -13)
         (stroke
           (width 0.1000)
           (type default))
@@ -91,7 +97,7 @@
           (type none)))
       (pin passive line
         (at 0 16 270)
-        (length 3.5)
+        (length 3)
         (name "TOP"
           (effects
             (font
@@ -102,7 +108,7 @@
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -16 90)
-        (length 3.5)
+        (length 3)
         (name "BOTTOM"
           (effects
             (font

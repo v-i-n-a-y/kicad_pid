@@ -1,0 +1,137 @@
+
+(kicad_symbol_lib
+  (version 20231120)
+  (generator kicad_symbol_editor)
+  (generator_version "8.0")
+  (symbol "Sample Cylinder - Medium - Outage Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property "Reference" "CYL"
+      (at 0 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Value" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Description" "Sample cylinder, double-ended with outage tube, medium (Swagelok 150 to 500 cm³)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "ki_keywords" "sample cylinder swagelok medium vessel cyl double-ended outage dip tube vapour space"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Volume" "300 cm³"
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Medium - Outage Tube_0_1"
+      (rectangle
+        (start -5.4 1.5)
+        (end 5.4 -1.5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -5.4 -1.5)
+        (mid -6.9 0)
+        (end -5.4 1.5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 5.4 1.5)
+        (mid 6.9 0)
+        (end 5.4 -1.5)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6.9 0.3)
+          (xy -4.1 0.3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6.9 -0.3)
+          (xy -4.1 -0.3))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Sample Cylinder - Medium - Outage Tube_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -7 2)
+        (end 7 -2)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 1.1)
+        (name "IN"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 1.1)
+        (name "OUT"
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700))))))))

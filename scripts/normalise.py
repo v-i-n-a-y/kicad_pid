@@ -175,38 +175,73 @@ _add(
     "instrument level indicator display li",
 )
 
-_add("Tank", "TK", "Vertical tank", "tank vessel vertical tk")
 _add("Tank - Horizontal", "TK", "Horizontal tank", "tank vessel horizontal tk")
-_add("Tank - Large", "TK", "Large vertical tank", "tank vessel large vertical tk")
-_add("Tank - Small", "TK", "Small vertical tank", "tank vessel small vertical tk")
 _add("Tank - Sphere", "TK", "Spherical tank", "tank vessel sphere spherical tk")
-_add("Bottle", "CYL", "Gas bottle", "bottle cylinder gas vessel cyl")
-_add(
-    "Bottle - Dip Tube",
-    "CYL",
-    "Gas bottle with a dip tube",
-    "bottle cylinder dip tube liquid vessel cyl",
-)
-_add("Bottle - Large", "CYL", "Large gas bottle", "bottle cylinder large gas cyl")
-_add("Bottle - Small", "CYL", "Small gas bottle", "bottle cylinder small gas cyl")
-_add(
-    "Sample Cylinder",
-    "CYL",
-    "Sample cylinder, inline",
-    "sample cylinder vessel inline cyl",
-)
-_add(
-    "Sample Cylinder - Large",
-    "CYL",
-    "Large sample cylinder, inline",
-    "sample cylinder large vessel inline cyl",
-)
-_add(
-    "Sample Cylinder - Small",
-    "CYL",
-    "Small sample cylinder, inline",
-    "sample cylinder small vessel inline cyl",
-)
+for _size in ("Small", "Medium", "Large"):
+    _add(
+        f"Tank - {_size}",
+        "TK",
+        f"Vertical tank, {_size.lower()}",
+        f"tank vessel vertical {_size.lower()} tk",
+    )
+    _add(
+        f"Tank - {_size} - Dip Tube",
+        "TK",
+        f"Vertical tank, {_size.lower()}, with dip tube",
+        f"tank vessel vertical {_size.lower()} dip tube liquid tk",
+    )
+
+# Gas cylinders by nominal water capacity.
+for _cap, _note in (
+    ("2 L", ""),
+    ("10 L", ""),
+    ("20 L", ""),
+    ("50 L", " (BOC W/K size)"),
+):
+    _add(
+        f"Bottle - {_cap}",
+        "CYL",
+        f"Gas cylinder, {_cap} water capacity{_note}",
+        f"bottle gas cylinder {_cap.replace(' ', '')} water capacity cyl",
+    )
+    _add(
+        f"Bottle - {_cap} - Dip Tube",
+        "CYL",
+        f"Gas cylinder, {_cap} water capacity{_note}, with dip tube",
+        f"bottle gas cylinder {_cap.replace(' ', '')} water capacity dip tube liquid cyl",
+    )
+
+# Sample cylinders by Swagelok size class (catalogue MS-01-177).
+for _size, _range in (
+    ("Small", "10 to 75 cm³"),
+    ("Medium", "150 to 500 cm³"),
+    ("Large", "1000 to 3785 cm³"),
+):
+    _kw = f"sample cylinder swagelok {_size.lower()} vessel cyl"
+    _single = {
+        "Small": "Swagelok 10 to 50 cm³",
+        "Medium": "Swagelok 150 to 500 cm³",
+        "Large": "generic; Swagelok single-ended sizes stop at 500 cm³",
+    }[_size]
+    _add(
+        f"Sample Cylinder - {_size}",
+        "CYL",
+        f"Sample cylinder, double-ended, {_size.lower()} (Swagelok {_range})",
+        f"{_kw} double-ended inline",
+    )
+    _add(
+        f"Sample Cylinder - {_size} - Single-Ended",
+        "CYL",
+        f"Sample cylinder, single-ended, {_size.lower()} ({_single})",
+        f"{_kw} single-ended",
+    )
+    _add(
+        f"Sample Cylinder - {_size} - Outage Tube",
+        "CYL",
+        f"Sample cylinder, double-ended with outage tube, {_size.lower()}"
+        f" (Swagelok {_range})",
+        f"{_kw} double-ended outage dip tube vapour space",
+    )
 
 _add(
     "Quick Disconnect - Both Sealed",

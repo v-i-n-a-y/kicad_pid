@@ -11029,7 +11029,7 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
-  (symbol "Bottle - Dip Tube"
+  (symbol "Bottle - 10 L - Dip Tube"
     (pin_numbers
       (hide yes))
     (pin_names
@@ -11039,7 +11039,7 @@
     (in_bom yes)
     (on_board no)
     (property Reference CYL
-      (at 0 -10 0)
+      (at 0 -23 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -11060,23 +11060,29 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description "Gas bottle with a dip tube"
+    (property Description "Gas cylinder, 10 L water capacity, with dip tube"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property ki_keywords "bottle cylinder dip tube liquid vessel cyl"
+    (property ki_keywords "bottle gas cylinder 10L water capacity dip tube liquid cyl"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (symbol "Bottle - Dip Tube_0_1"
+    (property "Water Capacity" "10 L"
+      (at 4.8000 -2 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Bottle - 10 L - Dip Tube_0_1"
       (polyline
         (pts
-          (xy -4 28)
-          (xy -4 -6))
+          (xy -2.8000 15.2000)
+          (xy -2.8000 -19.2000))
         (stroke
           (width 0.1000)
           (type default))
@@ -11084,18 +11090,18 @@
           (type none)))
       (polyline
         (pts
-          (xy -4 -6)
-          (xy 4 -6)
-          (xy 4 28))
+          (xy -2.8000 -19.2000)
+          (xy 2.8000 -19.2000)
+          (xy 2.8000 15.2000))
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 4 28)
-        (mid 0 32)
-        (end -4 28)
+        (start 2.8000 15.2000)
+        (mid 0 18)
+        (end -2.8000 15.2000)
         (stroke
           (width 0.1000)
           (type default))
@@ -11103,41 +11109,17 @@
           (type none)))
       (polyline
         (pts
-          (xy 0 32)
-          (xy 0 -5))
+          (xy 0 18)
+          (xy 0 -18.2000))
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none))))
-    (symbol "Bottle - Dip Tube_1_1"
+    (symbol "Bottle - 10 L - Dip Tube_1_1"
       (rectangle private
-        (start -20 20)
-        (end 20 -20)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -12 12)
-        (end 12 -12)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -8 8)
-        (end 8 -8)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -5 5)
-        (end 5 -5)
+        (start -3 21)
+        (end 3 -20)
         (stroke
           (width 0.1000)
           (type dot))
@@ -11145,17 +11127,17 @@
           (type none)))
       (polyline
         (pts
-          (xy 1 32)
-          (xy 1 35)
-          (xy -1 35)
-          (xy -1 32))
+          (xy 1.2000 18)
+          (xy 1.2000 21)
+          (xy -1.2000 21)
+          (xy -1.2000 18))
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (pin passive line
-        (at 0 38 270)
+        (at 0 24 270)
         (length 3)
         (name PORT
           (effects
@@ -11165,7 +11147,7 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
-  (symbol "Bottle - Large"
+  (symbol "Bottle - 10 L"
     (pin_numbers
       (hide yes))
     (pin_names
@@ -11175,7 +11157,7 @@
     (in_bom yes)
     (on_board no)
     (property Reference CYL
-      (at 0 -12 0)
+      (at 0 -23 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -11196,23 +11178,29 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description "Large gas bottle"
+    (property Description "Gas cylinder, 10 L water capacity"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property ki_keywords "bottle cylinder large gas cyl"
+    (property ki_keywords "bottle gas cylinder 10L water capacity cyl"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (symbol "Bottle - Large_0_1"
+    (property "Water Capacity" "10 L"
+      (at 4.8000 -2 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Bottle - 10 L_0_1"
       (polyline
         (pts
-          (xy -5 42)
-          (xy -5 -8))
+          (xy -2.8000 15.2000)
+          (xy -2.8000 -19.2000))
         (stroke
           (width 0.1000)
           (type default))
@@ -11220,51 +11208,27 @@
           (type none)))
       (polyline
         (pts
-          (xy -5 -8)
-          (xy 5 -8)
-          (xy 5 42))
+          (xy -2.8000 -19.2000)
+          (xy 2.8000 -19.2000)
+          (xy 2.8000 15.2000))
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 5 42)
-        (mid 0 47)
-        (end -5 42)
+        (start 2.8000 15.2000)
+        (mid 0 18)
+        (end -2.8000 15.2000)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none))))
-    (symbol "Bottle - Large_1_1"
+    (symbol "Bottle - 10 L_1_1"
       (rectangle private
-        (start -30 30)
-        (end 30 -30)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -20 20)
-        (end 20 -20)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -12 12)
-        (end 12 -12)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -8 8)
-        (end 8 -8)
+        (start -3 21)
+        (end 3 -20)
         (stroke
           (width 0.1000)
           (type dot))
@@ -11272,17 +11236,17 @@
           (type none)))
       (polyline
         (pts
-          (xy 1.2000 47)
-          (xy 1.2000 51)
-          (xy -1.2000 51)
-          (xy -1.2000 47))
+          (xy 1.2000 18)
+          (xy 1.2000 21)
+          (xy -1.2000 21)
+          (xy -1.2000 18))
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (pin passive line
-        (at 0 54 270)
+        (at 0 24 270)
         (length 3)
         (name PORT
           (effects
@@ -11292,7 +11256,7 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
-  (symbol "Bottle - Small"
+  (symbol "Bottle - 2 L - Dip Tube"
     (pin_numbers
       (hide yes))
     (pin_names
@@ -11302,116 +11266,810 @@
     (in_bom yes)
     (on_board no)
     (property Reference CYL
+      (at 0 -11 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Gas cylinder, 2 L water capacity, with dip tube"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle gas cylinder 2L water capacity dip tube liquid cyl"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Water Capacity" "2 L"
+      (at 4 -1 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Bottle - 2 L - Dip Tube_0_1"
+      (polyline
+        (pts
+          (xy -2 6)
+          (xy -2 -8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 -8)
+          (xy 2 -8)
+          (xy 2 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 2 6)
+        (mid 0 8)
+        (end -2 6)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 8)
+          (xy 0 -7))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Bottle - 2 L - Dip Tube_1_1"
+      (rectangle private
+        (start -2 11)
+        (end 2 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1 8)
+          (xy 1 11)
+          (xy -1 11)
+          (xy -1 8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 14 270)
+        (length 3)
+        (name PORT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Bottle - 2 L"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -11 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Gas cylinder, 2 L water capacity"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle gas cylinder 2L water capacity cyl"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Water Capacity" "2 L"
+      (at 4 -1 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Bottle - 2 L_0_1"
+      (polyline
+        (pts
+          (xy -2 6)
+          (xy -2 -8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -2 -8)
+          (xy 2 -8)
+          (xy 2 6))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 2 6)
+        (mid 0 8)
+        (end -2 6)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Bottle - 2 L_1_1"
+      (rectangle private
+        (start -2 11)
+        (end 2 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1 8)
+          (xy 1 11)
+          (xy -1 11)
+          (xy -1 8))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 14 270)
+        (length 3)
+        (name PORT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Bottle - 20 L - Dip Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -21 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Gas cylinder, 20 L water capacity, with dip tube"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle gas cylinder 20L water capacity dip tube liquid cyl"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Water Capacity" "20 L"
+      (at 6 -2 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Bottle - 20 L - Dip Tube_0_1"
+      (polyline
+        (pts
+          (xy -4 14)
+          (xy -4 -18))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -4 -18)
+          (xy 4 -18)
+          (xy 4 14))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 4 14)
+        (mid 0 18)
+        (end -4 14)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 18)
+          (xy 0 -17))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Bottle - 20 L - Dip Tube_1_1"
+      (rectangle private
+        (start -4 21)
+        (end 4 -18)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1.2000 18)
+          (xy 1.2000 21)
+          (xy -1.2000 21)
+          (xy -1.2000 18))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 24 270)
+        (length 3)
+        (name PORT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Bottle - 20 L"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -21 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Gas cylinder, 20 L water capacity"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle gas cylinder 20L water capacity cyl"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Water Capacity" "20 L"
+      (at 6 -2 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Bottle - 20 L_0_1"
+      (polyline
+        (pts
+          (xy -4 14)
+          (xy -4 -18))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -4 -18)
+          (xy 4 -18)
+          (xy 4 14))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 4 14)
+        (mid 0 18)
+        (end -4 14)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Bottle - 20 L_1_1"
+      (rectangle private
+        (start -4 21)
+        (end 4 -18)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1.2000 18)
+          (xy 1.2000 21)
+          (xy -1.2000 21)
+          (xy -1.2000 18))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 24 270)
+        (length 3)
+        (name PORT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Bottle - 50 L - Dip Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -33 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Gas cylinder, 50 L water capacity (BOC W/K size), with dip tube"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle gas cylinder 50L water capacity dip tube liquid cyl"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Water Capacity" "50 L"
+      (at 6.6000 -2.5000 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Bottle - 50 L - Dip Tube_0_1"
+      (polyline
+        (pts
+          (xy -4.6000 24.4000)
+          (xy -4.6000 -29.4000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -4.6000 -29.4000)
+          (xy 4.6000 -29.4000)
+          (xy 4.6000 24.4000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 4.6000 24.4000)
+        (mid 0 29)
+        (end -4.6000 24.4000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 29)
+          (xy 0 -28.4000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Bottle - 50 L - Dip Tube_1_1"
+      (rectangle private
+        (start -5 32)
+        (end 5 -30)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1.2000 29)
+          (xy 1.2000 32)
+          (xy -1.2000 32)
+          (xy -1.2000 29))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 35 270)
+        (length 3)
+        (name PORT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Bottle - 50 L"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -33 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Gas cylinder, 50 L water capacity (BOC W/K size)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "bottle gas cylinder 50L water capacity cyl"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property "Water Capacity" "50 L"
+      (at 6.6000 -2.5000 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Bottle - 50 L_0_1"
+      (polyline
+        (pts
+          (xy -4.6000 24.4000)
+          (xy -4.6000 -29.4000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -4.6000 -29.4000)
+          (xy 4.6000 -29.4000)
+          (xy 4.6000 24.4000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 4.6000 24.4000)
+        (mid 0 29)
+        (end -4.6000 24.4000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Bottle - 50 L_1_1"
+      (rectangle private
+        (start -5 32)
+        (end 5 -30)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 1.2000 29)
+          (xy 1.2000 32)
+          (xy -1.2000 32)
+          (xy -1.2000 29))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 35 270)
+        (length 3)
+        (name PORT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Sample Cylinder - Large - Outage Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Sample cylinder, double-ended with outage tube, large (Swagelok 1000 to 3785 cm³)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder swagelok large vessel cyl double-ended outage dip tube vapour space"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume "1000 cm³"
       (at 0 -8 0)
       (effects
         (font
           (size 1.2700 1.2700))))
-    (property Value ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))))
-    (property Footprint ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property Datasheet ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property Description "Small gas bottle"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property ki_keywords "bottle cylinder small gas cyl"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (symbol "Bottle - Small_0_1"
-      (polyline
-        (pts
-          (xy -3 20)
-          (xy -3 -5))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy -3 -5)
-          (xy 3 -5)
-          (xy 3 20))
+    (symbol "Sample Cylinder - Large - Outage Tube_0_1"
+      (rectangle
+        (start -10.5000 3)
+        (end 10.5000 -3)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 3 20)
-        (mid 0 23)
-        (end -3 20)
+        (start -10.5000 -3)
+        (mid -13.5000 0)
+        (end -10.5000 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 10.5000 3)
+        (mid 13.5000 0)
+        (end 10.5000 -3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -13.5000 0.5000)
+          (xy -8.1000 0.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -13.5000 -0.5000)
+          (xy -8.1000 -0.5000))
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none))))
-    (symbol "Bottle - Small_1_1"
+    (symbol "Sample Cylinder - Large - Outage Tube_1_1"
       (rectangle private
-        (start -12 12)
-        (end 12 -12)
+        (start -14 8)
+        (end 14 -8)
         (stroke
           (width 0.1000)
           (type dot))
         (fill
           (type none)))
       (rectangle private
-        (start -8 8)
-        (end 8 -8)
+        (start -14 3)
+        (end 14 -3)
         (stroke
           (width 0.1000)
           (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -5 5)
-        (end 5 -5)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy 0.7500 23)
-          (xy 0.7500 26)
-          (xy -0.7500 26)
-          (xy -0.7500 23))
-        (stroke
-          (width 0.1000)
-          (type default))
         (fill
           (type none)))
       (pin passive line
-        (at 0 29 270)
-        (length 3)
-        (name PORT
+        (at -14 0 0)
+        (length 0.5000)
+        (name IN
           (effects
             (font
               (size 1.2700 1.2700))))
         (number "1"
           (effects
             (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 14 0 180)
+        (length 0.5000)
+        (name OUT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
               (size 1.2700 1.2700)))))))
-  (symbol Bottle
+  (symbol "Sample Cylinder - Large - Single-Ended"
     (pin_numbers
       (hide yes))
     (pin_names
@@ -11421,7 +12079,7 @@
     (in_bom yes)
     (on_board no)
     (property Reference CYL
-      (at 0 -10 0)
+      (at 0 -6 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -11442,94 +12100,70 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description "Gas bottle"
+    (property Description "Sample cylinder, single-ended, large (generic; Swagelok single-ended sizes stop at 500 cm³)"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property ki_keywords "bottle cylinder gas vessel cyl"
+    (property ki_keywords "sample cylinder swagelok large vessel cyl single-ended"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (symbol "Bottle_0_1"
-      (polyline
-        (pts
-          (xy -4 28)
-          (xy -4 -6))
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy -4 -6)
-          (xy 4 -6)
-          (xy 4 28))
+    (property Volume "1000 cm³"
+      (at 0 -8 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Large - Single-Ended_0_1"
+      (rectangle
+        (start -10.5000 3)
+        (end 10.5000 -3)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 4 28)
-        (mid 0 32)
-        (end -4 28)
+        (start -10.5000 -3)
+        (mid -13.5000 0)
+        (end -10.5000 3)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 10.5000 3)
+        (mid 13.5000 0)
+        (end 10.5000 -3)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none))))
-    (symbol "Bottle_1_1"
+    (symbol "Sample Cylinder - Large - Single-Ended_1_1"
       (rectangle private
-        (start -20 20)
-        (end 20 -20)
+        (start -14 8)
+        (end 14 -8)
         (stroke
           (width 0.1000)
           (type dot))
         (fill
           (type none)))
       (rectangle private
-        (start -12 12)
-        (end 12 -12)
+        (start -14 3)
+        (end 14 -3)
         (stroke
           (width 0.1000)
           (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -8 8)
-        (end 8 -8)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -5 5)
-        (end 5 -5)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (polyline
-        (pts
-          (xy 1 32)
-          (xy 1 35)
-          (xy -1 35)
-          (xy -1 32))
-        (stroke
-          (width 0.1000)
-          (type default))
         (fill
           (type none)))
       (pin passive line
-        (at 0 38 270)
-        (length 3)
+        (at -14 0 0)
+        (length 0.5000)
         (name PORT
           (effects
             (font
@@ -11569,40 +12203,45 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description "Large sample cylinder, inline"
+    (property Description "Sample cylinder, double-ended, large (Swagelok 1000 to 3785 cm³)"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property ki_keywords "sample cylinder large vessel inline cyl"
+    (property ki_keywords "sample cylinder swagelok large vessel cyl double-ended inline"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property Volume "1000 cm³"
+      (at 0 -8 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
     (symbol "Sample Cylinder - Large_0_1"
       (rectangle
-        (start -3 2)
-        (end 3 -2)
+        (start -10.5000 3)
+        (end 10.5000 -3)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start -3 -2)
-        (mid -5 0)
-        (end -3 2)
+        (start -10.5000 -3)
+        (mid -13.5000 0)
+        (end -10.5000 3)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 3 2)
-        (mid 5 0)
-        (end 3 -2)
+        (start 10.5000 3)
+        (mid 13.5000 0)
+        (end 10.5000 -3)
         (stroke
           (width 0.1000)
           (type default))
@@ -11610,16 +12249,148 @@
           (type none))))
     (symbol "Sample Cylinder - Large_1_1"
       (rectangle private
-        (start -12 8)
-        (end 12 -8)
+        (start -14 8)
+        (end 14 -8)
         (stroke
           (width 0.1000)
           (type dot))
         (fill
           (type none)))
       (rectangle private
-        (start -8 5)
-        (end 8 -5)
+        (start -14 3)
+        (end 14 -3)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -14 0 0)
+        (length 0.5000)
+        (name IN
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 14 0 180)
+        (length 0.5000)
+        (name OUT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Sample Cylinder - Medium - Outage Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Sample cylinder, double-ended with outage tube, medium (Swagelok 150 to 500 cm³)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder swagelok medium vessel cyl double-ended outage dip tube vapour space"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume "300 cm³"
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Medium - Outage Tube_0_1"
+      (rectangle
+        (start -5.4000 1.5000)
+        (end 5.4000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -5.4000 -1.5000)
+        (mid -6.9000 0)
+        (end -5.4000 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 5.4000 1.5000)
+        (mid 6.9000 0)
+        (end 5.4000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6.9000 0.3000)
+          (xy -4.1000 0.3000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -6.9000 -0.3000)
+          (xy -4.1000 -0.3000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Sample Cylinder - Medium - Outage Tube_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -7 2)
+        (end 7 -2)
         (stroke
           (width 0.1000)
           (type dot))
@@ -11627,7 +12398,7 @@
           (type none)))
       (pin passive line
         (at -8 0 0)
-        (length 3)
+        (length 1.1000)
         (name IN
           (effects
             (font
@@ -11638,12 +12409,464 @@
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
-        (length 3)
+        (length 1.1000)
         (name OUT
           (effects
             (font
               (size 1.2700 1.2700))))
         (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Sample Cylinder - Medium - Single-Ended"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Sample cylinder, single-ended, medium (Swagelok 150 to 500 cm³)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder swagelok medium vessel cyl single-ended"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume "300 cm³"
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Medium - Single-Ended_0_1"
+      (rectangle
+        (start -5.4000 1.5000)
+        (end 5.4000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -5.4000 -1.5000)
+        (mid -6.9000 0)
+        (end -5.4000 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 5.4000 1.5000)
+        (mid 6.9000 0)
+        (end 5.4000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Sample Cylinder - Medium - Single-Ended_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -7 2)
+        (end 7 -2)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 1.1000)
+        (name PORT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Sample Cylinder - Medium"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Sample cylinder, double-ended, medium (Swagelok 150 to 500 cm³)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder swagelok medium vessel cyl double-ended inline"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume "300 cm³"
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Medium_0_1"
+      (rectangle
+        (start -5.4000 1.5000)
+        (end 5.4000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -5.4000 -1.5000)
+        (mid -6.9000 0)
+        (end -5.4000 1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 5.4000 1.5000)
+        (mid 6.9000 0)
+        (end 5.4000 -1.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Sample Cylinder - Medium_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -7 2)
+        (end 7 -2)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 1.1000)
+        (name IN
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 1.1000)
+        (name OUT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Sample Cylinder - Small - Outage Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Sample cylinder, double-ended with outage tube, small (Swagelok 10 to 75 cm³)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder swagelok small vessel cyl double-ended outage dip tube vapour space"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume "50 cm³"
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Small - Outage Tube_0_1"
+      (rectangle
+        (start -2.2500 1.0500)
+        (end 2.2500 -1.0500)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -2.2500 -1.0500)
+        (mid -3.3000 0)
+        (end -2.2500 1.0500)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 2.2500 1.0500)
+        (mid 3.3000 0)
+        (end 2.2500 -1.0500)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.3000 0.2000)
+          (xy -2 0.2000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy -3.3000 -0.2000)
+          (xy -2 -0.2000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Sample Cylinder - Small - Outage Tube_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -4 2)
+        (end 4 -2)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 4.7000)
+        (name IN
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 8 0 180)
+        (length 4.7000)
+        (name OUT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Sample Cylinder - Small - Single-Ended"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference CYL
+      (at 0 -4 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Sample cylinder, single-ended, small (Swagelok 10 to 50 cm³)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "sample cylinder swagelok small vessel cyl single-ended"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume "50 cm³"
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (symbol "Sample Cylinder - Small - Single-Ended_0_1"
+      (rectangle
+        (start -2.2500 1.0500)
+        (end 2.2500 -1.0500)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -2.2500 -1.0500)
+        (mid -3.3000 0)
+        (end -2.2500 1.0500)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 2.2500 1.0500)
+        (mid 3.3000 0)
+        (end 2.2500 -1.0500)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none))))
+    (symbol "Sample Cylinder - Small - Single-Ended_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -4 2)
+        (end 4 -2)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (pin passive line
+        (at -8 0 0)
+        (length 4.7000)
+        (name PORT
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
           (effects
             (font
               (size 1.2700 1.2700)))))))
@@ -11657,7 +12880,7 @@
     (in_bom yes)
     (on_board no)
     (property Reference CYL
-      (at 0 -3 0)
+      (at 0 -4 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -11678,147 +12901,51 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description "Small sample cylinder, inline"
+    (property Description "Sample cylinder, double-ended, small (Swagelok 10 to 75 cm³)"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property ki_keywords "sample cylinder small vessel inline cyl"
+    (property ki_keywords "sample cylinder swagelok small vessel cyl double-ended inline"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property Volume "50 cm³"
+      (at 0 -6 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
     (symbol "Sample Cylinder - Small_0_1"
       (rectangle
-        (start -1.5000 1)
-        (end 1.5000 -1)
+        (start -2.2500 1.0500)
+        (end 2.2500 -1.0500)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start -1.5000 -1)
-        (mid -2.5000 0)
-        (end -1.5000 1)
+        (start -2.2500 -1.0500)
+        (mid -3.3000 0)
+        (end -2.2500 1.0500)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 1.5000 1)
-        (mid 2.5000 0)
-        (end 1.5000 -1)
+        (start 2.2500 1.0500)
+        (mid 3.3000 0)
+        (end 2.2500 -1.0500)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none))))
     (symbol "Sample Cylinder - Small_1_1"
-      (rectangle private
-        (start -5 5)
-        (end 5 -5)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (pin passive line
-        (at -8 0 0)
-        (length 5.5000)
-        (name IN
-          (effects
-            (font
-              (size 1.2700 1.2700))))
-        (number "1"
-          (effects
-            (font
-              (size 1.2700 1.2700)))))
-      (pin passive line
-        (at 8 0 180)
-        (length 5.5000)
-        (name OUT
-          (effects
-            (font
-              (size 1.2700 1.2700))))
-        (number "2"
-          (effects
-            (font
-              (size 1.2700 1.2700)))))))
-  (symbol "Sample Cylinder"
-    (pin_numbers
-      (hide yes))
-    (pin_names
-      (offset 0)
-      (hide yes))
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board no)
-    (property Reference CYL
-      (at 0 -5 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))))
-    (property Value ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))))
-    (property Footprint ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property Datasheet ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property Description "Sample cylinder, inline"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property ki_keywords "sample cylinder vessel inline cyl"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (symbol "Sample Cylinder_0_1"
-      (rectangle
-        (start -2 1.5000)
-        (end 2 -1.5000)
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (arc
-        (start -2 -1.5000)
-        (mid -3.5000 0)
-        (end -2 1.5000)
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (arc
-        (start 2 1.5000)
-        (mid 3.5000 0)
-        (end 2 -1.5000)
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none))))
-    (symbol "Sample Cylinder_1_1"
       (rectangle private
         (start -8 8)
         (end 8 -8)
@@ -11828,8 +12955,8 @@
         (fill
           (type none)))
       (rectangle private
-        (start -5 5)
-        (end 5 -5)
+        (start -4 2)
+        (end 4 -2)
         (stroke
           (width 0.1000)
           (type dot))
@@ -11837,7 +12964,7 @@
           (type none)))
       (pin passive line
         (at -8 0 0)
-        (length 4.5000)
+        (length 4.7000)
         (name IN
           (effects
             (font
@@ -11848,7 +12975,7 @@
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 8 0 180)
-        (length 4.5000)
+        (length 4.7000)
         (name OUT
           (effects
             (font
@@ -11965,7 +13092,7 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
-  (symbol "Tank - Large"
+  (symbol "Tank - Large - Dip Tube"
     (pin_numbers
       (hide yes))
     (pin_names
@@ -11975,7 +13102,7 @@
     (in_bom yes)
     (on_board no)
     (property Reference TK
-      (at 0 -20 0)
+      (at 0 -18 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -11996,18 +13123,147 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description "Large vertical tank"
+    (property Description "Vertical tank, large, with dip tube"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property ki_keywords "tank vessel large vertical tk"
+    (property ki_keywords "tank vessel vertical large dip tube liquid tk"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property Volume ""
+      (at 7.5000 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Tank - Large - Dip Tube_1_1"
+      (rectangle private
+        (start -20 20)
+        (end 20 -20)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -10 10)
+        (end 10 -10)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -6 13)
+        (end 6 -13)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -6 13)
+        (mid 0 16)
+        (end 6 13)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 6 -13)
+        (mid 0 -16)
+        (end -6 -13)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 16)
+          (xy 0 -12))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 16 270)
+        (length 3)
+        (name TOP
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 -16 90)
+        (length 3)
+        (name BOTTOM
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Tank - Large"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference TK
+      (at 0 -18 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Vertical tank, large"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel vertical large tk"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume ""
+      (at 7.5000 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Tank - Large_1_1"
       (rectangle private
         (start -20 20)
@@ -12026,26 +13282,26 @@
         (fill
           (type none)))
       (rectangle
-        (start -7 12)
-        (end 7 -12)
+        (start -6 13)
+        (end 6 -13)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start -7 12)
-        (mid 0 15.5000)
-        (end 7 12)
+        (start -6 13)
+        (mid 0 16)
+        (end 6 13)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 7 -12)
-        (mid 0 -15.5000)
-        (end -7 -12)
+        (start 6 -13)
+        (mid 0 -16)
+        (end -6 -13)
         (stroke
           (width 0.1000)
           (type default))
@@ -12053,7 +13309,7 @@
           (type none)))
       (pin passive line
         (at 0 16 270)
-        (length 3.5000)
+        (length 3)
         (name TOP
           (effects
             (font
@@ -12064,7 +13320,7 @@
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -16 90)
-        (length 3.5000)
+        (length 3)
         (name BOTTOM
           (effects
             (font
@@ -12073,7 +13329,7 @@
           (effects
             (font
               (size 1.2700 1.2700)))))))
-  (symbol "Tank - Small"
+  (symbol "Tank - Medium - Dip Tube"
     (pin_numbers
       (hide yes))
     (pin_names
@@ -12083,7 +13339,7 @@
     (in_bom yes)
     (on_board no)
     (property Reference TK
-      (at 0 -8 0)
+      (at 0 -10 0)
       (effects
         (font
           (size 1.2700 1.2700))))
@@ -12104,18 +13360,384 @@
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property Description "Small vertical tank"
+    (property Description "Vertical tank, medium, with dip tube"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
-    (property ki_keywords "tank vessel small vertical tk"
+    (property ki_keywords "tank vessel vertical medium dip tube liquid tk"
       (at 0 0 0)
       (effects
         (font
           (size 1.2700 1.2700))
         (hide yes)))
+    (property Volume ""
+      (at 5.5000 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Tank - Medium - Dip Tube_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -4 6)
+        (end 4 -6)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -4 6)
+        (mid 0 8)
+        (end 4 6)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 4 -6)
+        (mid 0 -8)
+        (end -4 -6)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 8)
+          (xy 0 -5))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 8 270)
+        (length 2)
+        (name TOP
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 -8 90)
+        (length 2)
+        (name BOTTOM
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Tank - Medium"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference TK
+      (at 0 -10 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Vertical tank, medium"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel vertical medium tk"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume ""
+      (at 5.5000 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Tank - Medium_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -4 6)
+        (end 4 -6)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -4 6)
+        (mid 0 8)
+        (end 4 6)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 4 -6)
+        (mid 0 -8)
+        (end -4 -6)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 8 270)
+        (length 2)
+        (name TOP
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 -8 90)
+        (length 2)
+        (name BOTTOM
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Tank - Small - Dip Tube"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference TK
+      (at 0 -7 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Vertical tank, small, with dip tube"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel vertical small dip tube liquid tk"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume ""
+      (at 4.5000 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
+    (symbol "Tank - Small - Dip Tube_1_1"
+      (rectangle private
+        (start -8 8)
+        (end 8 -8)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle private
+        (start -5 5)
+        (end 5 -5)
+        (stroke
+          (width 0.1000)
+          (type dot))
+        (fill
+          (type none)))
+      (rectangle
+        (start -3 3.5000)
+        (end 3 -3.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start -3 3.5000)
+        (mid 0 5)
+        (end 3 3.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (arc
+        (start 3 -3.5000)
+        (mid 0 -5)
+        (end -3 -3.5000)
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (polyline
+        (pts
+          (xy 0 5)
+          (xy 0 -2.5000))
+        (stroke
+          (width 0.1000)
+          (type default))
+        (fill
+          (type none)))
+      (pin passive line
+        (at 0 5 270)
+        (length 1.5000)
+        (name TOP
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "1"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))
+      (pin passive line
+        (at 0 -5 90)
+        (length 1.5000)
+        (name BOTTOM
+          (effects
+            (font
+              (size 1.2700 1.2700))))
+        (number "2"
+          (effects
+            (font
+              (size 1.2700 1.2700)))))))
+  (symbol "Tank - Small"
+    (pin_numbers
+      (hide yes))
+    (pin_names
+      (offset 0)
+      (hide yes))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board no)
+    (property Reference TK
+      (at 0 -7 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Value ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))))
+    (property Footprint ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Datasheet ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Description "Vertical tank, small"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property ki_keywords "tank vessel vertical small tk"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (hide yes)))
+    (property Volume ""
+      (at 4.5000 0 0)
+      (effects
+        (font
+          (size 1.2700 1.2700))
+        (justify left)))
     (symbol "Tank - Small_1_1"
       (rectangle private
         (start -8 8)
@@ -12134,26 +13756,26 @@
         (fill
           (type none)))
       (rectangle
-        (start -2.5000 3.5000)
-        (end 2.5000 -3.5000)
+        (start -3 3.5000)
+        (end 3 -3.5000)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start -2.5000 3.5000)
-        (mid 0 4.7500)
-        (end 2.5000 3.5000)
+        (start -3 3.5000)
+        (mid 0 5)
+        (end 3 3.5000)
         (stroke
           (width 0.1000)
           (type default))
         (fill
           (type none)))
       (arc
-        (start 2.5000 -3.5000)
-        (mid 0 -4.7500)
-        (end -2.5000 -3.5000)
+        (start 3 -3.5000)
+        (mid 0 -5)
+        (end -3 -3.5000)
         (stroke
           (width 0.1000)
           (type default))
@@ -12161,7 +13783,7 @@
           (type none)))
       (pin passive line
         (at 0 5 270)
-        (length 3.2500)
+        (length 1.5000)
         (name TOP
           (effects
             (font
@@ -12172,7 +13794,7 @@
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -5 90)
-        (length 3.2500)
+        (length 1.5000)
         (name BOTTOM
           (effects
             (font
@@ -12262,114 +13884,6 @@
               (size 1.2700 1.2700)))))
       (pin passive line
         (at 0 -6 90)
-        (length 3)
-        (name BOTTOM
-          (effects
-            (font
-              (size 1.2700 1.2700))))
-        (number "2"
-          (effects
-            (font
-              (size 1.2700 1.2700)))))))
-  (symbol Tank
-    (pin_numbers
-      (hide yes))
-    (pin_names
-      (offset 0)
-      (hide yes))
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board no)
-    (property Reference TK
-      (at 0 -10 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))))
-    (property Value ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))))
-    (property Footprint ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property Datasheet ""
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property Description "Vertical tank"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (property ki_keywords "tank vessel vertical tk"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.2700 1.2700))
-        (hide yes)))
-    (symbol "Tank_1_1"
-      (rectangle private
-        (start -8 8)
-        (end 8 -8)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle private
-        (start -5 5)
-        (end 5 -5)
-        (stroke
-          (width 0.1000)
-          (type dot))
-        (fill
-          (type none)))
-      (rectangle
-        (start -4 6)
-        (end 4 -6)
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (arc
-        (start -4 6)
-        (mid 0 8)
-        (end 4 6)
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (arc
-        (start 4 -6)
-        (mid 0 -8)
-        (end -4 -6)
-        (stroke
-          (width 0.1000)
-          (type default))
-        (fill
-          (type none)))
-      (pin passive line
-        (at 0 8 270)
-        (length 3)
-        (name TOP
-          (effects
-            (font
-              (size 1.2700 1.2700))))
-        (number "1"
-          (effects
-            (font
-              (size 1.2700 1.2700)))))
-      (pin passive line
-        (at 0 -8 90)
         (length 3)
         (name BOTTOM
           (effects
